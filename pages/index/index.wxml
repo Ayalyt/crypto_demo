@@ -1,0 +1,3 @@
+<view class="container">
+    <fun-loading wx:if="{{showLoading}}"></fun-loading>
+</view>

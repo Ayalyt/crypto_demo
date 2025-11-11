@@ -1,0 +1,52 @@
+.fun-textarea {
+    background: #f7f7f7;
+    min-height: 170rpx;
+    padding-bottom: 20px;
+    position: relative
+}
+
+.textarea-input {
+    border: none;
+    border-radius: 8rpx;
+    height: 170rpx
+}
+
+.textarea-input,.textarea-show {
+    box-sizing: border-box;
+    color: #949aa7;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    padding: 14rpx 18rpx;
+    width: 100%
+}
+
+.textarea-show {
+    border-radius: 8rpx;
+    height: 100%;
+    left: 0;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    word-break: break-all
+}
+
+.textarea-placeholder,.textarea-show-placeholder {
+    color: #c6cbd7;
+    font-size: 26rpx
+}
+
+.textarea-count {
+    bottom: 14rpx;
+    color: #949aa7;
+    font-size: 24rpx;
+    position: absolute;
+    right: 20rpx
+}
+
+.fun-textarea.ios .textarea-input {
+    padding: 0 8rpx
+}
+
+.value-text {
+    min-height: 40rpx
+}

@@ -1,0 +1,21 @@
+<view class="repair-clean-container">
+    <view class="repair-clean-title">选择您需要的服务</view>
+    <view bindtap="goToRepair" class="repair-clean-tab-item">
+        <view class="tab-block-tip" wx:if="{{repairCount}}">{{repairCount>99?99+'+':repairCount}}</view>
+        <view class="repair-clean-tab-item-left">
+            <image class="repair-clean-tab-item-quote" src="/public/imgs/icon-quote.png"></image>
+            <view class="repair-clean-tab-item-text">维修</view>
+            <view class="repair-clean-tab-item-sub-text">选择维修服务</view>
+        </view>
+        <image class="repair-clean-tab-item-right" src="/public/imgs/icon-repair.png"></image>
+    </view>
+    <view bindtap="goToClean" class="repair-clean-tab-item">
+        <view class="tab-block-tip" wx:if="{{cleanCount}}">{{cleanCount>99?99+'+':cleanCount}}</view>
+        <view class="repair-clean-tab-item-left">
+            <image class="repair-clean-tab-item-quote" src="/public/imgs/icon-quote.png"></image>
+            <view class="repair-clean-tab-item-text">保洁</view>
+            <view class="repair-clean-tab-item-sub-text">选择保洁服务</view>
+        </view>
+        <image class="repair-clean-tab-item-right" src="/public/imgs/icon-clean.png"></image>
+    </view>
+</view>

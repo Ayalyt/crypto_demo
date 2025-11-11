@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "fun-button": "components\\fun-button\\fun-button",
+    "fun-loading": "pages\\hydropower-charge\\components\\fun-loading\\fun-loading"
+  },
+  "navigationBarTitleText": "水电充值"
+}

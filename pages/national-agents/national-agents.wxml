@@ -1,0 +1,37 @@
+<auth-user isPhoneOnly bind:ready="onAuthReady">
+    <view class="wrapper size20">
+        <view>
+            <view class="height102 flex">
+                <view class="required width160 color-some-grey">经纪人姓名</view>
+                <input bindinput="getCustomerNameValue" class="fun-text-input-value" maxlength="20" placeholder="请输入经纪人姓名" placeholderStyle="color:#C6CBD7;font-size:26rpx"></input>
+                <radio-group bindchange="onChangeRadio">
+                    <radio value="1"></radio>男<radio class="ml20" value="2"></radio>女</radio-group>
+            </view>
+        </view>
+        <view class="height102 flex">
+            <picker bindchange="onDateChange" class="full-width" end="{{lastBirthDate}}" mode="date" value="{{birthdate}}">
+                <view class="full-width flex-between">
+                    <view class="flex">
+                        <view class="required width160 color-some-grey">出生日期</view>
+                        <view>{{birthdate}}</view>
+                    </view>
+                    <view class="fun-icon fun-icon-angle-down color-some-grey"></view>
+                </view>
+            </picker>
+        </view>
+        <view class="height102 flex">
+            <picker bindchange="onProfessionsChange" class="full-width" mode="selector" range="{{professions}}" rangeKey="professionsName" value="{{profession}}">
+                <view class="full-width flex-between">
+                    <view class="flex">
+                        <view class="required width160 color-some-grey">职业</view>
+                        <view class="normal-lineheight">{{professions[profession].professionsName}}</view>
+                    </view>
+                    <view class="fun-icon fun-icon-angle-down color-some-grey"></view>
+                </view>
+            </picker>
+        </view>
+        <view class="flex">
+            <fun-button bindsure="onSure" btnShow="{{true}}" id="fun-button" sureText="确定"></fun-button>
+        </view>
+    </view>
+</auth-user>

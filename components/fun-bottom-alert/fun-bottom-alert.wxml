@@ -1,0 +1,11 @@
+<block wx:if="{{!isRemove}}">
+    <view animation="{{opacityAnimation}}" class="date-back"></view>
+    <view animation="{{lAnimate}}" class="date-view" style="height:{{height}}px;bottom:-{{height}}px;">
+        <view class="date-header">
+            <image bindtap="close" class="date-image" mode="aspectFit" src="/public/imgs/icon_close.png"></image>
+            <view class="date-text">{{title}}</view>
+            <image bindtap="sure" class="date-image" mode="aspectFit" src="{{isShowSure?'/public/imgs/icon_confirm.png':''}}"></image>
+        </view>
+        <slot></slot>
+    </view>
+</block>

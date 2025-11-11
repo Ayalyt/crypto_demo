@@ -1,0 +1,12 @@
+<scroll-view scrollY bindrefresherrefresh="handleRefresh" class="rent-renewal-page" refresherEnabled="true" refresherTriggered="{{refreshTriggered}}" style="background:{{isNoDataShow?'#ffffff':'#f4f4f4'}};">
+    <fun-apartment-list bind:change="onMonitorData" forNewApi="{{true}}" myClass="rent-renewal-header" selectedOrderNo="{{selectedOrderNo}}" showLoading="{{true}}" statusList="{{statusList}}"></fun-apartment-list>
+    <rent-renewal-item bind:details="goToDetails" bind:refresh="refreshData" bind:rentWithdrawAction="onRentWithdrawAction" listData="{{applyList}}"></rent-renewal-item>
+    <view class="placeholder-view"></view>
+    <no-data noDataShow="{{isNoDataShow}}" text="{{text}}"></no-data>
+    <form-button btnShow="{{roomDetail.evictionFlag==1||roomDetail.reletFlag==1}}">
+        <view bindtap="onRentWithdrawAction" class="withdraw-apply" data-edit="{{isEdit}}" data-orderno="{{orderNo}}" data-roomid="{{roomId}}" wx:if="{{roomDetail.evictionFlag==1}}">退租申请</view>
+        <view bindtap="rerentApplyAction" class="renewal-apply" data-edit="{{isEdit}}" data-orderno="{{orderNo}}" data-roomid="{{roomId}}" wx:if="{{roomDetail.reletFlag==1}}">续租办理</view>
+    </form-button>
+</scroll-view>
+<fun-loading wx:if="{{showLoading}}"></fun-loading>
+<faq-float-button show="{{showFaqBtn}}" type="{{19}}"></faq-float-button>

@@ -1,0 +1,8 @@
+<view class="fun-count-down-wrapper">
+    <block wx:if="{{displayTimes}}">
+        <text decode="{{true}}">{{prefixDesc}}</text>
+        <block wx:for="{{displayTimes}}" wx:key="index">
+            <view class="time">{{item.val}}</view>{{item.unit}}</block>
+    </block>
+    <text wx:else>{{completedText}}</text>
+</view>

@@ -1,0 +1,23 @@
+<view class="fun-city-selector">
+    <view bindtap="onOpen" class="city-selector-wrap">
+        <view class="city-selector-content">
+            <text class="city-selector-label">{{label}}</text>
+            <text class="city-selector-value" wx:if="{{displayValue}}">{{displayValue}}</text>
+            <text class="city-selector-placeholder" wx:if="{{!displayValue}}">{{placeholder}}</text>
+        </view>
+        <text class="fun-icon fun-icon-angle-down"></text>
+    </view>
+    <fun-drawer show="{{show}}">
+        <view class="selector-content-wrap">
+            <view class="selector-header">{{title}}<text bindtap="onClose" class="fun-icon fun-icon-close"></text>
+            </view>
+            <view class="selector-bar">
+                <view bindtap="onSelect" class="selector-bar-option {{index==highlightIndex?'highlight':''}}" data-option="{{item}}" data-same-level="true" wx:for="{{selected}}" wx:key="name">{{item.name}}</view>
+            </view>
+            <view class="selector-content">
+                <view bindtap="onSelect" class="selector-option {{item.id===currentId?'current':''}}" data-option="{{item}}" wx:for="{{options}}" wx:key="id">{{item.name}}<text class="fun-icon fun-icon-right" wx:if="{{item.id===currentId}}"></text>
+                </view>
+            </view>
+        </view>
+    </fun-drawer>
+</view>

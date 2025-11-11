@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>jia</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFD685" offset="0%"></stop>
+            <stop stop-color="#FF9D5A" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="41" cy="41" r="41"></circle>
+        <filter x="-8.5%" y="-6.1%" width="117.1%" height="117.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.755730228   0 0 0 0 0.755730228   0 0 0 0 0.755730228  0 0 0 0.79620404 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="发现" transform="translate(-644.000000, -1268.000000)">
+            <g id="编组-2" transform="translate(648.000000, 1270.000000)">
+                <g id="椭圆形">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <g id="jia" transform="translate(21.000000, 21.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M37.3873076,18.0681054 L21.9319458,18.0681054 L21.9319458,2.61274365 C21.9319458,1.54536428 21.06661,0.680823432 20.0000256,0.680823432 C18.9326462,0.680823432 18.0681054,1.54536428 18.0681054,2.61274365 L18.0681054,18.0681054 L2.61274365,18.0681054 C1.54536428,18.0681054 0.680823432,18.9326462 0.680823432,20.0000256 C0.680823432,21.06661 1.54536428,21.9319458 2.61274365,21.9319458 L18.0681054,21.9319458 L18.0681054,37.3873076 C18.0681054,38.453892 18.9326462,39.3192278 20.0000256,39.3192278 C21.06661,39.3192278 21.9319458,38.453892 21.9319458,37.3873076 L21.9319458,21.9319458 L37.3873076,21.9319458 C38.453892,21.9319458 39.3192278,21.06661 39.3192278,20.0000256 C39.3192278,18.9326462 38.453892,18.0681054 37.3873076,18.0681054 Z" id="路径"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

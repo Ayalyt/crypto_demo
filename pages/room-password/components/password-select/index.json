@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fun-drawer": "pages\\room-password\\components\\password-select\\components\\fun-drawer\\fun-drawer"
+  }
+}

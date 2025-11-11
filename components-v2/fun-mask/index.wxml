@@ -1,0 +1,1 @@
+<view bindtap="onClick" class="fun-mask fun-mask-{{status}}" style="z-index:{{zIndex}}" wx:if="{{status!=='none'}}"></view>

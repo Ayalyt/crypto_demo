@@ -1,0 +1,156 @@
+<view class="header">
+    <image class="header-bg" mode="widthFix" src="/public/imgs/icon_bill_details_bg.png"></image>
+    <view class="header-content">
+        <view class="first-row">
+            <text class="title">{{details.billTypeName}} {{details.periodsTime}}</text>
+            <text class="status">{{details.billStatusDesc}}</text>
+        </view>
+        <view style="margin-top:5px;display:flex;">
+            <view style="flex-grow:1;"></view>
+            <view style="color:#FFFFFF;font-size:24rpx;" wx:if="{{details.overdueDays}}">逾期<text style="color:#F15D61;">{{details.overdueDays}}</text>天</view>
+            <fun-count-down bind:onCompleted="onCountDownCompleted" prefixDesc="{{details.billType===1?'剩':'倒计时'}}" style="color:#fff" time="{{details.remainTime}}" wx:if="{{details.remainTime>0}}"></fun-count-down>
+        </view>
+    </view>
+</view>
+<view class="content">
+    <view class="content-top">
+        <view style="line-height:0;">
+            <image class="content-top-bg" mode="widthFix" src="/public/imgs/icon_orderDetails_top.png"></image>
+        </view>
+        <view class="content-top-content">
+            <fun-image class="content-top-image" mode="aspectFill" src="{{details.roomInfo.roomTypePhotoUrl.small}}"></fun-image>
+            <view style="margin-left:19rpx;flex-grow:1;">
+                <view class="room-info">{{details.roomInfo.buildingName}}-{{details.roomInfo.roomNo}}室 ¥{{details.businessInfo.businesSunitPrice}}/月 {{payType}}</view>
+                <view class="rent-date">租期：{{details.businessInfo.businessOrderStartTime}}-{{details.businessInfo.businessOrderEndTime}}</view>
+                <view class="apartment-info">
+                    <text class="apartment-name ellipsis">{{details.roomInfo.apartmentName}}</text>
+                    <view class="apartment-line"></view>
+                    <image bindtap="makePhoneCall" class="phone" mode="aspectFit" src="/public/imgs/icon_phone.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="content-bottom">
+        <view class="content-bottom-subview" wx:if="{{details.billType===4}}">
+            <view class="fee-view">租约信息</view>
+            <view class="fee-view-item">
+                <text class="prepay-amount-title">入住日期</text>
+                <text class="content-text" style="flex-grow:1;margin-left:40rpx;">{{details.businessInfo.businessOrderStartTime}} {{checkInWeek}}</text>
+            </view>
+            <view class="fee-view-item">
+                <text class="prepay-amount-title">签约人</text>
+                <text class="content-text" style="flex-grow:1;margin-left:40rpx;">{{details.businessInfo.signName}}</text>
+            </view>
+            <view class="fee-view-item">
+                <text class="prepay-amount-title">手机号</text>
+                <text class="content-text" style="flex-grow:1;margin-left:40rpx;">{{details.businessInfo.signPhone}}</text>
+            </view>
+            <view class="fee-view-item">
+                <text class="prepay-amount-title">证件号码</text>
+                <text class="content-text" style="flex-grow:1;margin-left:40rpx;">{{details.businessInfo.certificateNumber}}</text>
+            </view>
+        </view>
+        <view class="content-bottom-subview">
+            <view class="fee-view">费用信息</view>
+            <view class="fee-view-item">
+                <text class="prepay-amount-title">{{details.billTypeName}}{{details.billType!==4?'金额':''}}</text>
+                <view style="flex-grow:1;margin-left:40rpx;">
+                    <text style="margin-left:3px;">¥ {{details.billTotalAmount}}</text>
+                </view>
+                <view bindtap="showDetails" class="details">
+                    <text class="subtitle">明细</text>
+                    <image class="icon-arrow-down {{showFeeDetails?'fee-details-open':''}}" src="/public/imgs/icon_arrow_down.png"></image>
+                </view>
+            </view>
+            <view class="bill-infos-view" wx:if="{{showFeeDetails}}">
+                <view bindtap="paySelected" class="bill-info" data-index="{{index}}" data-item="{{item}}" wx:if="{{item.type!==4}}" wx:for="{{details.billDetailInfo}}" wx:key="index">
+                    <view class="bill-info-ctn">
+                        <view class="bill-info-ctn-type">{{item.typeName}}</view>
+                        <view class="bill-info-ctn-price">¥{{item.amount}} {{item.unitPrice&&item.type!==1?'(¥'+item.unitPrice+'/月)':''}}<view class="bill-info-ctn-price-real">实付：¥{{item.receiptAmount}}</view>
+                        </view>
+                    </view>
+                    <view class="bill-info-status">
+                        <view class="bill-info-status-dot" style="background:{{item.status===1?'#F15D61':'#21BE8E'}};"></view>
+                        <view class="statusDesc">{{item.statusDesc}}</view>
+                    </view>
+                    <image src="/public/imgs/icon_{{selected[index]?'select':'unselect'}}.png" style="{{item.status===1?item.type===1?'opacity:0.3':'opacity:1':'opacity:0'}}"></image>
+                </view>
+            </view>
+            <view class="fee-view-item" wx:if="{{details.depositAmount}}">
+                <text class="prepay-amount-title">定金抵扣</text>
+                <text class="content-text" style="flex-grow:1;margin-left:40rpx;color:#F15D61;">
+            - ¥ {{details.depositAmount}}
+          </text>
+            </view>
+            <view bindtap="showOverdueFeeRule" class="fee-view-item" wx:if="{{details.billType===1&&overdueFee}}">
+                <view class="prepay-amount-title row">
+                    <text>滞纳金</text>
+                    <image src="/public/imgs/icon_info.png" style="width:26rpx;height:26rpx;margin-left:10rpx;"></image>
+                </view>
+                <text class="content-text" style="flex-grow:1;margin-left:40rpx;">¥ {{overdueFee}}</text>
+            </view>
+        </view>
+        <view class="fee-view-item border-bottom" style="margin-top:0;" wx:if="{{details.billStatus===1&&details.billPaidAmount}}">
+            <text class="prepay-amount-title">已付金额</text>
+            <text class="content-text" style="flex-grow:1;margin-left:40rpx;">¥ {{details.billPaidAmount}}</text>
+        </view>
+        <block wx:if="{{details.billStatus===1}}">
+            <view class="prepay-amount-view content-bottom-subview">
+                <text class="prepay-amount-title">待付金额</text>
+                <text class="money">¥</text>
+                <text class="prepay-amount" style="margin-left:3px;">{{details.billUnPaidAmount}}</text>
+            </view>
+            <text class="deduction-amount" wx:if="{{totalDeductionAmount}}">
+          其中待抵扣金额： ¥{{totalDeductionAmount}}
+        </text>
+        </block>
+        <view class="prepay-amount-view-box" wx:if="{{details.billPaidAmount}}">
+            <view class="prepay-amount-view content-bottom-subview">
+                <text class="prepay-amount-title-long">优惠券抵扣</text>
+                <text class="money">¥</text>
+                <text class="prepay-amount" style="margin-left:3px;">{{details.couponAmount}}</text>
+            </view>
+            <view class="prepay-amount-view content-bottom-subview" wx:if="{{details.billStatus===2}}">
+                <text class="prepay-amount-title">实付金额</text>
+                <text class="money">¥</text>
+                <text class="prepay-amount" style="margin-left:3px;">{{details.billPaidAmount}}</text>
+            </view>
+        </view>
+        <view class="content-bottom-subview" wx:if="{{details.billType===4}}">
+            <view bindtap="copyOrderNo" class="paymentInfo-item">
+                <text class="paymentInfo-title">租约单号</text>
+                <text class="paymentInfo-content" style="flex-grow:1;">{{details.businessInfo.businessNo}}</text>
+                <image class="copy-image" src="/public/imgs/icon_copy.png"></image>
+                <text class="copy-text">复制</text>
+            </view>
+            <view class="paymentInfo-item">
+                <text class="paymentInfo-title">下单时间</text>
+                <text class="paymentInfo-content">{{details.businessInfo.createTime}}</text>
+            </view>
+        </view>
+        <view class="content-bottom-subview tips" wx:if="{{details.billType===1}}">
+            <text class="remark" decode="{{true}}">提示</text>
+            <view>1.{{details.latestPayTime}}为本账单的最晚交租日</view>
+            <view>2.若逾期，每天产生本期租金额*0.5‰的滞纳金</view>
+            <view>3.若超过本人支付限额，请到前台支付</view>
+        </view>
+    </view>
+</view>
+<fun-bottom-alert height="200" id="fun-bottom-alert" isShow="{{isShowOverdueFee}}" isShowSure="{{false}}" title="滞纳金">
+    <view class=".overdueFee-view">
+        <view class="overdueFee-title">滞纳金计算方式</view>
+        <view style="margin-top:5px;">滞纳金=每期房租全额 * 0.5% * 天数</view>
+        <view class="overdueFee-title" style="margin-top:10px;">逾期天数计算方式</view>
+        <view style="margin-top:5px;">若未全额缴清，则最晚交租日23:59′59″后，每到0点逾期天数增加1天。</view>
+    </view>
+</fun-bottom-alert>
+<fun-button bindsure="doPay" btnShow="{{true}}" id="fun-button" sureText="去支付" sureEnabled="{{sureEnabled&&toPayAmount}}" wx:if="{{details.billStatus===1}}">
+    <view class="fun-button-left">
+        <view class="prepay">金额</view>
+        <view class="money-bottom">￥</view>
+        <view class="charge-amount">{{toPayAmount}}</view>
+    </view>
+</fun-button>
+<fun-loading wx:if="{{showLoading}}"></fun-loading>
+<faq-float-button show="{{showFaqBtn}}" type="{{17}}"></faq-float-button>
+<privacy></privacy>

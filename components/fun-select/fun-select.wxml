@@ -1,0 +1,15 @@
+<view class="fun-select">
+    <fun-form-item bind:click="onShow" label="{{label}}" placeholder="{{placeholder}}" required="{{required}}" type="select" value="{{text}}"></fun-form-item>
+    <fun-drawer bind:close="onDrawerClose" show="{{show&&!isConfirm}}">
+        <view class="fun-select-header">
+            <text bindtap="onClose" class="fun-select-close fun-icon fun-icon-close"></text>
+            <text>{{title}}</text>
+            <text bindtap="onConfirm" class="fun-select-confirm fun-icon fun-icon-right"></text>
+        </view>
+        <picker-view bindchange="onChange" bindpickend="onEnd" bindpickstart="onStart" class="fun-select-items" indicatorStyle="height: 50px;" value="{{selectedIndex}}" wx:if="{{show}}">
+            <picker-view-column wx:for="{{innerItems}}" wx:for-item="options" wx:key="index">
+                <view class="fun-select-item" data-value="{{item[valueKey]}}" wx:for="{{options}}" wx:key="index">{{item[textKey]}}</view>
+            </picker-view-column>
+        </picker-view>
+    </fun-drawer>
+</view>

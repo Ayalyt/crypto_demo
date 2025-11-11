@@ -1,0 +1,75 @@
+.swiper-tab {
+    border-bottom: 1px solid #f4f4f4;
+    height: 43px;
+    text-align: center;
+    width: 100%
+}
+
+.swiper-tab-list {
+    color: #949aa7;
+    display: inline-block;
+    font-size: 26rpx;
+    height: 42px;
+    width: 25%
+}
+
+.on {
+    color: #333;
+    font-weight: 500
+}
+
+.tab_item {
+    -webkit-align-self: baseline;
+    align-self: baseline;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding-top: 8px
+}
+
+.tab_item,.tab_item_main {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.tab_item_main {
+    height: 100%;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.tab_item_text {
+    font-weight: 700;
+    height: 28px
+}
+
+.tab_item_indicator {
+    background: linear-gradient(90deg,#626262,#333);
+    border-radius: 2px;
+    height: 4px;
+    margin-top: 3px;
+    width: 100%
+}
+
+.bage-number {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #ff4f53;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    height: 18px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: -5px;
+    width: 18px
+}
+
+.bage-number,.tab_item_content {
+    display: -webkit-flex;
+    display: flex
+}

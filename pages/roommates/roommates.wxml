@@ -1,0 +1,9 @@
+<view class="room-mates-page">
+    <apartment-list bind:change="onMonitorData" myClass="roommate-header"></apartment-list>
+    <roommate-item bind:refresh="refreshData" listData="{{queryPersonList}}"></roommate-item>
+    <no-data marginTop="150" noDataShow="{{isNoDataShow}}" text="{{text}}"></no-data>
+    <form-button btnShow="{{num>0}}">
+        <view bindtap="onAddRoommate" class="reserve" data-edit="{{isEdit}}" data-orderno="{{orderNo}}" data-personid="{{personId}}" data-roomid="{{roomId}}">添加同住人</view>
+    </form-button>
+</view>
+<fun-loading wx:if="{{showLoading}}"></fun-loading>

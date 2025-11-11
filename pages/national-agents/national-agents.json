@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "fun-button": "pages\\national-agents\\components\\fun-button\\fun-button",
+    "auth-user": "pages\\national-agents\\cdp\\components\\auth-user\\index"
+  },
+  "navigationBarTitleText": "完善基本信息"
+}

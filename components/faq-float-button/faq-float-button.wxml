@@ -1,0 +1,4 @@
+<view bind:tap="hanleJump" class="faq-float-button {{show?'faq-float-show':'faq-float-hiden'}}">
+    <image class="faq-float-icon" src="./question-icon.png"></image>
+    <text class="faq-float-text">常见<br></br>问题</text>
+</view>

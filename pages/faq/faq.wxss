@@ -1,0 +1,129 @@
+.faq-tabs {
+    border-bottom: 1rpx solid #f2f2f2;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 32rpx 30rpx 10rpx
+}
+
+.faq-tabs,.faq-tabs-line {
+    display: -webkit-flex;
+    display: flex
+}
+
+.faq-tabs-line {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 20rpx
+}
+
+.faq-tab {
+    border: 1rpx solid #c6cbd7;
+    border-radius: 27.73rpx;
+    font-size: 24rpx;
+    line-height: 55.46rpx;
+    margin-bottom: 20rpx;
+    text-align: center;
+    width: 118rpx
+}
+
+.faq-tab.margin-left-20 {
+    margin-left: 21rpx
+}
+
+.faq-tab.active {
+    background: #ffdf83;
+    border-color: #ffdf83;
+    color: #795600
+}
+
+.faq-item:not(:first-child) {
+    border-top: 1rpx solid #f2f2f2
+}
+
+.faq-item .fun-icon {
+    color: #949195;
+    float: right;
+    vertical-align: middle
+}
+
+.faq-question {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    color: #151515;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    font-size: 26rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    line-height: 37rpx;
+    padding: 30rpx 40rpx
+}
+
+.faq-question::before {
+    background-color: #ffdf83;
+    content: "";
+    height: 12rpx;
+    margin-right: 10rpx;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    width: 12rpx
+}
+
+.faq-question::before,.faq-title {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.faq-title {
+    white-space: normal;
+    width: 626rpx
+}
+
+.faq-answer,.faq-title {
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+.faq-answer {
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 26rpx;
+    font-weight: 400;
+    height: 0;
+    line-height: 2;
+    overflow: hidden;
+    transition: height .2s ease-in;
+    white-space: pre-wrap
+}
+
+.faq-question-nomore {
+    font-size: 26rpx;
+    padding: 20rpx;
+    text-align: center
+}
+
+.open-answer .faq-answer {
+    height: auto;
+    overflow: auto;
+    padding: 20rpx 69rpx
+}
+
+.convention .faq-answer {
+    margin-top: 40rpx
+}
+
+.faq-header {
+    background: linear-gradient(270deg,#333,#2c2825);
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 24rpx;
+    font-weight: 700;
+    height: 88rpx;
+    line-height: 88rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    width: 100%
+}

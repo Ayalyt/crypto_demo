@@ -1,0 +1,5 @@
+<view class="footer" wx:if="{{btnShow}}">
+    <view class="footer-content">
+        <slot></slot>
+    </view>
+</view>

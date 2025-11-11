@@ -1,0 +1,59 @@
+.row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.item {
+    background: #fff;
+    text-align: center;
+    width: 14.28%
+}
+
+.weeks {
+    font-size: 20rpx
+}
+
+.month,.weeks {
+    color: #333;
+    height: 50rpx;
+    line-height: 50rpx
+}
+
+.month {
+    background: #f8f8f8;
+    font-size: 24rpx;
+    text-align: center;
+    width: 100%
+}
+
+.day {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #333;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 26rpx;
+    height: 100rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    line-height: 100rpx
+}
+
+.invaild-day {
+    background: #f7f7f8
+}
+
+.day-back {
+    height: 62rpx;
+    line-height: 62rpx;
+    text-align: center;
+    width: 62rpx
+}
+
+.day-selected {
+    background: #edd180;
+    border-radius: 31rpx;
+    color: #795600
+}

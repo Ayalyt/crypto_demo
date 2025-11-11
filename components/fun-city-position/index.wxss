@@ -1,0 +1,104 @@
+.city-selector-wrap {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    display: -webkit-flex;
+    display: flex
+}
+
+.city-selector-label {
+    color: #333;
+    display: inline-block;
+    margin-right: 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90rpx
+}
+
+.city-selector-content {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%
+}
+
+.city-selector-value {
+    color: #828999;
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.city-selector-placeholder {
+    color: #c6cbd7;
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.selector-header {
+    background: #f8f8f8;
+    color: #949aa7;
+    font-size: 32rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    position: relative;
+    text-align: center
+}
+
+.selector-bar {
+    border-bottom: 1rpx solid #f2f2f2;
+    color: #333;
+    font-size: 30rpx;
+    font-weight: 500;
+    line-height: 70rpx;
+    overflow: hidden
+}
+
+.fun-icon {
+    color: #afb2bb;
+    font-size: 22rpx;
+    line-height: inherit
+}
+
+.fun-icon-close {
+    font-size: 34rpx;
+    left: 0;
+    line-height: 90rpx;
+    padding: 0 40rpx;
+    position: absolute
+}
+
+.selector-bar-option {
+    margin: 0 45rpx
+}
+
+.selector-content {
+    -webkit-overflow-scrolling: touch;
+    background: #fff;
+    height: 100%;
+    overflow: auto
+}
+
+.selector-content-header {
+    color: #949aa7;
+    font-size: 26rpx;
+    line-height: 90rpx
+}
+
+.option-title {
+    margin-bottom: -20rpx;
+    padding: 0 45rpx
+}
+
+.selector-option {
+    border-bottom: 1rpx solid #f2f2f2;
+    font-size: 28rpx;
+    line-height: 90rpx;
+    padding: 0 45rpx
+}
+
+.selector-line {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}

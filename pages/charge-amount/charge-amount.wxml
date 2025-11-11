@@ -1,0 +1,28 @@
+<view class="charge-amount-content">
+    <view class="charge-amount-body">
+        <view class="charge-amount-body-info">
+            <view class="charge-amount-body-info-room">{{roomInfo}}</view>
+            <view class="charge-amount-body-info-count">{{amount}}</view>
+        </view>
+        <view class="charge-amount-body-list">
+            <view bindtap="onSelectCoupon" class="charge-amount-body-list-item">
+                <view class="left">
+                    <image class="image" src="/public/imgs/img-coupon.png"></image>
+                    <view class="text">
+                        <text>优惠券</text>
+                        <mp-badge content="{{couponCount}}" wx:if="{{couponCount}}"></mp-badge>
+                    </view>
+                </view>
+                <view class="right">
+                    <view class="nouse" wx:if="{{couponCount===0}}">无可用优惠券</view>
+                    <view class="amount" wx:if="{{couponAmount!==''}}">{{couponAmount}}</view>
+                    <mp-icon color="#999999" icon="arrow" size="{{10}}"></mp-icon>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="charge-amount-footer">
+        <button bindtap="handleToPay" class="charge-amount-btn">{{payableAmount}} 去支付</button>
+    </view>
+    <fun-loading wx:if="{{showLoading}}"></fun-loading>
+</view>

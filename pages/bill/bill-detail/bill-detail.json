@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "fun-count-down": "pages\\bill\\bill-detail\\components\\fun-count-down\\fun-count-down",
+    "fun-image": "pages\\bill\\bill-detail\\components\\fun-image\\fun-image",
+    "fun-bottom-alert": "pages\\bill\\bill-detail\\components\\fun-bottom-alert\\fun-bottom-alert",
+    "fun-button": "pages\\bill\\bill-detail\\components\\fun-button\\fun-button",
+    "faq-float-button": "pages\\bill\\bill-detail\\components\\faq-float-button\\faq-float-button",
+    "privacy": "pages\\bill\\bill-detail\\components\\privacy\\privacy"
+  },
+  "navigationBarTitleText": "账单详情"
+}

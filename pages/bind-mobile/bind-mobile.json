@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "otp": "pages\\bind-mobile\\components\\otp\\otp",
+    "text-input": "pages\\bind-mobile\\components\\text-input\\text-input"
+  },
+  "navigationBarTitleText": "绑定新手机号"
+}

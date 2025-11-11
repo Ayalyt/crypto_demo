@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "no-data": "pages\\contract-book\\components\\no-data\\no-data"
+  },
+  "navigationBarTitleText": "合同文书"
+}

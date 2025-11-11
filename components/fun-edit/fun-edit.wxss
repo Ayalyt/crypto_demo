@@ -1,0 +1,38 @@
+.fun-edit {
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    line-height: 102rpx;
+    padding: 0 30rpx
+}
+
+.fun-edit-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.fun-icon {
+    color: #afb2bb;
+    font-size: 22rpx;
+    line-height: inherit
+}
+
+.fun-edit-label {
+    color: #333;
+    display: inline-block;
+    margin-right: 30rpx;
+    min-width: 4em;
+    text-align: justify;
+    text-align-last: justify
+}
+
+.fun-edit-value {
+    color: #828999
+}
+
+.fun-edit-placeholder {
+    color: #c6cbd7
+}

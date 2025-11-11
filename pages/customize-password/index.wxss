@@ -1,0 +1,33 @@
+.container {
+    padding: 27rpx 75rpx
+}
+
+.password-wrap {
+    border-bottom: 1rpx solid #eaeaea;
+    margin-top: 68rpx
+}
+
+.confirm {
+    background: #fff0c3;
+    border-radius: 45rpx;
+    color: #d3bd85;
+    line-height: 90rpx;
+    text-align: center
+}
+
+.text-wrap {
+    margin-bottom: 20rpx;
+    margin-top: 20rpx
+}
+
+.text-wrap .text {
+    color: #949aa7;
+    font-size: 26rpx;
+    font-weight: 400;
+    height: 37rpx;
+    line-height: 37rpx
+}
+
+.btn-wrap {
+    margin-top: 80rpx
+}

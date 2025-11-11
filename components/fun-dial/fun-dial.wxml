@@ -1,0 +1,13 @@
+<view class="fun-dial">
+    <fun-drawer extraContentClass="fun-dial-drawer" show="{{open}}">
+        <view class="fun-dial-container">
+            <view class="fun-dial-actions">
+                <view bindtap="onDial" class="dial-action {{index>0?'dial-action-line':''}}" data-item="{{item}}" wx:for="{{salesInfo}}" wx:key="salePhone">
+                    <text class="dial-name" wx:if="{{item&&item.saleName}}">{{item.saleName}}</text>
+                    <text class="dial-number">{{item.salePhone}}</text>
+                </view>
+            </view>
+            <view bindtap="onClose" class="fun-dial-cancel">取消</view>
+        </view>
+    </fun-drawer>
+</view>

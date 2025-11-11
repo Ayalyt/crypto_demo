@@ -1,0 +1,4 @@
+<view class="result-view">
+    <image class="result-image" src="/public/imgs/{{payResultImage}}.png"></image>
+    <text class="result-text">{{payResultTip}}</text>
+</view>

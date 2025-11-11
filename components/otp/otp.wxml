@@ -1,0 +1,1 @@
+<view bindtap="onClick" class="fun-otp">{{text}}</view>

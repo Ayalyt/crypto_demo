@@ -1,0 +1,107 @@
+.city-selector-wrap {
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    line-height: 102rpx;
+    padding: 0 30rpx
+}
+
+.city-selector-label {
+    color: #333;
+    display: inline-block;
+    margin-right: 30rpx;
+    min-width: 4em;
+    text-align: justify;
+    text-align-last: justify
+}
+
+.city-selector-content {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%
+}
+
+.city-selector-value {
+    color: #828999;
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.city-selector-placeholder {
+    color: #c6cbd7;
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.fun-icon {
+    color: #afb2bb;
+    font-size: 22rpx;
+    line-height: inherit
+}
+
+.selector-content-wrap {
+    height: 80vh
+}
+
+.selector-header {
+    background: #f8f8f8;
+    color: #949aa7;
+    font-size: 32rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    position: relative;
+    text-align: center
+}
+
+.selector-bar {
+    border-bottom: 1rpx solid #eaeaea;
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    line-height: 70rpx;
+    overflow: hidden
+}
+
+.fun-icon-close {
+    font-size: 34rpx;
+    left: 0;
+    line-height: 90rpx;
+    padding: 0 40rpx;
+    position: absolute
+}
+
+.selector-bar-option {
+    float: left;
+    margin: 0 30rpx 0 40rpx
+}
+
+.selector-bar-option.highlight {
+    border-bottom: 1rpx solid #e0ae01;
+    color: #e0ae01
+}
+
+.selector-content {
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    overflow: auto
+}
+
+.selector-option {
+    font-size: 28rpx;
+    line-height: 90rpx;
+    padding: 0 40rpx
+}
+
+.selector-option.current {
+    color: #e0ae01
+}
+
+.selector-option.current .fun-icon {
+    color: #e0ae01;
+    display: inline-block;
+    font-size: 40rpx;
+    padding: 0 50rpx;
+    vertical-align: top
+}

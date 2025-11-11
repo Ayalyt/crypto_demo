@@ -1,0 +1,69 @@
+.tab-bar {
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    position: fixed;
+    right: 0
+}
+
+.tab-bar,.tab-wrapper {
+    display: -webkit-flex;
+    display: flex;
+    height: 110rpx
+}
+
+.tab-wrapper {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 100%
+}
+
+.tab-bar-border {
+    background-color: rgba(153 153 153,.3);
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    width: 100%
+}
+
+.tab-bar-brand {
+    height: 50rpx;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 130rpx
+}
+
+.tab-bar-brand wx-cover-image {
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.tab-bar-item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center
+}
+
+.tab-bar-item wx-cover-image {
+    height: 27px;
+    width: 27px
+}
+
+.tab-bar-item wx-cover-view {
+    font-size: 10px
+}

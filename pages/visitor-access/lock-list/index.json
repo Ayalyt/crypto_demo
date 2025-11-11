@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "开启门禁",
+  "usingComponents": {
+    "fun-count-down": "pages\\visitor-access\\lock-list\\components-v2\\fun-count-down\\index",
+    "fun-button": "pages\\visitor-access\\lock-list\\components-v2\\fun-button\\index",
+    "fun-empty": "pages\\visitor-access\\lock-list\\components-v2\\fun-empty\\index",
+    "fun-loading": "pages\\visitor-access\\lock-list\\components-v2\\fun-loading\\index"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "fun-apartment-list": "pages\\check-in-guide\\components\\fun-apartment-list\\fun-apartment-list",
+    "info-item": "pages\\check-in-guide\\components\\info-item\\info-item",
+    "no-data": "pages\\check-in-guide\\components\\no-data\\no-data"
+  },
+  "navigationBarTitleText": "入住指南"
+}

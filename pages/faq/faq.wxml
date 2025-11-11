@@ -1,0 +1,22 @@
+<view class="container">
+    <fun-apartment-list bind:change="apartmentChange" myClass="faq-header" selectedOrderNo="{{selectedOrderNo}}" showLoading="{{true}}"></fun-apartment-list>
+    <view class="faq-tabs" id="type-list">
+        <view bindtap="onSwitch" class="faq-tab {{current===item.id?'active':''}} {{itemIndex%5!==0?'margin-left-20':''}}" data-name="reservation" data-typeName="{{item.name}}" id="{{item.id}}" wx:for="{{typeList}}" wx:for-index="itemIndex" wx:key="itemIndex">{{item.name}}</view>
+    </view>
+    <view class="faq-content">
+        <scroll-view bindscrolltolower="loadMoreData" class="faq-scroll-view" id="scrollView" lowerThreshold="{{10}}" scrollY="true" style="background-color:{{list.length==0?'white':'#F1F1F1'}};height:{{winHeight}}rpx;min-height:{{scrollHeight}}rpx;" upperThreshold="{{10}}">
+            <no-data id="no-data" noDataShow="{{isShowNoData}}" text="暂无数据"></no-data>
+            <view class="faq-section">
+                <view class="faq-item {{selectedId==item.questionId?'open-answer':''}}" wx:for="{{list}}" wx:key="itemIndex">
+                    <view bind:tap="onClickQuestion" class="faq-question" id="{{item.questionId}}">
+                        <text class="faq-title" id="{{item.questionId}}">{{item.title}}</text>
+                        <text class="fun-icon {{selectedId==item.questionId?'fun-icon-angle-up':'fun-icon-angle-down'}}" id="{{item.questionId}}"></text>
+                    </view>
+                    <view class="faq-answer">{{item.content}}</view>
+                </view>
+                <view class="faq-question-nomore" wx:if="{{!canScroll&&!isShowNoData}}">没有更多数据</view>
+            </view>
+        </scroll-view>
+    </view>
+    <fun-loading wx:if="{{showLoading}}"></fun-loading>
+</view>

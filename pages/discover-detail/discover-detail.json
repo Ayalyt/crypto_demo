@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "fun-loading": "pages\\discover-detail\\components\\fun-loading\\fun-loading"
+  }
+}

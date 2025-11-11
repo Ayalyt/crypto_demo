@@ -1,0 +1,21 @@
+<view class="fun-date">
+    <fun-form-item bind:click="onShow" label="{{label}}" placeholder="{{placeholder}}" required="{{required}}" type="select" value="{{text}}"></fun-form-item>
+    <fun-drawer show="{{show}}">
+        <view class="fun-select-header">
+            <text bindtap="onClose" class="fun-select-close fun-icon fun-icon-close"></text>
+            <text>{{title}}</text>
+            <text bindtap="onConfirm" class="fun-select-confirm fun-icon fun-icon-right"></text>
+        </view>
+        <picker-view bindchange="onColumnChange" class="fun-select-items" indicatorStyle="height: 50px;" value="{{selectedIndex}}">
+            <picker-view-column>
+                <view class="fun-select-item" style="line-height:50px" wx:for="{{years}}" wx:key="{{index}}">{{item}}年</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view class="fun-select-item" style="line-height:50px" wx:for="{{months}}" wx:key="{{index}}">{{item}}月</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view class="fun-select-item" style="line-height:50px" wx:for="{{dates}}" wx:key="{{index}}">{{item}}日</view>
+            </picker-view-column>
+        </picker-view>
+    </fun-drawer>
+</view>

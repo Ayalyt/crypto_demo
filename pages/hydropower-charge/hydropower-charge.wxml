@@ -1,0 +1,21 @@
+<view class="balance">
+    <text class="room">{{apartment.text}}</text>
+    <text class="balance-text">余额 {{apartment.balance}}元</text>
+</view>
+<view class="charge-view">
+    <text class="charge-text">选择充值金额</text>
+    <view class="charge-select-view">
+        <view bindtap="chargeAmountSelected" class="charge-select-view-item {{chargeAmountIndex===index?'charge-view-selectd':''}}" data-index="{{index}}" wx:for="{{chargeAmountArray}}" wx:key="id">{{item.text}}</view>
+    </view>
+    <view class="charge-edit" wx:if="{{chargeAmountIndex===chargeAmountArray.length-1}}">
+        <text class="input-amount-text">输入充值金额</text>
+        <view class="amount {{chargeAmount>999?'number-format':''}}" data-unit="{{unit}}">
+            <input bindinput="amountInput" type="digit" value="{{chargeAmount}}"></input>
+        </view>
+        <text class="input-amount-text">元</text>
+    </view>
+</view>
+<view class="bottom-button">
+    <view bindtap="rechargeTip" class="reserve {{!chargeAmount>0||chargeAmountIndex===-1?'reserve-disabled':''}}">充值</view>
+</view>
+<fun-loading wx:if="{{showLoading}}"></fun-loading>

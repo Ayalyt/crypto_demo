@@ -1,0 +1,71 @@
+<import src="../template/no-more/index"></import>
+<view class="container descover-page">
+    <template is="header" data="{{title:'为您推荐',desc:'查看更多',showMore:true}}"></template>
+    <swiper autoplay class="swiper" wx:if="{{discover.length}}">
+        <swiper-item class="swiper-item" wx:for="{{discover}}" wx:key="activityId">
+            <view bindtap="navigateToDetail" class="banner-wrp" data-id="{{item.activityId}}" data-status="{{item.status}}">
+                <image class="banner" src="{{item.activityHeadImg||defaultImage}}"></image>
+                <view class="banner-desc">
+                    <view class="banner-desc-left">
+                        <view class="banner-desc-left__title">{{item.activityContent}}</view>
+                    </view>
+                    <button class="banner-desc-right fun-button">{{item.status===2?statusMap[item.status].btnText[item.retrospectStatus]:statusMap[item.status].btnText}}</button>
+                </view>
+                <view class="status {{item.status===1?'status-v':''}}" wx:if="{{item.status!==0}}">{{statusMap[item.status].statusText}}</view>
+                <image class="status-bg" src="/public/imgs/status-background.svg"></image>
+                <view class="city">
+                    <view class="important">*</view>
+                    <view>{{item.city}}</view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="header-wrp">
+        <template is="header" data="{{title:'隅星人聚集地',desc:'换种方式带你参观方隅'}}"></template>
+        <image bindtap="handlePublish" class="btn-publish" src="/public/imgs/plus.svg"></image>
+    </view>
+    <view class="fall-container">
+        <view class="fall-left">
+            <template is="community-card" data="{{...item,defaultImage:defaultImage,item:item}}" wx:for="{{leftList}}" wx:key="id"></template>
+        </view>
+        <view class="fall-right">
+            <template is="community-card" data="{{...item,defaultImage:defaultImage}}" wx:for="{{rightList}}" wx:key="id"></template>
+        </view>
+    </view>
+    <template is="no-more" data wx:if="{{noMore}}"></template>
+    <fun-loading wx:if="{{loading}}"></fun-loading>
+</view>
+<privacy></privacy>
+<template name="header">
+    <view bindtap="lookMore" class="header">
+        <view class="header-left">
+            <view class="header-left-title">{{title}}</view>
+            <text class="header-left-desc">{{desc}}</text>
+        </view>
+        <image class="arrow-right {{!showMore?'none':''}}" src="/public/imgs/icon-arrow-right.png"></image>
+    </view>
+</template>
+<template name="community-card">
+    <view bindtap="handleItemClick" class="card-wrp" data-id="{{id}}" data-item="{{item}}">
+        <image class="card-img" mode="aspectFill" src="{{images[0].imageUrl||defaultImage}}" style="height:{{itemHeight}}px;"></image>
+        <view class="card-desc">
+            <text class="card-desc-title">{{publishContent}}</text>
+            <view class="card-desc-footer flex">
+                <view class="card-desc-footer__left flex">
+                    <image class="card-desc-footer__avatar" mode="aspectFill" src="{{memberAvatar||'/public/imgs/logo4040.png'}}"></image>
+                    <view class="card-desc-footer__nickname">{{memberNickname}}</view>
+                </view>
+                <view class="card-desc-footer__right flex">
+                    <view class="card-desc-footer__viewcount">
+                        <image class="icon" src="/public/imgs/icon-eye.svg"></image>
+                        <text>{{browseNumber}}</text>
+                    </view>
+                    <view class="card-desc-footer__likecount">
+                        <image class="icon" src="/public/imgs/icon-heart.svg"></image>
+                        <text>{{likeNumber}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

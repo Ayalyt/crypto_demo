@@ -1,0 +1,10 @@
+<view class="room-password-tap-wrapper">
+    <view bindtap="handleChangeTap" class="room-password-tap-content {{tapKey==='lock'&&'room-password-tap-activity'}}" data-tap-key="lock">
+        <image class="room-password-tap-icon" src="{{tapKey==='lock'?'/public/imgs/icon-lock-activity.png':'/public/imgs/icon-lock.png'}}"></image>
+        <text>密码锁</text>
+    </view>
+    <view bindtap="handleChangeTap" class="room-password-tap-content {{tapKey==='fingerprint'&&'room-password-tap-activity'}}" data-tap-key="fingerprint">
+        <image class="room-password-tap-icon" src="{{tapKey==='fingerprint'?'/public/imgs/icon-fingerprint-activity.png':'/public/imgs/icon-fingerprint.png'}}"></image>
+        <text>指纹锁</text>
+    </view>
+</view>

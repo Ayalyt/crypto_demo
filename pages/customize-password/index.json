@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "text-input": "pages\\customize-password\\components\\text-input\\text-input",
+    "fun-loading": "pages\\customize-password\\components\\fun-loading\\fun-loading"
+  },
+  "navigationBarTitleText": "自定义密码"
+}

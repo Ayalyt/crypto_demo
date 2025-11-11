@@ -1,0 +1,97 @@
+.brand-icons {
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 40rpx;
+    padding: 0 40rpx
+}
+
+.brand-icons .icon-wrapper {
+    margin-bottom: 20rpx
+}
+
+.brand-icons .icon-wrapper,.brand-icons .scroll-view-icon-wrapper {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 165rpx
+}
+
+.brand-icons .icon {
+    border: 1px solid #e2e2e2;
+    border-radius: 50%;
+    height: 110rpx;
+    margin-bottom: 6rpx;
+    width: 110rpx
+}
+
+.less-than-four,.normal-view {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    width: 100%
+}
+
+.less-than-four,.normal-view,.progress-wrapper,.scroll-view-style {
+    display: -webkit-flex;
+    display: flex
+}
+
+.progress-wrapper {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.progress-wrapper .progress {
+    background-color: #ddd;
+    border-radius: 6rpx;
+    height: 6rpx;
+    margin-top: 6rpx;
+    overflow: hidden;
+    position: relative;
+    width: 100rpx
+}
+
+.progress-wrapper .progress .slider {
+    background-color: #ffb15a;
+    border-radius: 6rpx;
+    height: 6rpx;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .1s linear;
+    width: 50rpx
+}
+
+.multi-scroll-view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.scroll {
+    width: 670rpx
+}
+
+.scroll ::-webkit-scrollbar {
+    color: transparent;
+    display: none;
+    height: 0;
+    width: 0
+}
+
+.icon-text {
+    font-size: 24rpx
+}

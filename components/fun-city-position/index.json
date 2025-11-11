@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fun-drawer": "components\\fun-drawer\\fun-drawer",
+    "mp-icon": "components\\fun-city-position\\miniprogram_npm\\weui-miniprogram\\icon\\icon"
+  }
+}

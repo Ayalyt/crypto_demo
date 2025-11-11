@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "otp": "pages\\forget-pwd-old\\components\\otp\\otp",
+    "text-input": "pages\\forget-pwd-old\\components\\text-input\\text-input"
+  },
+  "navigationBarTitleText": "忘记密码"
+}

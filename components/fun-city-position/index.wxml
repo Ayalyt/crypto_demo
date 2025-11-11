@@ -1,0 +1,25 @@
+<view class="fun-city-selector">
+    <view bindtap="onOpen" class="city-selector-wrap">
+        <view class="city-selector-content">
+            <text class="city-selector-label">{{currentCity.name}}</text>
+        </view>
+        <text class="fun-icon fun-icon-angle-down"></text>
+    </view>
+    <fun-drawer direction="top" offset="{{offset}}" show="{{show}}">
+        <view class="selector-content-wrap">
+            <view class="selector-header">{{title}}<text bindtap="onClose" class="fun-icon fun-icon-close"></text>
+            </view>
+            <view class="selector-bar-option">
+                <view class="selector-content-header">当前城市</view>
+                <view class="selector-line">{{currentCity.name}}<mp-icon color="#E0AE01" icon="done"></mp-icon>
+                </view>
+            </view>
+            <scroll-view class="selector-content" scrollY="true" style="height:{{scrollHeight}}rpx">
+                <view class="selector-content-header option-title">全部城市</view>
+                <view bindtap="onSelect" class="selector-option selector-line" data-option="{{item}}" wx:for="{{cityList}}" wx:key="cityId">{{item.cityName}}<mp-icon color="#E0AE01" icon="done" wx:if="{{item.cityId===currentCityId}}"></mp-icon>
+                </view>
+                <view style="height:200rpx"></view>
+            </scroll-view>
+        </view>
+    </fun-drawer>
+</view>

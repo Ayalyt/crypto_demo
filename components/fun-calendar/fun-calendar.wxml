@@ -1,0 +1,13 @@
+<view class="row">
+    <view class="item weeks" wx:for="{{weeks}}">{{item}}</view>
+</view>
+<scroll-view scrollY style="height:{{scrollViewHeight}}px;background:white;">
+    <view wx:for="{{calendarData}}">
+        <view class="month">{{item.key}}</view>
+        <view class="row">
+            <view bindtap="selectedDate" class="item day {{dayItem.type!=2?'invaild-day':''}}" data-date="{{dayItem}}" style="margin-left:{{dayItem.marginLeft}}%;" wx:for="{{item.values}}" wx:for-item="dayItem">
+                <view class="day-back {{dayItem.dateString==selectedDateString?'day-selected':''}}">{{dayItem.day}}</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

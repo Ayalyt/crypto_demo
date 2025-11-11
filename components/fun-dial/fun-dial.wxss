@@ -1,0 +1,74 @@
+.fun-dial {
+    background-color: inherit
+}
+
+.fun-dial-drawer {
+    background-color: inherit!important
+}
+
+.fun-dial-container {
+    padding: 15rpx
+}
+
+.fun-dial-actions {
+    background-color: #fff;
+    border-radius: 15rpx;
+    color: #447bcc;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 32rpx;
+    margin-bottom: 15rpx
+}
+
+.dial-action,.fun-dial-actions {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%
+}
+
+.dial-action {
+    font-size: 40rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    position: relative
+}
+
+.dial-action-line {
+    border-top: 1rpx solid #eaeaea
+}
+
+.dial-name {
+    color: #333;
+    display: inline-block;
+    font-size: 28rpx;
+    left: 15rpx;
+    overflow: hidden;
+    position: absolute;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200rpx
+}
+
+.dial-number {
+    font-family: Consolas,Monaco,monospace
+}
+
+.fun-dial-cancel {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15rpx;
+    color: #447bcc;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 32rpx;
+    height: 96rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%
+}

@@ -1,0 +1,8 @@
+<view class="weui-grids {{extClass}}">
+    <navigator appId="{{item.appId}}" bindcomplete="{{item.bindcomplete}}" bindfail="{{item.bindfail}}" bindsuccess="{{item.bindsuccess}}" class="weui-grid" extraData="{{item.extraData}}" hoverClass="{{item.hoverClass}}" hoverStartTime="{{item.hoverStartTime}}" hoverStayTime="{{item.hoverStayTime}}" hoverStopPropagation="{{item.hoverStopPropagation}}" openType="{{item.openType}}" path="{{item.path}}" target="{{item.target}}" url="{{item.url}}" version="{{item.version}}" wx:for="{{innerGrids}}" wx:key="index">
+        <view class="weui-grid__icon">
+            <image alt class="weui-grid__icon_img" src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="weui-grid__label">{{item.text}}</view>
+    </navigator>
+</view>

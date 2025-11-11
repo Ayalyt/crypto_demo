@@ -1,0 +1,34 @@
+<view class="community-publish">
+    <form bindsubmit="formSubmit">
+        <fun-upload bind:change="onChange" count="{{5}}" data-name="publishImages" label="" limit="{{10*1024*1024}}" pictureType="2"></fun-upload>
+        <view class="title">
+            <input bindinput="handleInputTitle" confirmType="done" maxlength="20" name="publishTheme" placeholder="添加标题, 最多可填写20个字" placeholderStyle="color: #c4c4c4"></input>
+        </view>
+        <view class="content">
+            <textarea bindinput="handleInputContent" confirmType="done" maxlength="200" name="publishContent" placeholder="分享这一刻, 最多可填写200个字" placeholderStyle="color: #c4c4c4"></textarea>
+        </view>
+        <view bindtap="goSelectTopic" class="address-wrp flex" wx:if="{{currentTopic.id}}">
+            <view class="flex">
+                <image class="icon" src="/public/imgs/location.png"></image>
+                <view class="address">{{currentTopic.content}}</view>
+            </view>
+            <image class="icon icon-arrow" src="/public/imgs/icon-right.svg"></image>
+        </view>
+        <view bindtap="goSelectTopic" class="address-wrp flex" wx:else>
+            <view class="flex">
+                <image class="icon" src="/public/imgs/location.png"></image>
+                <view class="address">添加话题</view>
+            </view>
+            <view class="flex">
+                <view class="topic-tip">参加话题会被更多人发现</view>
+                <image class="icon icon-arrow" src="/public/imgs/icon-right.svg"></image>
+            </view>
+        </view>
+        <button class="submit-button" formType="submit">发 布</button>
+        <view bind:tap="goCommunityHistories" class="publish-record">发布记录</view>
+    </form>
+    <view class="mask-style" wx:if="{{showMask}}">
+        <view class="mask-toast">{{publishResult}}</view>
+    </view>
+</view>
+<fun-loading wx:if="{{loading}}"></fun-loading>

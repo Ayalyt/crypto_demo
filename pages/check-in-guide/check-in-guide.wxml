@@ -1,0 +1,12 @@
+<view class="check-in-guide-page">
+    <view class="check-in-guide-header">
+        <view class="check-in-guide-header-img">
+            <image src="/public/imgs/tu.png"></image>
+        </view>
+        <fun-apartment-list bind:change="onMonitorData" myClass="fun-apartment-list-small" showLoading="{{true}}"></fun-apartment-list>
+    </view>
+    <view class="check-in-guide-content">
+        <info-item liveData="{{infoData}}"></info-item>
+    </view>
+    <no-data marginTop="150" noDataShow="{{isNoDataShow}}" text="{{text}}"></no-data>
+</view>

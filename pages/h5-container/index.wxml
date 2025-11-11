@@ -1,0 +1,8 @@
+<view style="padding:30rpx;" wx:if="{{htmlString.length>0}}">
+    <rich-text nodes="{{htmlString}}"></rich-text>
+</view>
+<view class="page-body" wx:if="{{url.length>0}}">
+    <view class="page-section page-section-gap">
+        <web-view binderror="handleError" bindload="handleLoad" bindmessage="handleMessage" src="{{url}}"></web-view>
+    </view>
+</view>

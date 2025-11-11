@@ -1,0 +1,37 @@
+<view class="brand-icons" wx:if="{{list.length}}">
+    <view class="less-than-four" wx:if="{{listType==='lessThanFourView'}}">
+        <view bind:tap="jump" class="icon-wrapper" data-url="{{item.linkUrl}}" wx:for="{{list}}">
+            <image class="icon" mode="aspectFit" src="{{item.imageUrl}}"></image>
+            <view class="icon-text">{{item.foundName}}</view>
+        </view>
+    </view>
+    <view class="normal-view" wx:elif="{{listType==='normalView'}}">
+        <view bind:tap="jump" class="icon-wrapper" data-url="{{item.linkUrl}}" wx:for="{{list}}">
+            <image class="icon" mode="aspectFit" src="{{item.imageUrl}}"></image>
+            <view class="icon-text">{{item.foundName}}</view>
+        </view>
+    </view>
+    <view wx:elif="{{listType==='scrollView'}}">
+        <scroll-view bindscroll="onScroll" class="scroll" scrollX="{{true}}" showScrollbar="{{false}}">
+            <view class="scroll-view-style" style="width:{{670/4*list.length}}rpx">
+                <view bind:tap="jump" class="scroll-view-icon-wrapper" data-foundname="{{item.foundName}}" data-url="{{item.linkUrl}}" wx:for="{{list}}" wx:key="index">
+                    <image class="icon" mode="aspectFit" src="{{item.imageUrl}}"></image>
+                    <view class="icon-text">{{item.foundName}}</view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="progress-wrapper">
+            <view class="progress">
+                <view class="slider" style="left:{{sliderLeft}}rpx"></view>
+            </view>
+        </view>
+    </view>
+    <view wx:elif="{{listType==='multiScrollView'}}">
+        <view class="multi-scroll-view">
+            <view bind:tap="jump" class="icon-wrapper" data-url="{{item.linkUrl}}" wx:for="{{list}}">
+                <image class="icon" mode="aspectFit" src="{{item.imageUrl}}"></image>
+                <view class="icon-text">{{item.foundName}}</view>
+            </view>
+        </view>
+    </view>
+</view>

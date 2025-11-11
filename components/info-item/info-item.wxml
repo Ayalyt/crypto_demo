@@ -1,0 +1,11 @@
+<view class="live-guide-container" wx:for="{{liveData}}" wx:key="index">
+    <view bindtap="toggerVisible" class="header" data-index="{{index}}">
+        <text>{{item.title}}</text>
+        <image class="icon-arrow-down" src="{{!selected[index]?'/public/imgs/icon-bottom.png':'/public/imgs/icon-top.png'}}"></image>
+    </view>
+    <view class="animation" style="height:{{selected[index]?height:0}}rpx">
+        <view class="content">
+            <rich-text nodes="{{item.content}}"></rich-text>
+        </view>
+    </view>
+</view>

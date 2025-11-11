@@ -1,0 +1,13 @@
+<cover-view class="tab-bar">
+    <cover-view class="tab-bar-border"></cover-view>
+    <cover-view class="tab-wrapper">
+        <cover-view bindtap="switchTab" class="tab-bar-brand" data-id="{{brand.id}}" data-path="{{brand.pagePath}}">
+            <cover-image src="{{selected===brand.id?brand.selectedIconPath:brand.iconPath}}"></cover-image>
+            <cover-view style="color:{{selected===brand.id?selectedColor:color}};margin-top:6rpx">{{brand.text}}</cover-view>
+        </cover-view>
+        <cover-view bindtap="switchTab" class="tab-bar-item" data-id="{{item.id}}" data-path="{{item.pagePath}}" wx:for="{{list}}" wx:key="index">
+            <cover-image src="{{selected===item.id?item.selectedIconPath:item.iconPath}}"></cover-image>
+            <cover-view style="color:{{selected===item.id?selectedColor:color}};margin-top:6rpx">{{item.text}}</cover-view>
+        </cover-view>
+    </cover-view>
+</cover-view>

@@ -1,0 +1,35 @@
+<view class="auth-info" wx:if="{{showAuthUserInfo}}">
+    <view class="auth-title">授权提示</view>
+    <view class="auth-desc">请授权您的信息以便获得更好的使用体验</view>
+    <view class="auth-label">该程序将获取以下授权</view>
+    <view class="auth-content-box">
+        <view class="auth-dot"></view>
+        <view>获取你的昵称、头像、性别、地区及位置</view>
+    </view>
+    <view class="auth-btn-box">
+        <view bindtap="onRejectInfoAuth" class="auth-reject-btn">拒绝</view>
+        <button bindtap="onGetUserInfo" class="auth-btn none-border" type="primary">
+            <slot name="auth-info" wx:if="{{showSlot}}"></slot>
+            <text wx:else>{{getUserInfoText}}</text>
+        </button>
+    </view>
+</view>
+<view class="auth-info" wx:if="{{showAuthPhone}}">
+    <view class="auth-title">授权提示</view>
+    <view class="auth-desc">请授权您的信息以便获得更好的使用体验</view>
+    <view class="auth-label">该程序将获取以下授权</view>
+    <view class="auth-content-box">
+        <view class="auth-dot"></view>
+        <view>获取你的手机号</view>
+    </view>
+    <view class="auth-btn-box">
+        <view bindtap="onRejectAuth" class="auth-reject-btn">拒绝</view>
+        <button bindgetphonenumber="onGetPhoneNumber" class="auth-btn none-border" openType="getPhoneNumber" type="primary">
+            <slot name="auth-phone" wx:if="{{showSlot}}"></slot>
+            <text wx:else>{{getPhoneNumberText}}</text>
+        </button>
+    </view>
+</view>
+<slot name="content" wx:if="{{isAuthorited}}"></slot>
+<slot wx:if="{{isAuthorited}}"></slot>
+<privacy></privacy>

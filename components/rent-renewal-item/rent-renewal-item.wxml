@@ -1,0 +1,42 @@
+<view bindtap="goToDetails" class="rent-renewal-item-part cell" data-item="{{data}}" data-type="1" wx:for="{{listData}}" wx:for-index="listIndex" wx:for-item="data" wx:key="listIndex">
+    <view class="header">
+        <text class="main">{{data.type=='RELET'?'续租':'退租'}}</text>
+        <text class="right" style="color:{{data.status=='YQX'?'#AFB2BB':'#EB8311'}};">
+      {{data.evictionStatusDesc}}
+    </text>
+    </view>
+    <view class="content">
+        <block wx:if="{{data.type=='RELET'}}">
+            <view class="date-row" wx:if="{{data.type=='RELET'}}">
+                <text class="left">续租</text>
+                <text class="main">{{data.rentContent}}</text>
+            </view>
+            <view class="date-row" wx:if="{{data.payType}}">
+                <text class="left">押付方式</text>
+                <text class="main">{{data.payType.description}}</text>
+            </view>
+        </block>
+        <view class="date-row" wx:else>
+            <text class="left">退租日期</text>
+            <text class="main">{{data.evictionTimeText}}</text>
+        </view>
+        <view class="date-row">
+            <text class="left">申请日期</text>
+            <text class="main">{{data.createTimeText}}</text>
+        </view>
+        <view class="date-row" wx:if="{{data.canClickPay===1}}">
+            <text class="left">应交账单</text>
+            <text class="main">{{data.payAmount}}</text>
+        </view>
+        <view class="date-row" wx:if="{{data.canRefundAmount===1}}">
+            <text class="left">退款金额</text>
+            <text class="main">{{data.refundAmount}}</text>
+        </view>
+    </view>
+    <view class="line" wx:if="{{data.footerNodesArray.length>0}}"></view>
+    <view class="btn-row" wx:if="{{data.footerNodesArray.length>0}}">
+        <view catchtap="goToEditRenewal" class="btn-con" data-edit="{{isEdit}}" data-list="{{listIndex}}" data-type="{{button.type}}" wx:for="{{data.footerNodesArray}}" wx:for-item="button">
+            <text>{{button.title}}</text>
+        </view>
+    </view>
+</view>

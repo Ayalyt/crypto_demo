@@ -1,0 +1,6 @@
+<view bind:tap="closePopup" class="fun-mask" wx:if="{{show}}">
+    <view class="ad-image">
+        <image mode="aspectFit" src="{{imageUrl}}"></image>
+    </view>
+    <view bind:tap="jump" class="jump-button" wx:if="{{linkUrl}}"></view>
+</view>

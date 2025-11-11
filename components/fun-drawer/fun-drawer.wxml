@@ -1,0 +1,6 @@
+<view class="fun-drawer fun-drawer-{{direction}} fun-drawer-{{status}}" wx:if="{{status==='show'||status==='hiding'||status==='hidden'&&!destroyOnClose}}">
+    <fun-mask bind:close="onClose" closable="{{maskClosable}}" show="{{status==='show'}}" zIndex="{{zIndex}}" wx:if="{{mask}}"></fun-mask>
+    <view class="fun-drawer-content extra-content-class" style="z-index:{{zIndex}};{{direction}}: {{offset}}rpx">
+        <slot></slot>
+    </view>
+</view>

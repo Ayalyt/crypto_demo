@@ -1,0 +1,31 @@
+<block wx:if="{{wrapperShow}}">
+    <view ariaLabel="关闭" ariaRole="button" bindtap="closeActionSheet" class="weui-mask {{innerShow?'weui-animate-fade-in':'weui-animate-fade-out'}} {{maskClass}}" wx:if="{{mask}}"></view>
+    <view ariaModal="true" ariaRole="dialog" class="weui-actionsheet {{innerShow?'weui-animate-slide-up':'weui-animate-slide-down'}} {{extClass}}">
+        <view class="weui-actionsheet__title" tabindex="0" wx:if="{{title}}">
+            <view class="weui-actionsheet__title-text">{{title}}</view>
+        </view>
+        <slot name="title" wx:else></slot>
+        <view class="{{!showCancel&&index===actions.length-1?'weui-actionsheet__action':'weui-actionsheet__menu'}}" wx:for="{{actions}}" wx:for-item="actionItem" wx:key="index">
+            <block wx:if="{{utils.isNotSlot(actionItem)}}">
+                <view ariaRole="button" bindtap="buttonTap" class="weui-actionsheet__cell {{item.type==='warn'?'weui-actionsheet__cell_warn':''}}" data-groupindex="{{index}}" data-index="{{actionIndex}}" data-value="{{item.value}}" hoverClass="weui-active" wx:for="{{actionItem}}" wx:for-index="actionIndex" wx:key="actionIndex">{{item.text}}</view>
+            </block>
+            <slot name="{{actionItem}}" wx:else></slot>
+        </view>
+        <view class="weui-actionsheet__action" wx:if="{{showCancel}}">
+            <view ariaRole="button" bindtap="closeActionSheet" class="weui-actionsheet__cell weui-actionsheet__cell_cancel" data-type="close" hoverClass="weui-active" id="iosActionsheetCancel">{{cancelText}}</view>
+        </view>
+    </view>
+</block>
+
+<wxs module="utils">
+var join = (function(a, b) {
+  return (a + b)
+});
+var isNotSlot = (function(v) {
+  return (typeof v !== 'string')
+});
+module.exports = ({
+  join: join,
+  isNotSlot: isNotSlot,
+});
+</wxs>

@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="profile-common-info">基础信息</view>
+    <view class="section link-wrap">
+        <view bindtap="onShowInfo" class="link">
+            <text class="label">我的信息</text>
+            <text class="fun-icon fun-icon-angle-right"></text>
+        </view>
+        <view bindtap="onChangeMobile" class="link">
+            <view>
+                <text class="label">手机号</text>
+                <text class="mobile">{{mobile}}</text>
+            </view>
+            <text class="fun-icon fun-icon-angle-right"></text>
+        </view>
+        <view bindtap="goInvoice" class="link">
+            <text class="label">发票抬头设置</text>
+            <text class="fun-icon fun-icon-angle-right"></text>
+        </view>
+    </view>
+    <view class="section">
+        <view bindtap="onLogout" class="logout label">退出登录</view>
+    </view>
+</view>

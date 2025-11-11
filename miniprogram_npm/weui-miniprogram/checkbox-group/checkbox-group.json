@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mp-cells": "miniprogram_npm\\weui-miniprogram\\cells\\cells"
+  }
+}

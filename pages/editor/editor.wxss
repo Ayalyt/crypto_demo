@@ -1,0 +1,46 @@
+page {
+    background: #f4f4f4
+}
+
+.editor-wrap {
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    line-height: 102rpx;
+    padding: 0 30rpx
+}
+
+.editor-input {
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.editor-save {
+    color: #e0ae01;
+    padding: 0 30rpx
+}
+
+.idCardNo-view {
+    display: -webkit-flex;
+    display: flex
+}
+
+.idCardNo-label {
+    margin-right: 30rpx
+}
+
+.container .fun-text-input {
+    height: 102rpx
+}
+
+.editor-tips {
+    color: #949aa7;
+    font-size: 24rpx;
+    padding: 20rpx 30rpx
+}
+
+.btn-wrap {
+    padding: 30rpx
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fun-select": "components\\fun-select\\fun-select",
+    "fun-drawer": "components\\fun-drawer\\fun-drawer"
+  }
+}

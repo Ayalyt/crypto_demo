@@ -1,0 +1,8 @@
+<view bindtap="onEdit" class="fun-edit">
+    <view class="fun-edit-content">
+        <text class="fun-edit-label">{{label}}</text>
+        <text class="fun-edit-value" wx:if="{{value}}">{{value}}</text>
+        <text class="fun-edit-placeholder" wx:if="{{!value}}">{{placeholder}}</text>
+    </view>
+    <text class="fun-icon fun-icon-angle-right"></text>
+</view>

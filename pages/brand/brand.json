@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "welcome-popup": "pages\\brand\\components\\welcome-popup\\welcome-popup",
+    "privacy": "pages\\brand\\components\\privacy\\privacy"
+  }
+}

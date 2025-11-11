@@ -1,0 +1,124 @@
+.charge-amount-content .charge-amount-header {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #f8f8f8;
+    display: -webkit-flex;
+    display: flex;
+    height: 90rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.charge-amount-content .charge-amount-header .close {
+    width: 50rpx
+}
+
+.charge-amount-content .charge-amount-header .title {
+    color: #949aa7;
+    font-size: 32rpx
+}
+
+.charge-amount-content .charge-amount-header .right {
+    height: 50rpx;
+    width: 50rpx
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-info {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #f8f8f8;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 215rpx;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-info .charge-amount-body-info-room {
+    color: #333;
+    font-size: 26rpx
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-info .charge-amount-body-info-count {
+    color: #333;
+    font-size: 60rpx;
+    margin-top: 10rpx
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-list {
+    background: #fff
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-list .charge-amount-body-list-item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    height: 162rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 30rpx
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-list .charge-amount-body-list-item .left {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-list .charge-amount-body-list-item .left .image {
+    height: 72rpx;
+    margin-right: 40rpx;
+    width: 72rpx
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-list .charge-amount-body-list-item .left .text {
+    position: relative
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-list .charge-amount-body-list-item .right {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-list .charge-amount-body-list-item .right .nouse {
+    color: #787878;
+    font-size: 26rpx;
+    margin-right: 10rpx
+}
+
+.charge-amount-content .charge-amount-body .charge-amount-body-list .charge-amount-body-list-item .right .amount {
+    color: #f40000;
+    font-size: 30rpx;
+    margin-right: 10rpx
+}
+
+.charge-amount-content .charge-amount-footer {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 108rpx;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.charge-amount-content .charge-amount-footer .charge-amount-btn {
+    background: #ffdf83;
+    border-radius: 42rpx;
+    color: #795600;
+    font-size: 34rpx;
+    height: 78rpx;
+    width: 692rpx
+}

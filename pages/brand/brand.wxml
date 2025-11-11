@@ -1,0 +1,26 @@
+<view class="wrapper">
+    <view class="fixed-view">
+        <swiper autoplay bindchange="swiperChange" class="full" duration="{{500}}" indicatorDots="{{false}}" interval="{{5000}}" showScrollbar="{{false}}" wx:if="{{brandList.length}}">
+            <swiper-item itemId="{{item.id}}" wx:for="{{brandList}}" wx:key="index">
+                <image class="full" mode="scaleToFill" src="{{item.imageUrl}}"></image>
+            </swiper-item>
+        </swiper>
+        <view class="animate-icon">
+            <view>
+                <view class="dots">
+                    <view class="{{coverCurrent===index?'dot-active':'dot'}}" wx:for="{{brandList.length}}" wx:key="index"></view>
+                </view>
+                <view class="z-move">
+                    <image mode="widthFix" src="../../public/imgs/animation_arrow.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view style="padding-top:{{scrollViewHeight}}px;width:100%;background-color:transparent;" wx:if="{{brandList.length}}">
+        <view class="cover-view" wx:for="{{currentBrandImageList}}" wx:key="index">
+            <image class="full-width" mode="widthFix" src="{{item.imageUrl}}"></image>
+        </view>
+    </view>
+    <welcome-popup refresh="{{welcomePopupFlag}}"></welcome-popup>
+</view>
+<privacy></privacy>

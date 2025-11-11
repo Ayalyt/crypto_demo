@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "otp": "pages\\login\\components\\otp\\otp",
+    "text-input": "pages\\login\\components\\text-input\\text-input"
+  },
+  "navigationBarTitleText": "登录"
+}

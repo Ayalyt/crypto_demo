@@ -1,0 +1,19 @@
+<view class="container">
+    <view class="mobile-wrap">
+        <text-input bindblur="onBlur" bindinput="onInput" data-field="mobile" maxlength="11" placeholder="请输入手机号" type="number" value="{{mobile}}"></text-input>
+    </view>
+    <view class="password-wrap">
+        <text-input password bindinput="onInput" class="password" data-field="password" maxlength="20" placeholder="请输入密码"></text-input>
+        <text bindtap="onForgetPwd" class="forget-link">忘记密码</text>
+    </view>
+    <view class="btn-wrap">
+        <button bindtap="onLogin" class="fun-button login-btn" disabled="{{disabled}}">登录</button>
+    </view>
+    <view class="link-wrap">
+        <text bindtap="onOtpLogin" class="link otp-login">短信验证码登录</text>
+    </view>
+    <view class="protocol-wrap">
+        <view>登录/注册/找回密码均表示您已同意</view>
+        <view bindtap="onShowProtocol" class="protocol">《方隅公寓注册协议》</view>
+    </view>
+</view>

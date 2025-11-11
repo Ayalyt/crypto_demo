@@ -1,0 +1,52 @@
+.fun-select {
+    background: #fff
+}
+
+.fun-select-header {
+    background: #f8f8f8;
+    border-bottom: 1rpx solid #efefef;
+    color: #949aa7;
+    font-size: 32rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center
+}
+
+.fun-select-close,.fun-select-confirm {
+    height: 90rpx;
+    line-height: 90rpx;
+    position: absolute;
+    top: 0;
+    width: 90rpx
+}
+
+.fun-select-bottom,.fun-select-item {
+    background-color: #fff;
+    color: #333;
+    font-size: 36rpx;
+    height: 84rpx;
+    line-height: 84rpx;
+    text-align: center
+}
+
+.fun-select-bottom {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0
+}
+
+.fun-select-item {
+    border-bottom: 1rpx solid #eaeaea
+}
+
+.fun-select-bg {
+    background-color: #f8f8f8
+}
+
+.fun-select-options {
+    margin-bottom: 80rpx;
+    max-height: 40vh;
+    overflow-y: scroll;
+    padding-bottom: 30rpx
+}

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fun-drawer": "pages\\feedback\\components\\apartment-select\\components\\fun-drawer\\fun-drawer"
+  }
+}

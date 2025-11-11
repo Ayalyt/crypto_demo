@@ -1,0 +1,24 @@
+<view class="found-wrapper">
+    <view class="top-banners">
+        <block wx:if="{{topBannerList.length}}">
+            <view class="swipers" wx:if="{{topBannerList.length===1}}">
+                <view class="swiper">
+                    <image src="{{topBannerList[0].imageUrl}}"></image>
+                </view>
+            </view>
+            <swiper autoplay indicatorDots circular="{{true}}" class="swipers" duration="{{500}}" interval="{{5000}}" wx:else>
+                <swiper-item class="swiper" itemId="{{item.id}}" wx:for="{{topBannerList}}" wx:key="index">
+                    <image src="{{item.imageUrl}}"></image>
+                </swiper-item>
+            </swiper>
+        </block>
+    </view>
+    <brand-icons bind:jump="goBrand" data="{{externalJumpList}}"></brand-icons>
+    <view class="waist-banners" wx:if="{{waistBannerList.length}}">
+        <view>
+            <view bind:tap="goTwoBrand" class="wrapper" data-url="{{item.linkUrl}}" wx:for="{{waistBannerList}}" wx:key="index">
+                <image class="banner" mode="aspectFit" src="{{item.imageUrl}}"></image>
+            </view>
+        </view>
+    </view>
+</view>

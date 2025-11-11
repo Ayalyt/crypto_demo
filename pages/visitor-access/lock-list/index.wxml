@@ -1,0 +1,36 @@
+<view class="visitor-access-lock-list">
+    <view class="header">
+        <view wx:if="{{isLessThan3Seconds&&status===2}}">请耐心等待，长时间未通过请刷新。</view>
+        <view wx:elif="{{status===3||status===4}}">本次请求已失效。</view>
+        <view class="count-down" wx:elif="{{!isLessThan3Seconds&&status===2}}">
+            <view>请在10分钟内开门，有效时长:</view>
+            <view class="count-down-text">
+                <fun-count-down bindend="handleCountDownEnd" data="{{countDown}}" type="minute"></fun-count-down>
+            </view>
+        </view>
+    </view>
+    <view class="lock-list">
+        <view class="title">开启门禁</view>
+        <view class="lock-list-content">
+            <view bindtap="handleClickOpen" class="lock-item" data-device-id="{{item.deviceId}}" wx:for="{{accessControlInfoList}}" wx:key="deviceId">
+                <view class="name">{{item.deviceName}}</view>
+                <view class="item-loading" wx:if="{{status===2&&isLessThan3Seconds}}">
+                    <view class="load_circle"></view>
+                    <text class="loading-text">申请中...</text>
+                </view>
+                <view wx:if="{{!isLessThan3Seconds&&status===2}}">
+                    <image class="power-img" src="{{item.powerPng}}"></image>
+                </view>
+            </view>
+            <view class="empty">
+                <fun-empty info="暂无门禁" wx:if="{{!accessControlInfoList.length}}"></fun-empty>
+            </view>
+        </view>
+    </view>
+    <view class="footer-btn-group">
+        <view class="footer-btn">
+            <fun-button bindclick="handleRefresh" text="刷新"></fun-button>
+        </view>
+    </view>
+</view>
+<fun-loading wx:if="{{showLoading}}"></fun-loading>

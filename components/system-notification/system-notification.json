@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fun-mask": "components\\system-notification\\components\\fun-mask\\fun-mask",
+    "fun-image": "components\\system-notification\\components\\fun-image\\fun-image"
+  }
+}

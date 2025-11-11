@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "全部活动",
+  "usingComponents": {
+    "fun-loading": "pages\\acitivity-list\\components\\fun-loading\\fun-loading"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100
+}

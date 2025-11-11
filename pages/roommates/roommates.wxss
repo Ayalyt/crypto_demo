@@ -1,0 +1,24 @@
+.roommate-header {
+    background: linear-gradient(270deg,#333,#2c2825);
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 24rpx;
+    font-weight: 700;
+    height: 88rpx;
+    line-height: 88rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    width: 100%
+}
+
+.reserve {
+    background-color: #ffdf83;
+    border-radius: 50rpx;
+    color: #795600;
+    float: right;
+    height: 78rpx;
+    line-height: 78rpx;
+    margin-right: 20rpx;
+    text-align: center;
+    width: 234rpx
+}

@@ -1,0 +1,7 @@
+.time {
+    color: #f15d61;
+    font-size: 24rpx;
+    font-weight: 700;
+    text-align: center;
+    width: 32rpx
+}

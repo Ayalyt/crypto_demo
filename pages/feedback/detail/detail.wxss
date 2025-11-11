@@ -1,0 +1,102 @@
+page {
+    background: #f4f4f4
+}
+
+.container {
+    background: #fff;
+    padding-bottom: 150rpx
+}
+
+.opinion-tab {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    height: 154rpx;
+    width: 100%
+}
+
+.opinion-tab,.opinion-tab-item {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.opinion-tab-item {
+    display: -webkit-flex;
+    display: flex;
+    height: 64rpx;
+    transition: all .1s linear;
+    width: 90rpx
+}
+
+.opinion-tab-item-right {
+    margin-left: 150rpx
+}
+
+.line-input-label {
+    float: left;
+    height: 43.2rpx;
+    margin-right: 20rpx;
+    margin-top: 20rpx
+}
+
+.text-input-font {
+    font-size: 28rpx
+}
+
+.required {
+    color: #f15d61
+}
+
+.form-field {
+    padding: 0 30rpx
+}
+
+.line-field {
+    border-bottom: 1rpx solid #f2f2f2
+}
+
+.question-field {
+    padding: 30rpx
+}
+
+.upload-field {
+    padding: 30rpx 0 30rpx 30rpx
+}
+
+.question-label {
+    display: block;
+    margin-bottom: 23rpx
+}
+
+.opinion-tab-item-activited {
+    border-bottom: 2rpx solid #111010
+}
+
+.textarea-placeholder {
+    color: #949aa7;
+    font-size: 26rpx
+}
+
+.tips {
+    color: #828999;
+    font-size: 24rpx
+}
+
+.submit-wrap {
+    background: #fff;
+    bottom: 0;
+    box-sizing: border-box;
+    padding-bottom: calc(env(safe-area-inset-bottom) / 2);
+    position: fixed;
+    text-align: right;
+    width: 100%
+}
+
+.submit-btn {
+    display: block;
+    font-size: 30rpx;
+    height: 78rpx;
+    margin: 15rpx 80rpx;
+    padding: 0 74rpx
+}

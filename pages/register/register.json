@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "text-input": "pages\\register\\components\\text-input\\text-input"
+  },
+  "navigationBarTitleText": "注册"
+}

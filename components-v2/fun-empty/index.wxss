@@ -1,0 +1,17 @@
+.fun-empty {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.fun-empty .fun-tmpty-info {
+    color: #949aa7;
+    font-size: 28rpx;
+    font-weight: 400;
+    line-height: 40rpx
+}

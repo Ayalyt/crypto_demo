@@ -1,0 +1,176 @@
+page {
+    background: #f4f4f4;
+    height: 100%
+}
+
+.balance {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #2d3037;
+    display: -webkit-flex;
+    display: flex;
+    height: 88rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    width: auto
+}
+
+.room {
+    font-weight: 500
+}
+
+.balance-text,.room {
+    color: #fff;
+    font-family: PingFangSC;
+    font-size: 24rpx
+}
+
+.balance-text {
+    font-weight: 400
+}
+
+.charge-view {
+    background: #fff;
+    padding: 40rpx 30rpx
+}
+
+.charge-text {
+    color: #333;
+    font-family: PingFangSC;
+    font-size: 34rpx;
+    font-weight: 500
+}
+
+.charge-edit {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.charge-image {
+    height: 60rpx;
+    width: 60rpx
+}
+
+.charge-image.disabled {
+    opacity: .2
+}
+
+.amount {
+    border-bottom: 1px solid #d8d8d8;
+    color: #333;
+    font-size: 40rpx;
+    margin: 0rpx 24rpx;
+    padding: 10rpx 18rpx;
+    position: relative;
+    width: 25%
+}
+
+.number-format::before {
+    border-bottom: 10rpx solid #d8d8d8;
+    border-left: 6rpx solid transparent;
+    border-right: 6rpx solid transparent;
+    bottom: 5rpx;
+    content: "";
+    display: block;
+    height: 0;
+    left: 20rpx;
+    position: absolute;
+    width: 0;
+    z-index: 1000
+}
+
+.number-format::after {
+    bottom: -26rpx;
+    color: #828999;
+    content: attr(data-unit);
+    display: block;
+    font-size: 20rpx;
+    height: 20rpx;
+    left: 18rpx;
+    position: absolute;
+    z-index: 1000
+}
+
+.fun-button-left {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    height: 78rpx;
+    line-height: 78rpx;
+    margin-left: 20rpx;
+    text-align: center
+}
+
+.prepay {
+    color: #949aa7;
+    font-size: 24rpx;
+    font-weight: 400
+}
+
+.charge-amount {
+    font-size: 36rpx
+}
+
+.charge-amount,.money {
+    color: #e0ae01;
+    font-weight: 500
+}
+
+.money {
+    font-size: 24rpx
+}
+
+.charge-select-view {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 10rpx 0 30rpx
+}
+
+.charge-select-view-item {
+    background: #f7f5f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.14);
+    color: #333;
+    font-size: 34rpx;
+    height: 130rpx;
+    line-height: 130rpx;
+    margin-top: 20rpx;
+    text-align: center;
+    width: 30%
+}
+
+.input-amount-text {
+    color: #333;
+    font-size: 32rpx
+}
+
+.bottom-button {
+    margin: 80rpx 30rpx 0
+}
+
+.reserve {
+    background-color: #ffdf83;
+    border-radius: 50rpx;
+    color: #795600;
+    height: 78rpx;
+    line-height: 78rpx;
+    text-align: center;
+    width: 100%
+}
+
+.reserve-disabled {
+    background: #ffe9aa;
+    color: #d9bd6b
+}
+
+.charge-view-selectd {
+    background-color: #ffdf83
+}

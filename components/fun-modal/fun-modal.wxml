@@ -1,0 +1,17 @@
+<view class="show-fun-modal fun-modal-container-enter-done " wx:if="{{isShowModal}}">
+    <view class="fun-modal">
+        <view class="fun-modal-header">
+            <view bindtap="hideFunModal" class="header-left">取消</view>
+            <view class="rent-explain">{{modalTitle}}</view>
+            <view class="header-right">确定</view>
+        </view>
+        <view class="picker-container">
+            <picker-view bindchange="bindchange" indicatorClass="picker-view" style="width:100%;height:400rpx;text-align:center" value="{{defaultValue}}">
+                <picker-view-column>
+                    <view style="line-height:84rpx;" wx:for="{{items}}" wx:key="item.index">{{item.labels}}</view>
+                </picker-view-column>
+            </picker-view>
+        </view>
+    </view>
+    <view class="mask"></view>
+</view>

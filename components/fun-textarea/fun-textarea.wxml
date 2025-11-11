@@ -1,0 +1,10 @@
+<view class="fun-textarea {{platform}}">
+    <textarea bindblur="onBlur" bindinput="onInput" class="textarea-input" focus="{{inputing}}" maxlength="{{maxlength}}" placeholderClass="textarea-placeholder" value="{{inputValue}}" wx:if="{{inputing}}"></textarea>
+    <view bindtap="onSwitch" class="textarea-show textarea-show-placeholder" wx:if="{{!inputing&&!inputValue}}">{{placeholder}}</view>
+    <view bindtap="onSwitch" class="textarea-show" wx:if="{{!inputing&&inputValue}}">
+        <view class="value-text" wx:for="{{inputValueArr}}" wx:key="{{index}}">
+            <text space="nbsp">{{item}}</text>
+        </view>
+    </view>
+    <text class="textarea-count" wx:if="{{showCount}}">{{inputValue.length}}/{{maxlength}}</text>
+</view>

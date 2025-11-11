@@ -1,0 +1,25 @@
+{
+  "usingComponents": {
+    "actionsheet": "miniprogram_npm\\weui-miniprogram\\actionsheet\\actionsheet",
+    "form-page": "miniprogram_npm\\weui-miniprogram\\form-page\\form-page",
+    "navigation-bar": "miniprogram_npm\\weui-miniprogram\\navigation-bar\\navigation-bar",
+    "form": "miniprogram_npm\\weui-miniprogram\\form\\form",
+    "cell": "miniprogram_npm\\weui-miniprogram\\cell\\cell",
+    "icon": "miniprogram_npm\\weui-miniprogram\\icon\\icon",
+    "toptips": "miniprogram_npm\\weui-miniprogram\\toptips\\toptips",
+    "loading": "miniprogram_npm\\weui-miniprogram\\loading\\loading",
+    "tabbar": "miniprogram_npm\\weui-miniprogram\\tabbar\\tabbar",
+    "cells": "miniprogram_npm\\weui-miniprogram\\cells\\cells",
+    "half-screen-dialog": "miniprogram_npm\\weui-miniprogram\\half-screen-dialog\\half-screen-dialog",
+    "slideview": "miniprogram_npm\\weui-miniprogram\\slideview\\slideview",
+    "msg": "miniprogram_npm\\weui-miniprogram\\msg\\msg",
+    "dialog": "miniprogram_npm\\weui-miniprogram\\dialog\\dialog",
+    "uploader": "miniprogram_npm\\weui-miniprogram\\uploader\\uploader",
+    "gallery": "miniprogram_npm\\weui-miniprogram\\gallery\\gallery",
+    "grids": "miniprogram_npm\\weui-miniprogram\\grids\\grids",
+    "checkbox": "miniprogram_npm\\weui-miniprogram\\checkbox\\checkbox",
+    "badge": "miniprogram_npm\\weui-miniprogram\\badge\\badge",
+    "searchbar": "miniprogram_npm\\weui-miniprogram\\searchbar\\searchbar",
+    "checkbox-group": "miniprogram_npm\\weui-miniprogram\\checkbox-group\\checkbox-group"
+  }
+}

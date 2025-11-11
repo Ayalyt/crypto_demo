@@ -1,0 +1,50 @@
+.live-guide-container {
+    border-bottom: 1px solid #eaeaea
+}
+
+.live-guide-container .header {
+    -webkit-align-items: center;
+    align-items: center;
+    background-image: url("data:img/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAFVBMVEUAAAD52XD113P/3Hny1nnz1nb32W+ghL28AAAABXRSTlMAf3gSfxObk+0AAABYSURBVAjXYwACZgMGCFBLgtCMaWkCYIZoWloiWCA0DCLkGpoKFmIKBYmkKTCYhoJZyWBGKIjBBKRTw4BSQMVAANLPAlQTCtQOFgoEUmAhAYhlqkFAAu4MAGwTFqHkNJt6AAAAAElFTkSuQmCC");
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: 16rpx 16rpx;
+    color: #333;
+    display: -webkit-flex;
+    display: flex;
+    font-family: PingFangSC-Medium;
+    font-size: 30rpx;
+    font-weight: 700;
+    height: 104rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 0 30rpx 0 40rpx;
+    padding-left: 30rpx
+}
+
+.content {
+    background-color: #f9f9f9;
+    color: #949aa7;
+    font-size: 24rpx;
+    height: auto;
+    line-height: 60rpx;
+    overflow: hidden;
+    padding: 20rpx 69rpx
+}
+
+.animation {
+    overflow: hidden;
+    transition: height .3s
+}
+
+.hidden {
+    height: 0
+}
+
+.icon-arrow-down {
+    color: #afb2bb;
+    font-size: 22rpx;
+    height: 15rpx;
+    line-height: inherit;
+    width: 22rpx
+}

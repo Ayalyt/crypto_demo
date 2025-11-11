@@ -1,0 +1,123 @@
+.scroll-no-data {
+    -webkit-align-content: center;
+    align-content: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.cell {
+    margin-bottom: 18rpx;
+    padding: 0
+}
+
+.header {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    height: 88rpx;
+    padding: 0 14px
+}
+
+.bill-type-image {
+    height: 30rpx;
+    width: 30rpx
+}
+
+.bill-type {
+    color: #333;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    font-size: 30rpx;
+    font-weight: 500;
+    margin-left: 6rpx
+}
+
+.status-desc {
+    color: #eb8311;
+    font-size: 28rpx
+}
+
+.info {
+    background: #fafafa;
+    padding: 29rpx 14px 35rpx
+}
+
+.room-info {
+    color: #949aa7;
+    font-size: 30rpx
+}
+
+.rent-info {
+    color: #949aa7;
+    font-size: 24rpx;
+    margin-top: 21rpx
+}
+
+.amount-text {
+    color: #333;
+    font-size: 28rpx
+}
+
+.money {
+    font-size: 20rpx
+}
+
+.amount,.money {
+    color: #e0ae01;
+    font-weight: 500
+}
+
+.amount {
+    font-size: 28rpx
+}
+
+.unpayAmount-money,.unpayAmount-text {
+    color: #f15d61;
+    font-size: 18rpx
+}
+
+.unpayAmount-amount {
+    color: #f15d61;
+    font-size: 22rpx
+}
+
+.footer {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    height: 88rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0rpx 14px
+}
+
+.pay-button {
+    background: #ffdf83;
+    border-radius: 30rpx;
+    color: #795600;
+    font-size: 24rpx;
+    height: 60rpx;
+    width: 156rpx
+}
+
+wx-button::after {
+    border: none
+}
+
+.cancel-button {
+    background: #fff;
+    border: 1px solid #c6cbd7;
+    border-radius: 30rpx;
+    color: #949aa7;
+    font-size: 24rpx;
+    height: 60rpx;
+    width: 156rpx
+}

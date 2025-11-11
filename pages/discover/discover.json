@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "活动",
+  "usingComponents": {
+    "fun-button": "pages\\discover\\components\\fun-button\\fun-button",
+    "bottom-loading": "pages\\discover\\components\\bottom-loading\\bottom-loading",
+    "fun-loading": "pages\\discover\\components\\fun-loading\\fun-loading",
+    "privacy": "pages\\discover\\components\\privacy\\privacy"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100
+}

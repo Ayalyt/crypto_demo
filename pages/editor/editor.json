@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "text-input": "pages\\editor\\components\\text-input\\text-input",
+    "fun-select": "pages\\editor\\components\\fun-select\\fun-select"
+  }
+}

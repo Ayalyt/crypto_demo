@@ -1,0 +1,8 @@
+<view class="wx_loading_view {{animated?'wx_loading_view__animated':''}} {{!show?'wx_loading_view__hide':''}} {{extClass}}" id="wx_loading_view" style="{{animated?'transition: height '+duration+'ms ease;':''}}">
+    <view class="loading wx_dot_loading wx_dot_loading_white" wx:if="{{type==='dot-white'}}"></view>
+    <view class="loading wx_dot_loading" wx:elif="{{type==='dot-gray'}}"></view>
+    <view class="weui-loadmore" wx:elif="{{type==='circle'}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">{{tips}}</view>
+    </view>
+</view>

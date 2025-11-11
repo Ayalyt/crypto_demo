@@ -1,0 +1,9 @@
+<view class="form-item {{disabled?'form-item-disable':''}}">
+    <text class="required-sign" wx:if="{{!disabled}}">*</text>
+    <text class="required-sign-blank" wx:if="{{disabled}}"></text>
+    <text class="left">{{label}}</text>
+    <view class="right">
+        <input bindblur="bindblur" bindconfirm="bindconfirm" bindfocus="bindfocus" bindinput="bindinput" cardNo="{{cardNo}}" class="fun-text-input-value" disabled="{{disabled}}" focus="{{focus||focused}}" inputType="{{inputType}}" maxlength="{{maxlength}}" password="{{password}}" placeholder="{{placeholder}}" placeholderStyle="{{placeholderStyle}}" type="{{type}}" value="{{inputValue}}"></input>
+        <icon bindtouchstart="onClear" class="fun-text-input-clear" color="#D8D8D8" size="14" type="clear" wx:if="{{showClear}}"></icon>
+    </view>
+</view>

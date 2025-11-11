@@ -1,0 +1,43 @@
+<view class="discover-detail">
+    <view class="header">
+        <view class="header-left">
+            <image class="avatar" src="{{detail.memberAvatar||'/public/imgs/logo4040.png'}}"></image>
+            <text>{{detail.memberNickname}}</text>
+        </view>
+        <view class="header-right">
+            <view class="header-right-item">
+                <image class="icon" src="/public/imgs/icon-eye.svg"></image>
+                <text>{{detail.browseNumber}}</text>
+            </view>
+            <view class="header-right-item">
+                <image class="icon" src="/public/imgs/icon-heart.svg"></image>
+                <text>{{detail.likeNumber}}</text>
+            </view>
+        </view>
+    </view>
+    <swiper autoplay circular indicatorDots class="swiper">
+        <swiper-item wx:for="{{detail.images}}" wx:key="{{item.id}}">
+            <view class="swiper-item">
+                <image bindtap="onPreviewImage" class="swiper-item-image" data-image="{{item.imageUrl}}" mode="aspectFill" src="{{item.imageUrl||defaultImage}}"></image>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="desc">
+        <view class="desc-content">
+            <rich-text>{{detail.publishContent}}</rich-text>
+        </view>
+        <view class="desc-datetime">{{detail.publishTime}}</view>
+        <view class="desc-adress" wx:if="{{detail.publishLocation}}">
+            <image class="icon" src="/public/imgs/location.png"></image>
+            <view>{{detail.publishLocation||''}}</view>
+        </view>
+    </view>
+    <view class="like-wrp">
+        <view bindtap="handleLike" class="btn-like">
+            <image class="icon-heart-active" hidden="{{!showAnimateImage}}" src="/public/imgs/icon_discovery_fav.gif"></image>
+            <image animation="{{animation}}" class="icon-heart-active icon-heart" hidden="{{showAnimateImage}}" src="{{isLike?'/public/imgs/icon-heart-active.svg':'/public/imgs/icon-heart.svg'}}"></image>
+            <view class="status-text">点赞</view>
+        </view>
+    </view>
+</view>
+<fun-loading wx:if="{{loading}}"></fun-loading>

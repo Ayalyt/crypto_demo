@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "活动详情",
+  "usingComponents": {
+    "modal": "pages\\activity-detail\\components\\modal\\modal",
+    "form-item": "pages\\activity-detail\\components\\form-item\\form-item",
+    "fun-button": "pages\\activity-detail\\components\\fun-button\\fun-button",
+    "fun-loading": "pages\\activity-detail\\components\\fun-loading\\fun-loading",
+    "fun-select": "pages\\activity-detail\\components\\fun-select\\fun-select"
+  },
+  "enablePullDownRefresh": true
+}

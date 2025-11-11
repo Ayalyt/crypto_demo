@@ -1,0 +1,20 @@
+<view class="apartment-list" wx:if="{{items.length>0}}">
+    <view class="my-class">
+        <view bindtap="onShow" class="wraper">
+            <text class="value">{{items[selectedIndex].text}}</text>
+            <text class="fun-icon fun-icon-down-fill" wx:if="{{items.length>1}}"></text>
+        </view>
+    </view>
+    <fun-drawer bind:close="onDrawerClose" show="{{show}}">
+        <view class="fun-select-header">
+            <text bindtap="onClose" class="fun-select-close fun-icon fun-icon-close"></text>
+            <text>{{title}}</text>
+            <text bindtap="onConfirm" class="fun-select-confirm fun-icon fun-icon-right"></text>
+        </view>
+        <picker-view bindchange="bindPickerChange" class="fun-select-items" indicatorStyle="height: 50px;" value="{{[selectedIndex]}}" wx:if="{{show}}">
+            <picker-view-column>
+                <view class="fun-select-item" data-value="{{item.value}}" wx:for="{{items}}" wx:key="{{index}}">{{item.text}}</view>
+            </picker-view-column>
+        </picker-view>
+    </fun-drawer>
+</view>

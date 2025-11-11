@@ -1,0 +1,108 @@
+<view class="container">
+    <view class="service-head">
+        <view bindtap="onHandleNotice" class="message-wrap">
+            <image class="mseeage-icon {{hasMessage?'has-message':''}}" src="/public/imgs/icon-notification.png"></image>
+            <swiper autoplay="{{autoplay}}" bindchange="changeCurrentForTrack" circular="true" class="message-list" current="{{current}}" duration="500" interval="5000" vertical="true">
+                <swiper-item class="message-list-item" wx:for="{{messages}}" wx:key="itemIndex">
+                    <view class="message-item">
+                        <view class="message-content">{{item.title}}</view>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <text class="fun-icon fun-icon-angle-right"></text>
+        </view>
+        <view class="service-head-bg">
+            <image mode="aspectFit" src="{{vipPic}}"></image>
+        </view>
+        <view class="service-head-content">
+            <view bindtap="onShowProfile">
+                <view class="service-head-name-container">
+                    <view class="service-head-name">{{isLogin?'HI '+username:username}}</view>
+                    <image class="service-head-name-edit" src="/public/imgs/icon_edit_profile.png"></image>
+                </view>
+                <view class="service-welcome-slogan">您好！欢迎您加入方隅公寓</view>
+            </view>
+            <view class="live-period-wrapper">
+                <view>{{vipText}}</view>
+                <view class="live-period-text" wx:if="{{showDays}}">{{liveDays}}天</view>
+            </view>
+            <view bindtap="goActivityDetail" class="activity-info" wx:if="{{activityInfo}}">
+                <view class="activity-info-title">{{activityInfo.name}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="service-common-feature">常用功能</view>
+    <view class="service-slogan">您的满意 是我们最大的动力</view>
+    <view class="card-list">
+        <view bindtap="goToBillList" class="card">
+            <image class="card-icon" src="/public/imgs/bill.png"></image>
+            <view class="card-name">账单</view>
+            <view class="card-brand" wx:if="{{unPaidBillAmount}}">{{unPaidBillAmount>99?'99+':unPaidBillAmount}}</view>
+        </view>
+        <view bindtap="goToHydropower" class="card">
+            <image class="card-icon" src="/public/imgs/electricity.png"></image>
+            <view class="card-name">水电余额</view>
+        </view>
+        <view bindtap="goToRentRenewal" class="card">
+            <image class="card-icon" src="/public/imgs/relet.png"></image>
+            <view class="card-name">退续租</view>
+        </view>
+        <view bindtap="goToRoomPassword" class="card">
+            <image class="card-icon" src="/public/imgs/door_lock.png"></image>
+            <view class="card-name">门锁密码</view>
+        </view>
+        <view bindtap="goToFeedback" class="card">
+            <image class="card-icon" src="/public/imgs/feedback.png"></image>
+            <view class="card-name">投诉建议</view>
+            <text class="card-brand" wx:if="{{newReplyAmount}}">{{newReplyAmount}}</text>
+        </view>
+        <view bindtap="gotoAppointment" class="card">
+            <image class="card-icon" src="/public/imgs/yuyue.png"></image>
+            <view class="card-name">我的预约</view>
+        </view>
+        <view bindtap="goToFAQ" class="card">
+            <image class="card-icon" src="/public/imgs/faq-icon.png"></image>
+            <view class="card-name">常见问题</view>
+        </view>
+        <view bindtap="goSurroundingLife" class="card" wx:if="{{showSurroundingLife}}">
+            <image class="card-icon" src="/public/imgs/icon-surrounding-life.png"></image>
+            <view class="card-name">周边生活</view>
+        </view>
+        <view bindtap="goToRepair" class="card">
+            <image class="card-icon" src="/public/imgs/repair.png"></image>
+            <view class="card-name">保洁报修</view>
+            <view class="card-brand" wx:if="{{workOrderCount}}">{{workOrderCount>99?'99+':workOrderCount}}</view>
+        </view>
+        <view bindtap="goToCoupon" class="card">
+            <image class="card-icon" src="/public/imgs/icon-coupon.png"></image>
+            <view class="card-name">优惠券</view>
+        </view>
+        <view bindtap="goToInvoice" class="card">
+            <image class="card-icon" src="/public/imgs/icon_invoice.png"></image>
+            <view class="card-name">自助开票</view>
+        </view>
+        <view bindtap="goToSelfEletrContract" class="card">
+            <image class="card-icon" src="/public/imgs/icon-contract.png"></image>
+            <view class="card-name">我的合同</view>
+            <view class="card-brand" wx:if="{{underUseContractAmount}}">{{underUseContractAmount>99?'99+':underUseContractAmount}}</view>
+        </view>
+        <view bindtap="goToSelfLive" class="card" wx:if="{{selfLive}}">
+            <image class="card-icon" src="/public/imgs/self-live.png"></image>
+            <view class="card-name">自助入住</view>
+        </view>
+        <view bindtap="goToMyReservation" class="card">
+            <image class="card-icon" src="/public/imgs/wdyd.png"></image>
+            <view class="card-name">我的预定</view>
+        </view>
+        <view bindtap="onShowProfile" class="card">
+            <image class="card-icon" src="/public/imgs/icon-personal-information.png"></image>
+            <view class="card-name">个人信息</view>
+        </view>
+    </view>
+    <system-notification></system-notification>
+    <view class="floating-window heart_animation" wx:if="{{floatingWindowData}}">
+        <view bindtap="onClickFloatingWindow" class="floating-window-content">
+            <image class="floating-window-content-img" src="https://sce-dev-frstatic.oss-cn-shanghai.aliyuncs.com/miniprogram-activity/common/float-img.png"></image>
+        </view>
+    </view>
+</view>

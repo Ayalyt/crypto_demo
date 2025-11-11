@@ -1,0 +1,13 @@
+.demo {
+    font-size: 32rpx;
+    margin: 200rpx auto;
+    text-align: center
+}
+
+.btns {
+    padding: 0 40rpx
+}
+
+.btns wx-button {
+    margin-bottom: 40rpx
+}

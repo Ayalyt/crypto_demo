@@ -1,0 +1,77 @@
+.fun-form-input {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1rpx solid #f2f2f2;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 30rpx;
+    line-height: 142rpx;
+    margin: 0 40rpx
+}
+
+.fun-form-input-disable {
+    background: #f4f4f4
+}
+
+.fun-form-input .required-sign {
+    color: #f15d61;
+    padding-right: 6rpx;
+    text-align: center
+}
+
+.required-sign-blank {
+    padding-right: 10rpx;
+    text-align: center;
+    width: 11.38rpx
+}
+
+.fun-form-input .left {
+    min-width: 112rpx;
+    text-align: left;
+    white-space: nowrap
+}
+
+.fun-form-input .right {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #333;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 30rpx;
+    font-weight: 500;
+    height: 42rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    line-height: 42rpx;
+    overflow: hidden;
+    padding-left: 50rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+
+.fun-form-input .right .fun-form-input-value {
+    color: #333;
+    -webkit-flex: 1;
+    flex: 1;
+    font-weight: 400;
+    height: 100%;
+    text-overflow: ellipsis;
+    vertical-align: center;
+    width: 100%
+}
+
+.fun-form-input .right .fun-form-input-clear {
+    color: #d8d8d8;
+    font-size: 28rpx;
+    height: 37rpx;
+    margin-right: 20rpx;
+    overflow: hidden;
+    text-align: center;
+    transition: all .1s ease-in;
+    width: 37rpx
+}

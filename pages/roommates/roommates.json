@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "form-button": "pages\\roommates\\components\\form-button\\form-button",
+    "no-data": "pages\\roommates\\components\\no-data\\no-data",
+    "apartment-list": "pages\\roommates\\components\\apartment-list\\apartment-list",
+    "roommate-item": "pages\\roommates\\components\\roommate-item\\roommate-item",
+    "fun-loading": "pages\\roommates\\components\\fun-loading\\fun-loading"
+  },
+  "navigationBarTitleText": "同住人"
+}

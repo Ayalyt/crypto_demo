@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的荷包",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "segmented-control": "components\\segmented-control\\segmented-control",
+    "no-data": "components\\no-data\\no-data",
+    "fun-loading": "pages\\balance\\components\\fun-loading\\fun-loading"
+  }
+}

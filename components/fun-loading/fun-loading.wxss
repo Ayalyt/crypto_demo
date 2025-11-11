@@ -1,0 +1,19 @@
+.loading-icon {
+    height: 60rpx;
+    left: 50%;
+    margin-left: -40rpx;
+    margin-top: -100rpx;
+    position: fixed;
+    top: 50%;
+    width: 80rpx;
+    z-index: 101
+}
+
+.loading-mask {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100
+}

@@ -1,0 +1,10 @@
+<view class="evaluate-star">
+    <view class="evaluate-star-require" wx:if="{{required}}">*</view>
+    <view class="prompt">{{prompt}}</view>
+    <view class="stars{{blank?' stars-bg':''}}">
+        <view class="{{item?'star':'gray-star'}}" data-index="{{index}}" ontap="onSelect" wx:for="{{selectArr}}" wx:key="index">
+            <text class="fun-icon fun-icon-star-full"></text>
+        </view>
+    </view>
+    <view class="desc">{{desc}}</view>
+</view>

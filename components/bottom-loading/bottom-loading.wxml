@@ -1,0 +1,6 @@
+<view class="bottom-loading" hidden="{{!loading}}">
+    <text>加载中</text>
+    <view class="bottom-loading-item"></view>
+    <view class="bottom-loading-item"></view>
+    <view class="bottom-loading-item"></view>
+</view>

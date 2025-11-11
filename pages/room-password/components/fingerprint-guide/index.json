@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fun-count-down": "pages\\room-password\\components\\fingerprint-guide\\components\\fun-count-down\\fun-count-down"
+  }
+}

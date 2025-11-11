@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fun-mask": "components-v2\\fun-mask\\index"
+  }
+}

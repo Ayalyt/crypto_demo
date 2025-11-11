@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "支付方式",
+  "disableScroll": true,
+  "usingComponents": {
+    "fun-button": "pages\\charge-amount\\components\\fun-button\\fun-button",
+    "fun-loading": "pages\\charge-amount\\components\\fun-loading\\fun-loading",
+    "mp-icon": "pages\\charge-amount\\miniprogram_npm\\weui-miniprogram\\icon\\icon",
+    "mp-badge": "pages\\charge-amount\\miniprogram_npm\\weui-miniprogram\\badge\\badge"
+  }
+}

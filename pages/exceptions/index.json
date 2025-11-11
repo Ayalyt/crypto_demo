@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "系统维护",
+  "usingComponents": {
+    "fun-loading": "pages\\exceptions\\components\\fun-loading\\fun-loading"
+  }
+}

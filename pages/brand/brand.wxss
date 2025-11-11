@@ -1,0 +1,129 @@
+.wrapper {
+    padding-bottom: calc(55px + env(safe-area-inset-bottom))
+}
+
+.fixed-view {
+    bottom: calc(55px + env(safe-area-inset-bottom));
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 0
+}
+
+.full-width {
+    display: block;
+    width: 100%
+}
+
+.full {
+    height: 100%;
+    width: 100%
+}
+
+.animate-arrow {
+    -webkit-animation: transparent-arrow 3s linear infinite;
+    animation: transparent-arrow 3s linear infinite;
+    bottom: 50rpx;
+    height: 50rpx;
+    left: 50rpx;
+    position: fixed;
+    width: 50rpx;
+    z-index: 5
+}
+
+.animate-icon {
+    bottom: 3%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 0
+}
+
+.animate-icon,.dots {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.dots {
+    margin-bottom: 10rpx;
+    width: 100%
+}
+
+.dots .dot {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 10rpx;
+    margin: 0 20rpx;
+    width: 10rpx
+}
+
+.dots .dot-active {
+    background-color: initial;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    height: 20rpx;
+    margin: 0 10rpx;
+    width: 20rpx
+}
+
+.z-move wx-image {
+    height: 60rpx;
+    width: 100rpx
+}
+
+.z-move {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-animation: guideTop 1.5s infinite;
+    animation: guideTop 1.5s infinite;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+@-webkit-keyframes guideTop {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(0)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(0)
+    }
+}
+
+@keyframes guideTop {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(0)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(0)
+    }
+}
+
+.cover-view {
+    background-color: initial;
+    position: relative;
+    width: 100%;
+    z-index: 2
+}

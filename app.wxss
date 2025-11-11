@@ -1,0 +1,52 @@
+@import "public\styles\index.wxss";
+
+page {
+    color: #333;
+    font-size: 28rpx
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.fun-button {
+    background: #ffdf83;
+    border-radius: 45rpx;
+    color: #795600
+}
+
+.fun-button:after {
+    border: none
+}
+
+.fun-button[disabled] {
+    background: #fff0c3!important;
+    color: #d3bd85!important
+}
+
+.line {
+    background: #eaeaea;
+    height: 1px
+}
+
+.row {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.placeholder-view {
+    height: 124rpx;
+    width: 100%
+}
+
+.color-primary {
+    color: #795600
+}
+
+.bg-primary {
+    background-color: #ffdf83
+}

@@ -1,0 +1,6 @@
+<view class="fun-text-input">
+    <input bindblur="bindblur" bindconfirm="bindconfirm" bindfocus="bindfocus" bindinput="bindinput" class="fun-text-input-value {{disabled?'disabled':''}}" disabled="{{disabled}}" focus="{{focus||focused}}" maxlength="{{maxlength}}" password="{{password}}" placeholder="{{placeholder}}" placeholderStyle="{{placeholderStyle}}" type="{{type}}" value="{{inputValue}}"></input>
+    <text bindtap="onShowPwd" bindtouchstart="onClear" class="fun-icon fun-icon-remove fun-text-input-clear" wx:if="{{showClear}}"></text>
+    <text bindtap="onShowPwd" class="fun-icon fun-icon-eye-hide fun-text-eye" wx:if="{{isPassword&&!showPwd}}"></text>
+    <text bindtap="onHidePwd" class="fun-icon fun-icon-eye-show fun-text-eye" wx:if="{{isPassword&&showPwd}}"></text>
+</view>

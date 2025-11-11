@@ -1,0 +1,240 @@
+{
+  "entryPagePath": "pages/brand/brand",
+  "pages": [
+    "pages/brand/brand",
+    "pages/index/index",
+    "pages/service/service",
+    "pages/invite/invite",
+    "pages/self-live-middle/index",
+    "pages/h5-container/index",
+    "pages/bill/bill-list/index",
+    "pages/store/index",
+    "pages/hydropower/hydropower",
+    "pages/pay-result/pay-result",
+    "pages/login/login",
+    "pages/pwd-login/pwd-login",
+    "pages/notification-center/notification-center",
+    "pages/balance/balance",
+    "pages/bill/bill-detail/bill-detail",
+    "pages/hydropower-charge/hydropower-charge",
+    "pages/room-password/room-password",
+    "pages/faq/faq",
+    "pages/repair-clean/repair-clean",
+    "pages/bill/other-detail/other-detail",
+    "pages/rent-renewal/rent-renewal",
+    "pages/feedback/list/list",
+    "pages/feedback/detail/detail",
+    "pages/appointment/list/index",
+    "pages/contract-book/contract-book",
+    "pages/editor/editor",
+    "pages/profile/profile",
+    "pages/register/register",
+    "pages/mine/mine",
+    "pages/BillList/BillList",
+    "pages/roommates/roommates",
+    "pages/roommates/edit-roommate/edit-roommate",
+    "pages/check-in-guide/check-in-guide",
+    "pages/bill-details/rent-bill-details/rent-bill-details",
+    "pages/bind-mobile/bind-mobile",
+    "pages/exceptions/index",
+    "pages/customize-password/index",
+    "pages/web-view/web-view",
+    "pages/charge-amount/charge-amount",
+    "pages/national-agents/national-agents",
+    "pages/visitor-access/register/index",
+    "pages/visitor-access/lock-list/index",
+    "pages/discover/discover",
+    "pages/discover-detail/discover-detail",
+    "pages/acitivity-list/activity-list",
+    "pages/activity-detail/activity-detail",
+    "pages/community-publish/community-publish",
+    "pages/template/no-more/index",
+    "pages/bridge-pay/bridge-pay",
+    "pages/found/found"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于城市定位、房源推荐"
+    }
+  },
+  "plugins": {},
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#1C1C1C",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/brand/brand",
+        "iconPath": "public\\imgs\\tabbar_logo.png",
+        "selectedIconPath": "public\\imgs\\tabbar_logo_selected.png"
+      },
+      {
+        "text": "租房",
+        "pagePath": "pages/store/index",
+        "iconPath": "public\\imgs\\home.png",
+        "selectedIconPath": "public\\imgs\\home_selected.png"
+      },
+      {
+        "text": "发现",
+        "pagePath": "pages/found/found",
+        "iconPath": "public\\imgs\\service.png",
+        "selectedIconPath": "public\\imgs\\service_selected.png"
+      },
+      {
+        "text": "活动",
+        "pagePath": "pages/discover/discover",
+        "iconPath": "public\\imgs\\discover.png",
+        "selectedIconPath": "public\\imgs\\discover_selected.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/service/service",
+        "iconPath": "public\\imgs\\tabbar_mine.png",
+        "selectedIconPath": "public\\imgs\\tabbar_mine_selected.png"
+      }
+    ]
+  },
+  "renderer": "webview",
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "__usePrivacyCheck__": true,
+  "componentFramework": "exparser",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "subPackages": [
+    {
+      "root": "packageA/",
+      "pages": [
+        "pages/user-info/user-info",
+        "pages/repair/form/form",
+        "pages/repair/list/list",
+        "pages/repair/detail/detail",
+        "pages/repair/evaluation/index",
+        "pages/repair/evaluation-detail/index",
+        "pages/repair-clean/clean/form/form",
+        "pages/repair-clean/clean/detail/detail",
+        "pages/repair-clean/clean/list/list",
+        "pages/repair-clean/evaluation/index",
+        "pages/repair-clean/evaluation-detail/index",
+        "pages/change-pwd/change-pwd",
+        "pages/change-mobile/change-mobile",
+        "pages/forget-pwd/forget-pwd",
+        "pages/forget-pwd-alert/forget-pwd-alert",
+        "pages/forget-pwd-explain/forget-pwd-explain",
+        "pages/forget-pwd-appeal/forget-pwd-appeal",
+        "pages/forget-pwd-appeal-detail/forget-pwd-appeal-detail",
+        "pages/forget-pwd-code/forget-pwd-code",
+        "pages/set-pwd/set-pwd",
+        "pages/register-protocol/register-protocol",
+        "pages/balance-details/balance-details",
+        "pages/rerent-apply/rerent-apply",
+        "pages/checkout-apply/checkout-apply",
+        "pages/relet/relet-apply/index",
+        "pages/relet/new-relet-apply/index",
+        "pages/checkout/apply/index",
+        "pages/checkout/detail/index",
+        "pages/contract/list/list",
+        "pages/contract/detail/index",
+        "pages/contract/pdf-view/index",
+        "pages/checkin/list/list",
+        "pages/checkin/detail/index",
+        "pages/search-location/index",
+        "pages/official-accounts/index",
+        "pages/community-topics/community-topics",
+        "pages/community-history/community-history",
+        "pages/invoice/detail/detail",
+        "pages/invoice/edit/edit"
+      ]
+    },
+    {
+      "root": "presale/",
+      "pages": [
+        "pages/index/index",
+        "pages/poster/poster"
+      ]
+    },
+    {
+      "root": "drainage/",
+      "pages": [
+        "pages/home-new/home",
+        "pages/invite-new/index",
+        "pages/gifts-new/gifts",
+        "pages/marketing-gifts/gifts",
+        "pages/marketing-home/home",
+        "pages/marketing-invite/index",
+        "pages/marketing-poster/poster",
+        "pages/choose-poster-style/choose-poster-style"
+      ]
+    },
+    {
+      "root": "happyNewYear/",
+      "pages": [
+        "pages/confession/index",
+        "pages/home/index"
+      ]
+    },
+    {
+      "root": "newSignActivity/",
+      "pages": [
+        "pages/home/home"
+      ]
+    },
+    {
+      "root": "graduation-season/",
+      "pages": [
+        "pages/main/main",
+        "pages/red-package/index",
+        "pages/choose-city/index"
+      ]
+    },
+    {
+      "root": "customerVisitStore/",
+      "pages": [
+        "pages/main/main"
+      ]
+    },
+    {
+      "root": "fission/",
+      "pages": [
+        "pages/invitee/invitee",
+        "pages/inviter/inviter",
+        "pages/lottery/lottery",
+        "pages/authlogin/authlogin"
+      ]
+    },
+    {
+      "root": "xiaoguo-activity/",
+      "pages": [
+        "pages/welcome/index",
+        "pages/lottery/index",
+        "pages/win-form/index"
+      ]
+    },
+    {
+      "root": "activity/",
+      "pages": [
+        "slot-machine/index/index",
+        "slot-machine/slot-machine-prize/index",
+        "slot-machine/slot-machine-rules/index",
+        "slot-machine/slot-machine-prize-pool/index",
+        "slot-machine/slot-machine-form/index",
+        "benefits-activity/index/index"
+      ]
+    },
+    {
+      "root": "pagesFace/",
+      "pages": [
+        "pages/index/index",
+        "pages/webview/webview",
+        "pages/middle/middle"
+      ]
+    }
+  ]
+}

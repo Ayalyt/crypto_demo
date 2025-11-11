@@ -1,0 +1,36 @@
+<apartment-list bindchange="apartmentChange" id="apartment-list" myClass="hydropower-header" selectedOrderNo="{{selectedOrderNo}}"></apartment-list>
+<fun-apartment-list bind:change="apartmentChange" myClass="hydropower-header" selectedOrderNo="{{selectedOrderNo}}" showLoading="{{true}}"></fun-apartment-list>
+<view class="balance-tip" wx:if="{{selectedItem}}">
+    <text>余额  {{balance||0}}元</text>
+    <view class="balance-tip-right">
+        <icon class="balance-tip-icon" color="#333333" size="28rpx" type="warn"></icon>
+        <text>请联系管家查询能耗详情</text>
+    </view>
+</view>
+<scroll-view bindscroll="handleScroll" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData" id="scrollView" lowerThreshold="0" scrollY="true" style="background-color:{{list.length==0?'white':'#F1F1F1'}};min-height:{{scrollHeight}}rpx;" upperThreshold="0">
+    <no-data id="no-data" noDataShow="{{isShowNoData}}" text="{{tipText}}"></no-data>
+    <view class="cell" wx:for="{{list}}" wx:key="itemIndex">
+        <view class="cell-top-view">
+            <view class="cell-top-view-date">{{item.billPeriod}}</view>
+            <view class="cell-top-view-price">{{item.totalFee}}元</view>
+        </view>
+        <view class="cell-electric">
+            <image class="cell-electric-image" src="/public/imgs/icon_electric.png"></image>
+            <view class="cell-electric-item">用电</view>
+            <view class="cell-electric-item al-right">{{item.electricityFee}}元</view>
+        </view>
+        <view class="cell-electric">
+            <image class="cell-electric-image" src="/public/imgs/icon_water.png"></image>
+            <view class="cell-electric-item">用水</view>
+            <view class="cell-electric-item al-right">{{item.waterFee}}元</view>
+        </view>
+        <view class="cell-electric" wx:if="{{item.airconditionFee}}">
+            <image class="cell-electric-image" src="/public/imgs/condition_pms.png"></image>
+            <view class="cell-electric-item">空调</view>
+            <view class="cell-electric-item al-right">{{item.airconditionFee}}元</view>
+        </view>
+    </view>
+</scroll-view>
+<fun-button bindsure="goToCharge" btnShow="{{true}}" id="fun-button" sureText="充值" wx:if="{{selectedItem.canRecharge}}"></fun-button>
+<fun-loading wx:if="{{showLoading}}"></fun-loading>
+<faq-float-button show="{{showFaqBtn}}" type="{{17}}"></faq-float-button>

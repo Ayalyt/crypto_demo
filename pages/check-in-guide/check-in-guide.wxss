@@ -1,0 +1,33 @@
+.check-in-guide-page .check-in-guide-header {
+    height: 400rpx;
+    position: relative
+}
+
+.check-in-guide-page .check-in-guide-header .check-in-guide-header-img {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0
+}
+
+.check-in-guide-page .check-in-guide-header .check-in-guide-header-img wx-image {
+    height: 410rpx;
+    width: 750rpx
+}
+
+.fun-apartment-list-small {
+    background: rgba(250,194,0,.44);
+    border: 1px solid #faf1f1;
+    border-radius: 30rpx;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin: 120px 0 80px;
+    padding: 0 36rpx;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 4rpx 6rpx #e5b719;
+    z-index: 100
+}

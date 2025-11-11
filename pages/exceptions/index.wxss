@@ -1,0 +1,37 @@
+.page-error {
+    color: #333;
+    padding: 50rpx
+}
+
+.error-message-wrap {
+    color: #949aa7;
+    font-size: 28rpx;
+    margin-bottom: 300rpx;
+    margin-top: 300rpx;
+    text-align: center
+}
+
+.error-message-text {
+    color: #949aa7;
+    font-size: 28rpx;
+    line-height: 2
+}
+
+.error-message-image {
+    height: 290rpx;
+    width: 360rpx
+}
+
+.error-btn {
+    background: #ffdf83;
+    border: none;
+    border-radius: 35px;
+    color: #795600;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+    width: 264rpx
+}
+
+.error-btn::after {
+    border: none
+}

@@ -1,0 +1,40 @@
+.fun-text-input {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx;
+    height: 80rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    line-height: 80rpx
+}
+
+.fun-text-input-value {
+    -webkit-flex: 1;
+    flex: 1;
+    height: 100%;
+    vertical-align: center;
+    width: 100%
+}
+
+.fun-text-input-value.disabled {
+    opacity: .3
+}
+
+.fun-icon {
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    width: 80rpx
+}
+
+.fun-text-eye {
+    color: #afb5bb;
+    font-size: 40rpx
+}
+
+.fun-text-input-clear {
+    color: #d8d8d8;
+    font-size: 30rpx
+}

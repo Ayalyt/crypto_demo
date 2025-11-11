@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "消息中心",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "no-data": "pages\\notification-center\\components\\no-data\\no-data",
+    "fun-loading": "pages\\notification-center\\components\\fun-loading\\fun-loading",
+    "fun-image": "pages\\notification-center\\components\\fun-image\\fun-image"
+  }
+}

@@ -1,0 +1,11 @@
+<view class="fun-select {{disabled?'fun-select-disable':''}}">
+    <view class="select-wrap">
+        <text class="required-sign" wx:if="{{!disabled}}">*</text>
+        <text class="required-sign-blank" wx:if="{{disabled}}"></text>
+        <text class="label">{{label}}</text>
+        <picker bindchange="bindPickerChange" class="select-picker" disabled="{{disabled}}" range="{{items}}" rangeKey="labels" value="{{index}}">
+            <view class="value">{{text||placeholder}}</view>
+        </picker>
+    </view>
+    <text class="fun-icon fun-icon-angle-down" wx:if="{{!disabled}}"></text>
+</view>

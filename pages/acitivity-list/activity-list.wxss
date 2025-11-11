@@ -1,0 +1,79 @@
+@import "..\template\no-more\index.wxss";
+
+.no-more {
+    padding: 20rpx;
+    text-align: center
+}
+
+.activity-list {
+    padding: 0 30rpx
+}
+
+.activity-item {
+    box-shadow: 0 0 10px #ccc;
+    margin-bottom: 36rpx
+}
+
+.activity-item-image {
+    height: 377rpx;
+    width: 100%
+}
+
+.activity-item-footer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 18rpx 30rpx
+}
+
+.activity-item-title {
+    color: #222;
+    font-size: 26rpx
+}
+
+.activity-item-time {
+    color: #999;
+    font-size: 22rpx
+}
+
+.activity-item-status {
+    color: #fff;
+    font-size: 24rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+    padding: 0 20rpx
+}
+
+.activity-item-status.progress {
+    background-color: #fdb367
+}
+
+.activity-item-status.notstarted {
+    background-color: #99d0f6
+}
+
+.activity-item-status.over {
+    background-color: #c4c4c4
+}
+
+.activity-item-status.review {
+    background-color: #93b999
+}
+
+.fixed-view {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 750rpx
+}
+
+.fixed-loading {
+    height: 30rpx;
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+    top: 20rpx;
+    width: 60rpx
+}

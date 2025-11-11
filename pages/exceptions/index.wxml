@@ -1,0 +1,10 @@
+<view class="page-error">
+    <view class="error-message-wrap">
+        <fun-loading wx:if="{{loading}}"></fun-loading>
+        <image class="error-message-image" src="/public/imgs/leida.png"></image>
+        <view>
+            <text class="error-message-text">{{message}}</text>
+            <button bindtap="onReload" class="error-btn">重新加载</button>
+        </view>
+    </view>
+</view>

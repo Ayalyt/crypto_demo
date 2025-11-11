@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fun-form-item": "components\\fun-form-item\\fun-form-item",
+    "fun-drawer": "components\\fun-drawer\\fun-drawer"
+  }
+}

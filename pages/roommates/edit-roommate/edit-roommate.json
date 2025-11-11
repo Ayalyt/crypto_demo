@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "fun-loading": "pages\\roommates\\edit-roommate\\components\\fun-loading\\fun-loading",
+    "text-input": "pages\\roommates\\edit-roommate\\components\\text-input\\text-input",
+    "form-button": "pages\\roommates\\edit-roommate\\components\\form-button\\form-button",
+    "fun-modal": "pages\\roommates\\edit-roommate\\components\\fun-modal\\fun-modal",
+    "form-item": "pages\\roommates\\edit-roommate\\components\\form-item\\form-item",
+    "fun-select": "pages\\roommates\\edit-roommate\\components\\fun-select\\fun-select",
+    "form-select": "pages\\roommates\\edit-roommate\\components\\form-select\\form-select",
+    "fun-button": "pages\\roommates\\edit-roommate\\components\\fun-button\\fun-button"
+  },
+  "navigationBarTitleText": "编辑同住人"
+}

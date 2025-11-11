@@ -1,0 +1,17 @@
+<view class="fun-count-down">
+    <block wx:if="{{type==='day'}}">
+        <view>{{day}}天</view>
+        <view>{{hour}}时</view>
+        <view>{{minute}}分</view>
+        <view>{{second}}秒</view>
+    </block>
+    <block wx:if="{{type==='hour'}}">
+        <view>{{hour}}时</view>
+        <view>{{minute}}分</view>
+        <view>{{second}}秒</view>
+    </block>
+    <block wx:if="{{type==='minute'}}">
+        <view>{{minute}}分</view>
+        <view>{{second}}秒</view>
+    </block>
+</view>

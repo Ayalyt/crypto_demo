@@ -1,0 +1,63 @@
+<view class="activity-detail {{status===1?'pb-150':''}}">
+    <image class="activity-detail-head__image" mode="aspectFill" src="{{data.firstPicture||defaultImage}}"></image>
+    <view class="activity-detail-desc {{status===0?'pb-150':''}}">
+        <view class="activity-detail-title">{{data.activityName}}</view>
+        <view class="activity-detail-time">
+            <text wx:if="{{status===3}}">活动已结束</text>
+            <text wx:else>活动报名截至：{{registrationEndTime}}</text>
+            <text>{{chargeAmount}}</text>
+        </view>
+        <block wx:if="{{status===3}}">
+            <view class="swiper-title">精彩回顾，看不过瘾</view>
+            <swiper autoplay circular indicatorDots class="swiper">
+                <swiper-item wx:for="{{data.retrospectPictureList}}" wx:key="index">
+                    <view class="swiper-item">
+                        <image bindtap="onPreviewImage" class="swiper-item-image" data-image="{{item.fileUrl}}" mode="aspectFill" src="{{item.fileUrl||defaultImage}}"></image>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <view class="activity-detail-review">美好时刻</view>
+            <view class="activity-detail-review__rich">
+                <rich-text class="rich-text-center" nodes="{{data.retrospectContent}}"></rich-text>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="activity-detail-adress__wrp">
+                <text bindtap="handleAdressOnChange" class="activity-detail-adress {{cityIndex===index?'active':''}}" data-cityid="{{item.cityId}}" data-index="{{index}}" wx:for="{{activityApartmentList}}" wx:key="cityId">{{item.cityName}}</text>
+            </view>
+            <view class="activity-detail-date">活动日期：{{activityDate}}</view>
+            <view class="activity-detail-limits">
+                <view class="label">活动限制：</view>
+                <view class="content">
+                    <view wx:for="{{limits}}" wx:key="index">{{item.apartmentName}} {{item.peopleNumberLimit}}</view>
+                </view>
+            </view>
+            <view class="mt-20 mb-20 line"></view>
+            <view class="activity-detail-intro">活动介绍</view>
+            <view class="activity-detail-intro__rich">
+                <rich-text nodes="{{data.activityIntroduce}}"></rich-text>
+            </view>
+            <image bindtap="handlePreviewDetailImage" class="activity-detail-body__image" data-image="{{data.detailPicture}}" mode="aspectFit" src="{{data.detailPicture}}" wx:if="{{data.detailPicture}}"></image>
+            <view class="activity-detail-rule">活动需知</view>
+            <view class="activity-detail-intro__rule">
+                <rich-text nodes="{{data.ruleDescription}}"></rich-text>
+            </view>
+        </block>
+    </view>
+</view>
+<block wx:if="{{status!==3}}">
+    <button bindtap="handleSignUp" class="fun-button fixed-bottom-button" data-flag="{{1}}" wx:if="{{status===1&&data.activityRegFlag===1&&!isActivityAttend}}">参与活动</button>
+    <button bindtap="handleSignUp" class="fun-button fixed-bottom-button" data-flag="{{2}}" wx:if="{{status===1&&data.activityRegFlag===1&&isActivityAttend}}">取消报名</button>
+    <modal id="modalId" maskClosable="{{false}}" title="报名信息填写">
+        <view class="modal-content" slot="content">
+            <fun-select required bindchange="handleSelectOnChange" class="select-control" items="{{apartmentList}}" label="参与公寓" placeholder="选择参与公寓" placeholderStyle="color: #C6CBD7;" value="{{selectedApartmentId}}"></fun-select>
+            <view class="custom-control-wrp">
+                <form-item bindinput="inputChange" data-filedid="{{item.fieldsId}}" label="{{item.registerFields}}" placeholder="请输入" value="{{item.registerContent}}" wx:for="{{customFileds}}" wx:key="item.fieldsId"></form-item>
+            </view>
+        </view>
+        <view class="modal-footer" slot="footer">
+            <fun-button btnShow isCancel sureEnabled bindcancel="cancel" bindsure="submit" cancelText="取消" fixed="{{false}}" id="fun-button" sureText="提交"></fun-button>
+        </view>
+    </modal>
+</block>
+<fun-loading wx:if="{{loading}}"></fun-loading>

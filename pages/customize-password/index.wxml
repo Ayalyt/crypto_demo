@@ -1,0 +1,12 @@
+<view class="container">
+    <view class="password-wrap">
+        <text-input bindinput="onInput" class="password" data-field="password" maxlength="{{maxLength}}" placeholder="请设置{{maxLength}}位数字密码"></text-input>
+    </view>
+    <view class="text-wrap">
+        <text class="text">有效期至:{{endtime}}</text>
+    </view>
+    <view class="btn-wrap">
+        <button bindtap="onSubmit" class="fun-button" disabled="{{disabled||showLoading}}">确认</button>
+    </view>
+</view>
+<fun-loading wx:if="{{showLoading}}"></fun-loading>

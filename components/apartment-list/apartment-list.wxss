@@ -1,0 +1,22 @@
+.apartment-list {
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.apartment-list,.wraper {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.wraper {
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.wraper .value {
+    margin-right: 20rpx
+}

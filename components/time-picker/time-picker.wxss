@@ -1,0 +1,73 @@
+.fun-select {
+    background: #fff;
+    border-bottom: 1rpx solid #eaeaea;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    line-height: 102rpx;
+    padding-left: 30rpx
+}
+
+.fun-select-disable {
+    background: #f4f4f4;
+    padding-left: 26rpx
+}
+
+.fun-icon {
+    color: #afb2bb;
+    font-size: 22rpx;
+    line-height: inherit
+}
+
+.label {
+    color: #333
+}
+
+.value {
+    color: #828999;
+    height: 102rpx;
+    margin-left: 30rpx
+}
+
+.select-wrap {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%
+}
+
+.select-wrap .required-sign {
+    color: #f15d61;
+    padding-right: 10rpx;
+    text-align: center
+}
+
+.required-sign-blank {
+    padding-right: 10rpx;
+    text-align: center;
+    width: 11.38rpx
+}
+
+.form-item .right .fun-text-input-value {
+    -webkit-flex: 1;
+    flex: 1;
+    height: 100%;
+    vertical-align: center;
+    width: 100%
+}
+
+.fun-icon {
+    color: #d8d8d8;
+    font-size: 28rpx;
+    height: 100rpx;
+    margin-right: 20rpx;
+    overflow: hidden;
+    text-align: center;
+    transition: all .1s ease-in;
+    width: 60rpx
+}
+
+.select-picker {
+    -webkit-flex: 1;
+    flex: 1
+}

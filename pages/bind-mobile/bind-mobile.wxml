@@ -1,0 +1,26 @@
+<view class="container">
+    <view wx:if="{{!success}}">
+        <view class="mobile-wrap">
+            <text-input bindinput="onInput" class="mobile" data-field="mobile" maxlength="11" placeholder="请输入新手机号" type="number" value=""></text-input>
+            <otp bind:sent="onOtpSent" class="otp-btn" mobile="{{mobile}}" reset="{{resetOtp}}" type="CHANGE_MOBILE_OLD" url="ac/authentication/generate-otp/v1"></otp>
+        </view>
+        <view class="otp-wrap">
+            <text-input bindinput="onInput" data-field="otp" maxlength="6" placeholder="请输入短信验证码" type="number" value="{{otp}}"></text-input>
+        </view>
+        <view class="btn-wrap">
+            <button bindtap="onChangeMobile" class="fun-button login-btn" disabled="{{disabled}}">确认绑定</button>
+        </view>
+        <view class="tips">
+            <text>遇到困难？请</text>
+            <text bindtap="onGoFeedback" class="feedback">意见反馈</text>
+        </view>
+    </view>
+    <view class="success-wrap" wx:if="{{success}}">
+        <view class="success-title">
+            <text class="fun-icon fun-icon-checked-encircle"></text>
+            <text>绑定成功！</text>
+        </view>
+        <view class="success-tips">您已经成功修改了手机号，后续请用新手机号登录，现在将回到个人中心</view>
+        <button bindtap="onBack" class="fun-button success-btn">好的</button>
+    </view>
+</view>

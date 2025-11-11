@@ -1,0 +1,82 @@
+.repair-clean-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.repair-clean-title {
+    color: #333;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-size: 38rpx;
+    font-weight: 500;
+    padding: 30rpx 40rpx;
+    width: 100%
+}
+
+.repair-clean-tab-item {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 4rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 210rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 0 40rpx 30rpx;
+    padding: 30rpx;
+    position: relative
+}
+
+.repair-clean-tab-item-left {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.repair-clean-tab-item-quote {
+    height: 18rpx;
+    width: 23rpx
+}
+
+.repair-clean-tab-item-text {
+    color: #333;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-size: 55rpx;
+    font-weight: 500;
+    margin-top: 6rpx
+}
+
+.repair-clean-tab-item-sub-text {
+    color: #c4c4c4;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-size: 26rpx;
+    font-weight: 400;
+    margin-top: 12rpx
+}
+
+.repair-clean-tab-item-right {
+    height: 114rpx;
+    width: 114rpx
+}
+
+.tab-block-tip {
+    background: #f15d61;
+    border: 2rpx solid #fff;
+    border-radius: 18rpx;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 24rpx;
+    height: 34rpx;
+    left: 143rpx;
+    line-height: 30rpx;
+    min-width: 34rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    position: absolute;
+    top: 60rpx
+}

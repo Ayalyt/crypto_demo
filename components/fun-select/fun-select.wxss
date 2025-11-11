@@ -1,0 +1,41 @@
+.fun-select {
+    background: #fff
+}
+
+.fun-select-header {
+    background: #f8f8f8;
+    border-bottom: 1rpx solid #efefef;
+    color: #949aa7;
+    font-size: 32rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center
+}
+
+.fun-select-close,.fun-select-confirm {
+    height: 90rpx;
+    line-height: 90rpx;
+    position: absolute;
+    top: 0;
+    width: 90rpx
+}
+
+.fun-select-close {
+    left: 0
+}
+
+.fun-select-confirm {
+    color: #e0ae01;
+    font-size: 42rpx;
+    right: 0
+}
+
+.fun-select-items {
+    height: 600rpx;
+    width: 100%
+}
+
+.fun-select-item {
+    line-height: 50px;
+    text-align: center
+}

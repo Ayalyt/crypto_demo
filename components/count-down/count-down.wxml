@@ -1,0 +1,11 @@
+<view style="color:{{color}};font-size:{{fontSize}}rpx;display:flex;align-items:center;">
+    <text decode="{{true}}">{{countDownModel.prefixDesc}}</text>
+    <block wx:if="{{countDownModel.days>0}}">
+        <view class="time">{{countDownModel.daysDisplay}}</view>天</block>
+    <block wx:if="{{countDownModel.hours>0||countDownModel.hours>0}}">
+        <view class="time">{{countDownModel.hoursDisplay}}</view>时</block>
+    <block wx:if="{{countDownModel.days==0&&(countDownModel.hours>0||countDownModel.minutes>0)}}">
+        <view class="time">{{countDownModel.minutesDisplay}}</view>分</block>
+    <block wx:if="{{countDownModel.days==0&&countDownModel.hours==0&&(countDownModel.minutes>0||countDownModel.second>0)}}">
+        <view class="time">{{countDownModel.secondDisplay}}</view>秒</block>
+</view>

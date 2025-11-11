@@ -1,0 +1,48 @@
+.fun-form-item {
+    display: -webkit-flex;
+    display: flex;
+    line-height: 100rpx
+}
+
+.form-item-label {
+    color: #333;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-right: 30rpx;
+    min-width: 4em;
+    text-align: justify
+}
+
+.form-item-label:after {
+    content: "";
+    display: inline-block;
+    visibility: hidden;
+    width: 100%
+}
+
+.form-item-required {
+    color: #f15d61
+}
+
+.form-item-value {
+    color: #828999;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 28rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.form-item-placeholder {
+    color: #c6cbd7;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 28rpx
+}
+
+.form-item-icon {
+    color: #afb2bb;
+    font-size: 22rpx;
+    line-height: inherit
+}

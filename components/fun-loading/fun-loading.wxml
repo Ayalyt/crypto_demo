@@ -1,0 +1,4 @@
+<view class="fun-loading">
+    <view class="loading-mask"></view>
+    <image class="loading-icon" mode="aspectFit" src="../../public/imgs/loading.gif"></image>
+</view>

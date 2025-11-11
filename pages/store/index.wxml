@@ -1,0 +1,78 @@
+<view class="page-body">
+    <scroll-view bindscrolltoupper="onRefreshData" class="scroll-view" scrollY="true" style="width:100%;height:width: 100%;">
+        <view class="swiper-top">
+            <swiper autoplay="{{true}}" class="swiper" duration="{{1000}}" indicatorActiveColor="#ffffff" indicatorColor="#C3A78D" indicatorDots="{{topAdList.length>1}}" interval="{{5000}}" wx:if="{{topAdList.length>0}}">
+                <swiper-item bindtap="goToAdDetail" data-index="{{index}}" wx:for="{{topAdList}}" wx:key="id">
+                    <fun-image class="top-ad-image" mode="aspectFill" src="{{item.pictures.medium}}"></fun-image>
+                </swiper-item>
+            </swiper>
+            <view class="store-city-search">
+                <fun-city-position bind:change="onCityChange" cityList="{{cityList}}" currentCity="{{currentCity}}" slot="left" sourceName="公寓列表" style="height:100%;display:flex;align-items:center;"></fun-city-position>
+                <view class="store-city-gap-line"></view>
+                <view bindtap="onClickSearchLocation" class="store-city-select-place {{'您想住哪儿'===searchText?'store-city-select-place-placeholder-style':'store-city-select-place-selected-style'}}">{{searchText}}</view>
+            </view>
+        </view>
+        <view class="sort">
+            <view bindtap="onClickSort" class="{{sortCurrent==='1'?'sort-item-selected':'sort-item'}} {{sortCurrent==='1'&&'sort-item-activited'}}" data-index="1">综合</view>
+            <view class="{{sortCurrent==='2'?'sort-item-selected':'sort-item'}}">
+                <view bindtap="onClickSort" class="sort-item {{sortCurrent==='2'&&'sort-item-activited'}}" data-index="2">价格<view class="sort-item-triangle">
+                        <view class="up-triangle {{sortPriceCurrent==='1'&&'sort-triangle-activited'}}"></view>
+                        <view class="down-triangle {{sortPriceCurrent==='2'&&'sort-triangle-activited'}}"></view>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="onClickSort" class="{{sortCurrent==='3'?'sort-item-selected':'sort-item'}} {{sortCurrent==='3'&&'sort-item-activited'}}" data-index="3">离我最近</view>
+            <view bindtap="onClickSort" class="{{sortCurrent==='4'?'sort-item-selected':'sort-item'}} {{sortCurrent==='4'&&'sort-item-activited'}}" data-index="4">视频探房</view>
+        </view>
+        <fun-loading wx:if="{{loading}}"></fun-loading>
+        <view class="store-list-content" wx:elif="{{storeList.length>0}}">
+            <view bindtap="onJump" class="store-item" data-apartment-id="{{item.apartmentId}}" data-apartment-name="{{item.apartmentName}}" data-price-low="{{item.priceLow}}" wx:for="{{storeList}}" wx:key="apartmentId">
+                <image class="store-full-room" src="/public/imgs/fullRoom.png" wx:if="{{item.isFull===1}}"></image>
+                <image class="store-panorama" src="/public/imgs/icon-panorama.png" wx:if="{{item.hasPanorama}}"></image>
+                <view class="store-image">
+                    <fun-image mode="aspectFill" src="{{item.coverPictures.large}}"></fun-image>
+                </view>
+                <view class="store-info">
+                    <view class="store-line">
+                        <text class="store-title-name">{{item.apartmentName}}</text>
+                        <text class="store-title-price">
+                            <text>¥</text>
+                            <text style="font-size:34rpx;padding:0 10rpx">{{item.priceLow}}</text>
+                            <text>/月起</text>
+                        </text>
+                    </view>
+                    <view class="store-addr">
+                        <image class="store-icon" src="/public/imgs/coordinate.svg"></image>
+                        <text class="store-addr-text">{{item.addr}}</text>
+                    </view>
+                    <view class="store-line">
+                        <view style="width:50%">
+                            <view class="store-position" wx:if="{{item.position}}">
+                                <image class="store-icon" src="/public/imgs/distance.svg"></image>
+                                <text>{{item.position}}</text>
+                            </view>
+                        </view>
+                        <view class="store-labels">
+                            <view class="store-label-item" wx:for="{{item.labels}}" wx:key="name">{{item.name}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="store-end">
+                <view class="store-divide"></view>
+                <view>亲爱的，到底了</view>
+                <view class="store-divide"></view>
+            </view>
+        </view>
+        <view class="store-no-data" style="width:100%;height:100%" wx:else>
+            <image class="store-no-date-img" src="https://sce-dev-frstatic.oss-cn-shanghai.aliyuncs.com/miniprogram-activity/common/empty-room.png"></image>
+            <text class="store-no-data-info">暂无公寓</text>
+        </view>
+    </scroll-view>
+    <view class="floating-window heart_animation" wx:if="{{floatingWindowData}}">
+        <view bindtap="onClickFloatingWindow" class="floating-window-content">
+            <image class="floating-window-content-img" src="https://sce-dev-frstatic.oss-cn-shanghai.aliyuncs.com/miniprogram-activity/common/float-img.png"></image>
+        </view>
+    </view>
+</view>
+<privacy></privacy>

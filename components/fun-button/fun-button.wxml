@@ -1,0 +1,9 @@
+<view class="footer" wx:if="{{btnShow}}">
+    <view class="footer-content {{fixed?'fixed':''}}">
+        <slot></slot>
+        <view class="right">
+            <view bindtap="cancelBtn" class="order" disabled="{{!cancelEnabled}}" wx:if="{{isCancel}}">{{cancelText}}</view>
+            <view bindtap="sureBtn" class="reserve {{!sureEnabled?'reserve-disabled':''}}" disabled="{{!sureEnabled}}" wx:if="{{isSure}}">{{sureText}}</view>
+        </view>
+    </view>
+</view>

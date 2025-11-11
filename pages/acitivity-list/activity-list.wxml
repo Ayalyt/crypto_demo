@@ -1,0 +1,18 @@
+<import src="../template/no-more/index"></import>
+<view class="activity-list">
+    <template is="activity-item" data="{{...item,statusMap:statusMap,defaultImage:defaultImage}}" wx:for="{{list}}" wx:key="{{item.activityId}}"></template>
+</view>
+<template is="no-more" data wx:if="{{noMore}}"></template>
+<fun-loading wx:if="{{loading}}"></fun-loading>
+<template name="activity-item">
+    <view bindtap="navigateToDetail" class="activity-item" data-id="{{activityId}}" data-status="{{status}}">
+        <image class="activity-item-image" mode="aspectFill" src="{{firstPicture||defaultImage}}"></image>
+        <view class="activity-item-footer">
+            <view class="activity-item-footer__left">
+                <view class="activity-item-title">{{activityName}}</view>
+                <view class="activity-item-time">{{activityStartTime}}</view>
+            </view>
+            <view class="activity-item-status {{status===2?statusMap[status].name[retrospectStatus]:statusMap[status].name}}">{{status===2?statusMap[status].text[retrospectStatus]:statusMap[status].text}}</view>
+        </view>
+    </view>
+</template>

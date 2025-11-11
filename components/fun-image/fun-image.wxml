@@ -1,0 +1,1 @@
+<image class="fun-image" mode="{{isLoadSuccess?mode:'aspectFill'}}" src="{{showSrc}}"></image>

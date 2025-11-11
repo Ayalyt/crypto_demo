@@ -1,0 +1,6 @@
+<view class="fun-info {{isShow?'fun-info-enter':'fun-info-enter-done'}}">
+    <view class="{{type==='warn'?'fun-info-warn':'fun-info-success'}}">
+        <text class="info-text">{{infoText}}</text>
+        <text bindtap="close" class="fun-icon fun-icon-close" data-show="{{isShow}}"></text>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "fun-modal": "pages\\rent-renewal\\components\\fun-modal\\fun-modal",
+    "form-button": "pages\\rent-renewal\\components\\form-button\\form-button",
+    "no-data": "pages\\rent-renewal\\components\\no-data\\no-data",
+    "apartment-list": "pages\\rent-renewal\\components\\apartment-list\\apartment-list",
+    "fun-apartment-list": "pages\\rent-renewal\\components\\fun-apartment-list\\fun-apartment-list",
+    "rent-renewal-item": "pages\\rent-renewal\\components\\rent-renewal-item\\rent-renewal-item",
+    "fun-loading": "pages\\rent-renewal\\components\\fun-loading\\fun-loading",
+    "faq-float-button": "pages\\rent-renewal\\components\\faq-float-button\\faq-float-button"
+  },
+  "navigationBarTitleText": "退续租"
+}

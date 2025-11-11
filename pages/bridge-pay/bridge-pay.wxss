@@ -1,0 +1,38 @@
+.bridge-pay-container {
+    padding: 120rpx 30rpx 0
+}
+
+.bridge-pay-container,.bridge-pay-failure-container,.bridge-pay-success-container,.bridge-re-pay-container {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.bridge-pay-failure,.bridge-re-pay,.bridge-success {
+    color: #000;
+    font-size: 40rpx;
+    margin-top: 30rpx
+}
+
+.bridge-pay-cancel {
+    color: #949aa7;
+    font-size: 30rpx;
+    margin-top: 10rpx
+}
+
+.bridge-pay-button-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 100rpx;
+    width: 100%
+}
+
+wx-button {
+    margin-top: 30rpx;
+    width: 100%
+}

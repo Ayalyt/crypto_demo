@@ -1,0 +1,48 @@
+<segmented-control bindchange="segmentedChange" current="{{currentTab}}" id="segmented-control" items="{{['全部','待支付','已支付']}}"></segmented-control>
+<swiper bindchange="swiperChange" current="{{currentTab}}" duration="300" style="min-height:{{winHeight-44}}px;height:{{winHeight-44}}px;margin-bottom:40rpx;">
+    <swiper-item wx:for="{{curList}}" wx:for-item="pageItem" wx:key="index">
+        <scroll-view bindscrolltolower="loadMoreData" bindscrolltoupper="getInitData" class="scroll-view" data-index="{{index}}" lowerThreshold="10" scrollY="{{true}}" style="background-color:{{pageItem.length>0?'#F1F1F1':'#FFF'}};height:{{winHeight-44}}px;" upperThreshold="0">
+            <no-data marginTop="300" noDataShow="{{pageItem.length<=0}}" text="{{currentTab===1?billInfo:'暂无账单信息'}}"></no-data>
+            <view bindtap="goToDetail" class="cell" data-billIds="{{item.billIds}}" data-billType="{{item.billType}}" data-item="{{item}}" wx:for="{{pageItem}}" wx:for-index="itemIndex" wx:key="itemIndex">
+                <view class="header">
+                    <image class="bill-type-image" src="{{billTypeIcons[item.billType]}}"></image>
+                    <text class="bill-type">{{item.billTypeName}} {{item.periodsTime}}</text>
+                    <view style="margin-right:5px;">
+                        <view style="color:#333333;font-size:24rpx;" wx:if="{{item.overdueDays>0&&item.status==1&&item.billType!=3}}">逾期<text style="color:#F15D61;">{{item.overdueDays}}</text>天</view>
+                        <fun-count-down bind:onCompleted="onCountDownCompleted" prefixDesc="剩" time="{{item.remainTime}}" wx:if="{{item.remainTime>0&&item.billType===1}}"></fun-count-down>
+                    </view>
+                    <text class="status-desc">{{item.statusDesc}}</text>
+                </view>
+                <view class="info">
+                    <view class="room-info">{{item.businessInfo.buildingName}}-{{item.businessInfo.roomNo}}室 {{item.businessInfo.apartmentName}}</view>
+                    <view class="rent-info">租期：{{item.businessInfo.businessOrderStartTime}} - {{item.businessInfo.businessOrderEndTime}}</view>
+                </view>
+                <view class="footer">
+                    <view class="row">
+                        <view>
+                            <text class="amount-text">金额</text>
+                            <text class="money">¥</text>
+                            <text class="amount">{{item.billTotalAmount}}</text>
+                        </view>
+                        <view style="margin-left:10px;" wx:if="{{item.status===2}}">
+                            <text class="amount-text">实付</text>
+                            <text class="money">¥</text>
+                            <text class="amount">{{item.billPaidAmount}}</text>
+                        </view>
+                        <view style="margin-left:5px;" wx:if="{{item.billUnpaidAmount>0}}">
+                            <text class="unpayAmount-text">待付:</text>
+                            <text class="unpayAmount-money">¥</text>
+                            <text class="unpayAmount-amount">{{item.billUnpaidAmount}}</text>
+                        </view>
+                    </view>
+                    <view class="btns">
+                        <button catchtap="handleCancel" class="cancel-button" data-billIds="{{item.billIds}}" data-billType="{{item.billType}}" wx:if="{{item.status===1&&(item.billType===2||item.billType===3)}}">取消</button>
+                        <button catchtap="handlePay" class="pay-button {{disabledArr[itemIndex]?'pay-disabled':''}}" data-billIds="{{item.noPayBillIds}}" data-billType="{{item.billType}}" data-businessNo="{{item.businessNo}}" data-index="{{itemIndex}}" data-item="{{item}}" data-roomInfo="{{item.businessInfo.buildingName}}-{{item.businessInfo.roomNo}} {{item.businessInfo.apartmentName}}" data-totalAmount="{{item.billTotalAmount}}" wx:if="{{item.status===1}}">去支付</button>
+                        <button catchtap="goToDetail" class="cancel-button" data-billIds="{{item.billIds}}" data-billType="{{item.billType}}" data-isview="view" data-item="{{item}}" wx:else>查看</button>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>
+<fun-loading wx:if="{{showLoading}}"></fun-loading>

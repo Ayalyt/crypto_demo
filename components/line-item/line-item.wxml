@@ -1,0 +1,4 @@
+<view class="fun-line-item">
+    <label class="line-item-label">{{label}}</label>
+    <text class="line-item-value">{{value}}</text>
+</view>

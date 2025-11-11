@@ -1,0 +1,7 @@
+<view bindtap="onClick" class="fun-form-item">
+    <view class="form-item-required" wx:if="{{required}}">*</view>
+    <view class="form-item-label" wx:if="{{label}}">{{label}}</view>
+    <view class="form-item-value" wx:if="{{value}}">{{value}}</view>
+    <view class="form-item-placeholder" wx:if="{{!value}}">{{placeholder}}</view>
+    <view class="form-item-icon fun-icon fun-icon-angle-down" wx:if="{{type==='select'}}"></view>
+</view>

@@ -1,0 +1,4 @@
+<view class="fun-empty">
+    <image class="fun-empty-img" src="{{imgSrc}}"></image>
+    <view class="fun-empty-info">{{info}}</view>
+</view>

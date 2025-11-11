@@ -1,0 +1,15 @@
+<view class="popup" wx:if="{{show}}">
+    <view class="popup-mask fun-pop-mask"></view>
+    <view class="popup-body">
+        <view class="popup-wrap">
+            <view slot="content" style="width:100%;">
+                <image class="popup-img" src="http://sce-dev-frstatic.oss-cn-shanghai.aliyuncs.com/miniprogram-activity/funlive/fingerprint.png"></image>
+                <view>请按照门锁提示语音，录入您的指纹。</view>
+                <view class="popup-count-down">
+                    <fun-count-down bind:onCompleted="onCountDownCompleted" prefixDesc="" style="color:#949AA7" time="{{59940}}"></fun-count-down>
+                </view>
+            </view>
+        </view>
+        <view bindtap="onClose" class="popup-close" wx:if="{{showClose}}"></view>
+    </view>
+</view>

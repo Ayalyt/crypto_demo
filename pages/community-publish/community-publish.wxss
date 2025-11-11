@@ -1,0 +1,106 @@
+.flex {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.community-publish {
+    padding: 0 40rpx
+}
+
+.community-publish .upload-img {
+    border-width: 0;
+    height: 180rpx;
+    width: 202rpx
+}
+
+.title {
+    margin-top: 30rpx
+}
+
+.content {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    margin: 20rpx 0;
+    padding: 20rpx 0
+}
+
+.content wx-textarea {
+    width: 100%
+}
+
+.topic-tip {
+    color: #c4c4c4;
+    margin-right: 10rpx
+}
+
+.address-wrp {
+    margin-bottom: 6rpx
+}
+
+.address {
+    margin-left: 10rpx
+}
+
+.address-wrp .icon {
+    height: 30rpx;
+    width: 30rpx
+}
+
+.address-wrp .icon-arrow {
+    height: 24rpx;
+    width: 24rpx
+}
+
+.submit-button {
+    background-color: #212721;
+    border: 0;
+    border-radius: 45rpx;
+    color: #ffda71;
+    font-size: 36rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    margin-top: 90rpx;
+    text-align: center
+}
+
+.publish-record {
+    font-size: 28rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin-top: 30rpx;
+    text-align: center;
+    width: 100%
+}
+
+.mask-style {
+    background-color: rgba(0,0,0,.2);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999
+}
+
+.mask-style,.mask-toast {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.mask-toast {
+    background-color: rgba(0,0,0,.5);
+    border-radius: 24rpx;
+    color: #fff;
+    font-size: 24rpx;
+    margin-bottom: 200rpx;
+    padding: 30rpx 50rpx;
+    text-align: center
+}

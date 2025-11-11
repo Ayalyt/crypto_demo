@@ -1,0 +1,47 @@
+<view class="container" style="background-color:{{isNoDataShow?'#FFF':'#F4F4F4'}};height:{{winHeight}}px;">
+    <scroll-view bindscrolltoupper="handleLoadMore" class="scroll-view" scrollIntoView="{{'s-'+curId}}" scrollY="{{true}}" upperThreshold="0">
+        <view class="scroll-view-loading" wx:if="{{!initLoading&&showLoading}}">
+            <image class="loading-icon" mode="aspectFit" src="/public/imgs/loading.gif"></image>
+        </view>
+        <no-data marginTop="300" noDataShow="{{isNoDataShow}}" text="暂无新信息"></no-data>
+        <view bindtap="onClickCard" class="message-card" data-item="{{item}}" data-url="{{item.url}}" id="{{'s-'+item.messageId}}" wx:for="{{messageData}}" wx:key="index">
+            <view class="message-card-date">{{item.createTime}}</view>
+            <view class="message-card-content" wx:if="{{item.style!=2}}">
+                <view class="card-header">
+                    <text>{{item.sceneType}}</text>
+                    <text class="card-header-date">{{item.cardTime}}</text>
+                </view>
+                <view class="card-title">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="card-normal" wx:if="{{item.style==0}}">
+                    <text wx:if="{{item.apartmentName}}">{{item.apartmentName}}</text>
+                </view>
+                <view class="card-template" wx:if="{{item.style==1}}">
+                    <view wx:for="{{item.extraFields}}" wx:for-item="extraItem" wx:key="index">
+                        <text>{{extraItem.fieldName}}</text>:<text space="nbsp" style="color:{{extraItem.color}} ">{{extraItem.fieldValue}}</text>
+                    </view>
+                </view>
+                <view class="card-url" wx:if="{{item.style==1&&item.url}}">
+                    <text>详情</text>
+                    <text class="fun-icon fun-icon-angle-right"></text>
+                </view>
+            </view>
+            <view class="message-card-content" wx:if="{{item.style==2}}">
+                <view style="height:{{imageHeight}}px;">
+                    <fun-image mode="aspectFill" src="{{item.picture}}"></fun-image>
+                </view>
+                <view class="card-title-view">
+                    <text>{{item.title}}</text>
+                </view>
+                <view>
+                    <view class="card-url" wx:if="{{item.content}}">
+                        <text>详情</text>
+                        <text class="fun-icon fun-icon-angle-right"></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<fun-loading wx:if="{{initLoading&&showLoading}}"></fun-loading>

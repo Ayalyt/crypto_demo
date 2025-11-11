@@ -1,0 +1,10 @@
+<view class="fun-select">
+    <view class="select-wrap">
+        <text class="required-sign">*</text>
+        <text class="label">{{label}}</text>
+        <picker bindchange="bindMultiPickerChange" class="select-picker" mode="multiSelector" range="{{items}}" rangeKey="label" value="{{index}}">
+            <view class="value">{{text||placeholder}}</view>
+        </picker>
+    </view>
+    <text class="fun-icon fun-icon-angle-down"></text>
+</view>

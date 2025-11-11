@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "fun-image": "pages\\service\\components\\fun-image\\fun-image",
+    "system-notification": "pages\\service\\components\\system-notification\\system-notification"
+  },
+  "navigationBarTitleText": "方隅公寓",
+  "navigationBarBackgroundColor": "#F4F1E7"
+}

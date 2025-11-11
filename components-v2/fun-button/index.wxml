@@ -1,0 +1,1 @@
+<button bindtap="handleClick" class="fun-button" disabled="{{disabled}}" hoverClass="fun-button-hover">{{text}}</button>

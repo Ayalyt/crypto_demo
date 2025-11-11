@@ -1,0 +1,19 @@
+.no-data-container {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #ccc;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.no-data-container .null-img {
+    height: 290rpx;
+    margin-top: 300rpx;
+    width: 360rpx
+}
+
+.no-data-container .text {
+    color: #949aa7
+}

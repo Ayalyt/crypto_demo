@@ -1,0 +1,38 @@
+.room-password-tap-wrapper {
+    background: #f4f4f4;
+    margin-top: 15rpx;
+    padding: 0 5rpx
+}
+
+.room-password-tap-content,.room-password-tap-wrapper {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.room-password-tap-content {
+    background: #fbfbfb;
+    border: 1rpx solid #eaeaea;
+    border-radius: 6rpx 6rpx 0 0;
+    color: #c6cbd7;
+    font-size: 26rpx;
+    font-weight: 400;
+    height: 88rpx;
+    line-height: 34rpx;
+    margin: 0 5rpx;
+    width: 360rpx
+}
+
+.room-password-tap-activity {
+    background: #fff;
+    color: #333
+}
+
+.room-password-tap-icon {
+    height: 34rpx;
+    margin-right: 5rpx;
+    width: 34rpx
+}

@@ -1,0 +1,12 @@
+.fun-button {
+    background: #212721;
+    border-radius: 48px;
+    color: #ffda71;
+    font-weight: 400;
+    height: 96rpx;
+    line-height: 96rpx
+}
+
+.fun-button-hover {
+    opacity: .9
+}

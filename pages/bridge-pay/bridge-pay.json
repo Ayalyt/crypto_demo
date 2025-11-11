@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-icon": "pages\\bridge-pay\\miniprogram_npm\\weui-miniprogram\\icon\\icon"
+  },
+  "navigationBarTitleText": "支付"
+}

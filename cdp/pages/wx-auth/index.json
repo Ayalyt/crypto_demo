@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "授权登录",
+  "usingComponents": {
+    "auth-user": "cdp\\pages\\wx-auth\\cdp\\components\\auth-user\\index"
+  }
+}

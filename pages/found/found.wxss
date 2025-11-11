@@ -1,0 +1,57 @@
+.found-wrapper {
+    padding-bottom: calc(55px + env(safe-area-inset-bottom))
+}
+
+.top-banners {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-bottom: 40rpx
+}
+
+.top-banners .swipers {
+    border-radius: 20rpx;
+    box-shadow: 5rpx 5rpx 10rpx #ccc;
+    height: 600rpx;
+    overflow: hidden;
+    width: 730rpx
+}
+
+.top-banners .swipers .swiper {
+    border-radius: 20rpx;
+    height: 100%;
+    width: 100%
+}
+
+.top-banners .swipers .swiper wx-image {
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.waist-banners {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.waist-banners .wrapper {
+    border-radius: 14rpx;
+    box-shadow: 5rpx 5rpx 10rpx #ccc;
+    height: 256rpx;
+    margin-bottom: 20rpx;
+    overflow: hidden;
+    width: 730rpx
+}
+
+.waist-banners .wrapper wx-image {
+    display: block;
+    height: 100%;
+    width: 100%
+}

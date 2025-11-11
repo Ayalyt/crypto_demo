@@ -1,0 +1,15 @@
+<view class="fun-upload">
+    <label>
+        <text class="required" wx:if="{{required}}">*</text>{{label}}</label>
+    <view class="upload-sub-title" wx:if="{{subTitle!=''}}">{{subTitle}}</view>
+    <view class="upload-imgs">
+        <view class="upload-img" wx:if="{{item.status!=='fail'}}" wx:for="{{imgs}}" wx:key="index">
+            <image bindtap="onPreview" class="upload-preview" data-index="{{index}}" mode="aspectFill" src="{{item.thumb||item.image}}"></image>
+            <text bindtap="onDelete" class="fun-icon fun-icon-minus-circle-fill upload-delete" data-index="{{index}}"></text>
+        </view>
+        <view bindtap="onAdd" class="upload-img upload-btn" wx:if="{{imgs.length<count}}">
+            <text class="fun-icon fun-icon-camera upload-add"></text>
+        </view>
+    </view>
+</view>
+<privacy></privacy>

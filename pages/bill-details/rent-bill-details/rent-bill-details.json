@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "fun-loading": "pages\\bill-details\\rent-bill-details\\components\\fun-loading\\fun-loading",
+    "fun-button": "components\\fun-button\\fun-button",
+    "count-down": "components\\count-down\\count-down",
+    "fun-bottom-alert": "components\\fun-bottom-alert\\fun-bottom-alert",
+    "fun-image": "components\\fun-image\\fun-image",
+    "faq-float-button": "pages\\bill-details\\rent-bill-details\\components\\faq-float-button\\faq-float-button",
+    "privacy": "pages\\bill-details\\rent-bill-details\\components\\privacy\\privacy"
+  }
+}

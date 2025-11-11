@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "brand-icons": "components\\brand-icons\\brand-icons"
+  },
+  "navigationBarTitleText": "发现"
+}

@@ -1,0 +1,39 @@
+.faq-float-button {
+    background: #fff;
+    border-radius: 42rpx 0 0 42rpx;
+    bottom: 198rpx;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.1);
+    height: 84rpx;
+    line-height: 84rpx;
+    position: fixed;
+    right: 0;
+    transition: all .3s ease;
+    width: 156rpx;
+    z-index: 10
+}
+
+.faq-float-hiden {
+    opacity: .7;
+    -webkit-transform: translateX(77rpx);
+    transform: translateX(77rpx)
+}
+
+.faq-float-icon {
+    height: 74rpx;
+    margin-left: 5rpx;
+    vertical-align: middle;
+    width: 74rpx
+}
+
+.faq-float-text {
+    color: #404859;
+    display: inline-block;
+    font-size: 22rpx;
+    font-weight: 500;
+    height: 52rpx;
+    letter-spacing: 1rpx;
+    line-height: 26rpx;
+    margin-left: 8rpx;
+    vertical-align: middle;
+    width: 60rpx
+}

@@ -1,0 +1,10 @@
+.fun-count-down {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 35rpx;
+    font-weight: 500;
+    line-height: 49rpx
+}

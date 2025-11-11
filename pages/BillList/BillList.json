@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "账单",
+  "disableScroll": true,
+  "usingComponents": {
+    "fun-loading": "pages\\BillList\\components\\fun-loading\\fun-loading",
+    "segmented-control": "components\\segmented-control\\segmented-control",
+    "no-data": "components\\no-data\\no-data",
+    "count-down": "components\\count-down\\count-down"
+  }
+}

@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="editor-wrap">
+        <block wx:if="{{name==='certificates'}}">
+            <view class="editor-input">
+                <fun-select bind:change="onSelectChange" items="{{certificates}}" label="证件类型" name="maritalStatus" placeholder="请选择账号类型" title="证件类型" value="{{cardType}}"></fun-select>
+            </view>
+            <view class="editor-input idCardNo-view">
+                <text class="idCardNo-label">证件号码</text>
+                <text-input bind:input="onCardNoInput" class="editor-input" focus="true" maxlength="{{maxlength}}" pattern="{{pattern}}" placeholder="{{placeholder}}" type="{{type}}" value="{{cardNum}}"></text-input>
+            </view>
+        </block>
+        <text-input bind:input="onInput" class="editor-input" focus="true" maxlength="{{maxlength}}" pattern="{{pattern}}" placeholder="{{placeholder}}" type="{{type}}" value="{{value}}" wx:else></text-input>
+    </view>
+    <view class="btn-wrap">
+        <button bindtap="onSave" class="fun-button login-btn" disabled="{{false}}">确定</button>
+    </view>
+    <view class="editor-tips">{{tips}}</view>
+</view>

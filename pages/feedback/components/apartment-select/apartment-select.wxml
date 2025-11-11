@@ -1,0 +1,34 @@
+<view bindtap="onShow" class="apartment-select">
+    <label class="select-label">
+        <text class="required">*</text>选择公寓</label>
+    <view class="select-value" wx:if="{{apartmentName}}">{{apartmentName}}</view>
+    <view class="select-placeholder" wx:if="{{!apartmentName}}">问题相关公寓</view>
+    <text class="fun-icon fun-icon-angle-down select-icon"></text>
+</view>
+<fun-drawer bind:open="" show="{{show}}">
+    <view class="select-drawer">
+        <view class="select-header">选择公寓<text bindtap="onClose" class="fun-icon fun-icon-close"></text>
+        </view>
+        <view class="select-content">
+            <view class="select-cities">
+                <view bindtap="onSwitchCity" class="select-city {{cityIndex===index?'selected':''}}" data-index="{{index}}" wx:for="{{data}}" wx:key="index">{{item.cityName}}</view>
+            </view>
+            <view class="select-apartments">
+                <view bindtap="onSelect" class="select-apartment {{apartmentId===item.apartmentId?'selected':''}}" data-item="{{item}}" wx:for="{{data[cityIndex].apartments||[]}}" wx:key="index">
+                    <text>{{item.apartmentName}}</text>
+                    <text class="current-live" wx:if="{{helper.includes(myApartmentIds,item.apartmentId)}}">当前在住</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</fun-drawer>
+
+<wxs module="helper">
+var includes = (function(array, item) {
+  for (var i = 0; i < array.length; ++i) {
+    if (array[((nt_0 = (i), null == nt_0 ? undefined : 'number' === typeof nt_0 ? nt_0 : "" + nt_0))] === item) return (true);
+  };
+  return (false)
+});
+module.exports.includes = includes;
+</wxs>

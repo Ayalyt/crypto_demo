@@ -1,0 +1,7 @@
+<template name="no-more">
+    <view class="store-end">
+        <view class="store-divide"></view>
+        <view>亲爱的，到底了</view>
+        <view class="store-divide"></view>
+    </view>
+</template>

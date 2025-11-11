@@ -1,0 +1,27 @@
+<view class="device-picker" wx:if="{{isShow}}">
+    <view bindtap="clickPicker" class="picker-wrap">
+        <text class="required-sign">*</text>
+        <text class="label">设备</text>
+        <text class="placeholder">{{name||placeholder}}</text>
+        <text class="fun-icon fun-icon-angle-down"></text>
+    </view>
+    <view class="show-fun-modal fun-modal-container-enter-done " wx:if="{{isShowModal}}">
+        <view class="fun-modal">
+            <form bindreset="reset" bindsubmit="submit">
+                <view class="fun-modal-header">
+                    <view bindtap="cancelBtn" class="header-left">取消</view>
+                    <view bindtap="okBtn" class="header-right">确定</view>
+                </view>
+                <view class="picker-container">
+                    <radio-group bindchange="radioChange" class="free-radios">
+                        <label bindtap="onClickRadio" class="{{clsName}}" data-id="{{index}}" style="{{index==id?'background:#efefef;':'background:#fff;'}}" wx:for="{{items}}" wx:key="index">
+                            <radio name="{{item.value}}" value="{{item.name}}"></radio>
+                            <label class="free-text">{{item.name}}</label>
+                        </label>
+                    </radio-group>
+                </view>
+            </form>
+        </view>
+        <view class="mask"></view>
+    </view>
+</view>

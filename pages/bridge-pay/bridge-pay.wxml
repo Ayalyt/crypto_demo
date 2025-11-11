@@ -1,0 +1,9 @@
+<view class="bridge-pay-container">
+    <view class="bridge-pay-failure-container">
+        <icon size="46" type="{{payStatusIcon}}"></icon>
+        <view class="bridge-pay-failure">{{payStatusDes}}</view>
+    </view>
+    <view class="bridge-pay-button-container">
+        <button appParameter="wechat" binderror="launchAppError" openType="launchApp" plain="true" type="primary">返回APP</button>
+    </view>
+</view>

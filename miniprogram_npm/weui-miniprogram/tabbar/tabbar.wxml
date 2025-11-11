@@ -1,0 +1,9 @@
+<view ariaRole="tablist" class="weui-tabbar {{reactive?'weui-tabbar__reactive':''}} {{extClass}}">
+    <view ariaDescribedby="t{{index}}_tips" ariaLabelledby="t{{index}}_title" ariaRole="tab" ariaSelected="{{index===current}}" bindtap="tabChange" class="weui-tabbar__item {{index===current?'weui-bar__item_on':''}}" data-index="{{index}}" wx:for="{{list}}" wx:key="index">
+        <view ariaHidden="true" id="t{{index}}_tips" style="position: relative;display:inline-block;">
+            <image class="weui-tabbar__icon" src="{{current===index?item.selectedIconPath:item.iconPath}}"></image>
+            <mp-badge ariaLabel="{{item.ariaLabel||''}}" content="{{item.badge}}" style="position: absolute;top:-2px;left:calc(100% - 3px)" wx:if="{{item.badge||item.dot}}"></mp-badge>
+        </view>
+        <view ariaHidden="true" class="weui-tabbar__label" id="t{{index}}_title">{{item.text}}</view>
+    </view>
+</view>

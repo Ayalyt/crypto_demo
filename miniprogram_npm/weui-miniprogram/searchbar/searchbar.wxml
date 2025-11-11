@@ -1,0 +1,19 @@
+<view class="weui-search-bar {{searchState?'weui-search-bar_focusing':''}} {{extClass}}">
+    <view ariaHaspopup ariaExpanded="{{searchState}}" ariaOwns="searchResult" ariaRole="combobox" class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search" size="12" type="search"></icon>
+            <input ariaControls="searchResult" bindblur="inputBlur" bindfocus="inputFocus" bindinput="inputChange" class="weui-search-bar__input" focus="{{focus}}" placeholder="{{placeholder}}" type="text" value="{{value}}"></input>
+            <text ariaLabel="清除" ariaRole="button" bindtap="clearInput" class="weui-icon-clear" hoverClass="weui-active" wx:if="{{value.length>0}}"></text>
+        </view>
+        <label bindtap="showInput" class="weui-search-bar__label" id="searchText">
+            <icon class="weui-icon-search" size="12" type="search"></icon>
+            <text ariaHidden class="weui-search-bar__text">{{placeholder}}</text>
+        </label>
+    </view>
+    <view ariaRole="button" bindtap="hideInput" class="weui-search-bar__cancel-btn" wx:if="{{cancel&&searchState}}">{{cancelText}}</view>
+</view>
+<mp-cells ariaRole="listbox" extClass=" {{'searchbar-result '+extClass}}" id="searchResult" wx:if="{{searchState&&result.length>0}}">
+    <mp-cell hover ariaRole="option" bindtap="selectResult" bodyClass="weui-cell_primary" class="result" data-index="{{index}}" wx:for="{{result}}" wx:key="index">
+        <view>{{item.text}}</view>
+    </mp-cell>
+</mp-cells>

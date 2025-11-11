@@ -1,0 +1,12 @@
+<view class="fingerprint-success" wx:if="{{show}}">
+    <view class="fingerprint-success-mask fun-pop-mask"></view>
+    <view class="fingerprint-success-body">
+        <view class="fingerprint-success-title">
+            <image class="fingerprint-success-title-icon" src="/public/imgs/icon_combined.png"></image>指纹录制成功</view>
+        <view class="fingerprint-success-message">密码有效期至: {{message}}</view>
+        <view class="fingerprint-success-message">密码将在您缴纳租金后自动延期</view>
+        <view class="fingerprint-success-btn">
+            <view bindtap="onClose" class="fingerprint-success-btn-item fingerprint-success-btn-item-retry">确定</view>
+        </view>
+    </view>
+</view>

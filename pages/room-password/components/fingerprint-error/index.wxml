@@ -1,0 +1,12 @@
+<view class="fingerprint-error" wx:if="{{show}}">
+    <view class="fingerprint-error-mask fun-pop-mask"></view>
+    <view class="fingerprint-error-body">
+        <view class="fingerprint-error-title">设置失败</view>
+        <view class="fingerprint-error-message">{{message}}</view>
+        <view class="fingerprint-error-btn">
+            <view bindtap="onClose" class="fingerprint-error-btn-item">取消</view>
+            <view class="fingerprint-error-divider"></view>
+            <view bindtap="onRetry" class="fingerprint-error-btn-item fingerprint-error-btn-item-retry">重试</view>
+        </view>
+    </view>
+</view>

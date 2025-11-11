@@ -1,0 +1,4 @@
+<view class="no-data-container extra-class" wx:if="{{noDataShow}}">
+    <image class="null-img" src="/public/imgs/no-data.png" style="margin-top:{{marginTop}}rpx;"></image>
+    <text class="text">{{text}}</text>
+</view>

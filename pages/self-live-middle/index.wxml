@@ -1,0 +1,2 @@
+<view bindtap="onLogin" wx:if="{{!isLogin}}"></view>
+<view bindtap="goToSelfLive" wx:else></view>

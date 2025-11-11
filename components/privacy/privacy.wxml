@@ -1,0 +1,20 @@
+<view class="privacy" wx:if="{{innerShow}}">
+    <view class="content" style="padding-bottom:calc(env(safe-area-inset-bottom) + {{paddingBottom}}rpx)">
+        <view class="title">
+            <image class="logo" mode="aspectFit" src="/public/imgs/logo4040.png"></image>
+            <text>方隅公寓 高档一居租方隅 申请</text>
+        </view>
+        <view class="sub-title">需要授权使用手机号登录</view>
+        <view class="des">我们依据相关法律法规要求制定<text bind:tap="openPrivacyContract" class="link">《隐私保护指引》</text>请您在使用小程序前仔细阅读并充分理解相关条款若您拒绝，部分功能将受限，我们建议您点击同意并继续使用我们完整的服务</view>
+        <view class="check-area">
+            <radio bind:tap="hanldeAgreeAgreement" checked="{{agreed}}"></radio>
+            <text>我已阅读并同意方隅公寓小程序</text>
+            <text bind:tap="openPrivacyContract" class="link">《隐私保护指引》</text>
+        </view>
+        <view class="btns">
+            <button bind:tap="rejectAgreement" class="reject">拒绝</button>
+            <button bindagreeprivacyauthorization="handleAgree" class="agree" openType="agreePrivacyAuthorization" wx:if="{{agreed}}">同意</button>
+            <button bind:tap="hanldeNoAgreeThenAgree" class="agree" wx:else>同意</button>
+        </view>
+    </view>
+</view>

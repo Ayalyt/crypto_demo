@@ -1,0 +1,34 @@
+.modal-mask {
+    background-color: rgba(0,0,0,.6);
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    z-index: 9998
+}
+
+.modal-mask,.modal-wrp {
+    -webkit-animation: fun-animate-fadein .3s ease forwards;
+    animation: fun-animate-fadein .3s ease forwards;
+    position: fixed
+}
+
+.modal-wrp {
+    background-color: #fff;
+    left: 30rpx;
+    min-height: 300rpx;
+    padding: 20rpx;
+    right: 30rpx;
+    top: 20vh;
+    transition-delay: .25s;
+    z-index: 9999
+}
+
+.modal-title {
+    font-size: 36rpx;
+    font-weight: 500;
+    padding: 20rpx;
+    text-align: center
+}

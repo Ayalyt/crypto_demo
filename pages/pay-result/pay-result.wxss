@@ -1,0 +1,27 @@
+.result-view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 120rpx 14px 0
+}
+
+.result-image {
+    height: 90rpx;
+    width: 90rpx
+}
+
+.result-text {
+    color: #333
+}
+
+.count-down-text,.result-text {
+    font-size: 30rpx;
+    margin-top: 42rpx
+}
+
+.count-down-text {
+    color: #949aa7
+}

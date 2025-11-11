@@ -1,0 +1,72 @@
+.container {
+    padding: 27rpx 75rpx
+}
+
+.mobile-wrap,.otp-wrap {
+    border-bottom: 1rpx solid #eaeaea;
+    margin-top: 68rpx
+}
+
+.mobile-wrap {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.otp-btn {
+    color: #e0ae01;
+    line-height: 80rpx
+}
+
+.btn-wrap {
+    margin-top: 130rpx
+}
+
+.link-wrap {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 50rpx;
+    text-align: right
+}
+
+.link-wrap .tips {
+    color: #afb2bb;
+    font-size: 22rpx
+}
+
+.link-wrap .link {
+    color: #4a84d0;
+    font-size: 24rpx
+}
+
+.link-wrap .otp-login {
+    border-right: 1rpx solid #d9d9d9;
+    margin-right: 24rpx;
+    padding-right: 24rpx
+}
+
+.login {
+    background: #fff0c3;
+    border-radius: 45rpx;
+    color: #d3bd85;
+    line-height: 90rpx;
+    text-align: center
+}
+
+.protocol-wrap {
+    bottom: 40rpx;
+    color: #949aa7;
+    font-size: 24rpx;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%
+}
+
+.protocol-wrap .protocol {
+    color: #e0ae01;
+    margin-top: 10rpx
+}

@@ -1,0 +1,93 @@
+.privacy {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999999
+}
+
+.content {
+    background: #fff;
+    border-radius: 32rpx 32rpx 0rpx 0rpx;
+    box-sizing: initial;
+    padding: 48rpx;
+    width: 100%
+}
+
+.content .title {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #212721;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    font-weight: 600;
+    height: 40rpx;
+    line-height: 40rpx
+}
+
+.content .title .logo {
+    border-radius: 24rpx;
+    height: 48rpx;
+    margin-right: 24rpx;
+    width: 48rpx
+}
+
+.content .sub-title {
+    color: #212721;
+    font-size: 36rpx;
+    font-weight: 600;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-top: 48rpx
+}
+
+.content .des {
+    color: #212721;
+    font-size: 28rpx;
+    margin-top: 24rpx
+}
+
+.content .check-area {
+    font-size: 24rpx;
+    margin-top: 48rpx
+}
+
+.link {
+    color: #3e97ff
+}
+
+.btns {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 48rpx
+}
+
+.btns .reject {
+    border: 1rpx solid #212721;
+    border-radius: 42rpx;
+    color: #212721
+}
+
+.btns .agree,.btns .reject {
+    height: 84rpx;
+    line-height: 84rpx;
+    padding: 0;
+    width: 302rpx
+}
+
+.btns .agree {
+    background: #212721;
+    border-radius: 42rpx;
+    color: #ffda71
+}

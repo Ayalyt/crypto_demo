@@ -1,0 +1,51 @@
+<view class="balance-tip">小程序限微信支付，使用荷包请到方隅公寓APP</view>
+<view class="header">
+    <image class="balance-bg" mode="widthFix" src="/public/imgs/icon_balance_bg.png"></image>
+    <view class="header-content-view">
+        <view class="balance-text">可用余额</view>
+        <view class="balance-amount-view">
+            <text class="money">¥</text>
+            <text class="balance-amount">{{availableBalance}}</text>
+        </view>
+    </view>
+</view>
+<segmented-control bindchange="segmentedChange" class="{{scrollCls}}" current="{{currentTab}}" id="SegmentedControl" items="{{['全部','充值','消费']}}"></segmented-control>
+<swiper bindchange="swiperChange" current="{{currentTab}}" duration="300" style="min-height:{{swiperHeight}}px;height:{{swiperHeight}}px;">
+    <swiper-item>
+        <view class="{{allList.length==0?'scroll-no-data':''}}" id="swiper-item-0" style="background-color:white;">
+            <no-data id="all-no-data" marginTop="200" noDataShow="{{isShowAllListBlank}}" text="暂无明细记录"></no-data>
+            <view bindtap="goToBalanceDetails" class="cell" id="{{itemIndex}}" wx:for="{{allList}}" wx:for-index="itemIndex" wx:key="id">
+                <view>
+                    <text class="voucher-title">{{item.voucherTypeTitle}}</text>
+                    <view class="date">{{item.createTimeString}}</view>
+                </view>
+                <text class="amount" style="color:{{item.walletColor}}">{{item.symbol}}{{item.changeAmount}}</text>
+            </view>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="{{unpayList.length==0?'scroll-no-data':''}}" id="swiper-item-1" style="background-color:{{unpayList.length>0?'#F1F1F1':'white'}};">
+            <no-data id="unpay-no-data" marginTop="200" noDataShow="{{isShowChargeBlank}}" text="暂无明细记录"></no-data>
+            <view bindtap="goToBalanceDetails" class="cell" id="{{itemIndex}}" wx:for="{{chargeList}}" wx:for-index="itemIndex" wx:key="id">
+                <view>
+                    <text class="voucher-title">{{item.voucherTypeTitle}}</text>
+                    <view class="date">{{item.createTimeString}}</view>
+                </view>
+                <text class="amount" style="color:{{item.walletColor}}">{{item.symbol}}{{item.changeAmount}}</text>
+            </view>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="{{payList.length==0?'scroll-no-data':''}}" id="swiper-item-2" style="background-color:{{payList.length>0?'#F1F1F1':'white'}};">
+            <no-data id="pay-no-data" marginTop="200" noDataShow="{{isShowExpendBlank}}" text="暂无明细记录"></no-data>
+            <view bindtap="goToBalanceDetails" class="cell" id="{{itemIndex}}" wx:for="{{expendList}}" wx:for-index="itemIndex" wx:key="id">
+                <view>
+                    <text class="voucher-title">{{item.voucherTypeTitle}}</text>
+                    <view class="date">{{item.createTimeString}}</view>
+                </view>
+                <text class="amount" style="color:{{item.walletColor}}">{{item.symbol}}{{item.changeAmount}}</text>
+            </view>
+        </view>
+    </swiper-item>
+</swiper>
+<fun-loading wx:if="{{showLoading}}"></fun-loading>

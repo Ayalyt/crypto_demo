@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "双十一隅荐礼",
+  "usingComponents": {
+    "fun-loading": "pages\\invite\\components-v2\\fun-loading\\index",
+    "auth-user": "pages\\invite\\cdp\\components\\auth-user\\index"
+  }
+}

@@ -1,0 +1,122 @@
+.discover-detail {
+    padding: 0 30rpx
+}
+
+.header {
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.header,.header-left {
+    display: -webkit-flex;
+    display: flex
+}
+
+.header-left {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.header-left .avatar {
+    border-radius: 60rpx;
+    height: 60rpx;
+    margin-right: 10rpx;
+    width: 60rpx
+}
+
+.header-right {
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.header-right,.header-right-item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.header-right-item {
+    color: #777;
+    margin-left: 20rpx
+}
+
+.header-right-item .icon {
+    height: 26rpx;
+    margin-right: 5rpx;
+    width: 26rpx
+}
+
+.swiper {
+    height: 60vh;
+    margin: 20rpx auto
+}
+
+.swiper-item,.swiper-item wx-image {
+    height: 100%;
+    width: 100%
+}
+
+.desc-content {
+    margin-bottom: 20rpx
+}
+
+.desc-adress,.desc-datetime {
+    color: #777;
+    font-size: 22rpx
+}
+
+.desc-adress {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 15rpx
+}
+
+.desc-adress .icon {
+    height: 30rpx;
+    margin-right: 8rpx;
+    width: 30rpx
+}
+
+.like-wrp {
+    margin: 60rpx auto 80rpx;
+    text-align: center
+}
+
+.btn-like {
+    background-color: #fff;
+    border: 0.5rpx solid #ccc;
+    border-radius: 54rpx;
+    display: inline-block;
+    font-size: 28rpx;
+    overflow: hidden;
+    padding: 15rpx 60rpx;
+    position: relative
+}
+
+.icon-heart-active {
+    height: 150rpx;
+    left: -19rpx;
+    position: absolute;
+    top: -38rpx;
+    width: 168rpx;
+    z-index: 0
+}
+
+.icon-heart {
+    height: 50rpx;
+    left: 40rpx;
+    top: 14rpx;
+    width: 50rpx
+}
+
+.status-text {
+    display: inline;
+    margin-left: 40rpx;
+    position: relative;
+    z-index: 1
+}

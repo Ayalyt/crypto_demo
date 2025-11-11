@@ -1,0 +1,16 @@
+<view class="fun-select">
+    <view class="get-password-btn">
+        <button bindtap="onShow" class="fun-button" disabled="{{disabled}}">{{title}}</button>
+    </view>
+    <fun-drawer bind:close="onClose" show="{{show&&!isConfirm}}">
+        <view class="fun-select-bg">
+            <view class="fun-select-header">
+                <text>{{title}}</text>
+            </view>
+            <view class="fun-select-options">
+                <view bindtap="onSelect" class="fun-select-item" data-cannot-add="{{item.cannotAdd}}" data-client-id="{{item.clientId}}" data-client-key="{{item.clientKey}}" data-deviced-id="{{item.deviceId}}" data-end-time-str="{{item.endTimeStr}}" data-lock-flag="{{item.lockFlag}}" data-lock-mac="{{item.lockMac}}" data-sn="{{item.sn}}" data-start-time-str="{{item.startTimeStr}}" data-supplier-id="{{item.supplierId}}" data-third-uid="{{item.thirdUid}}" wx:for="{{items}}">{{item.deviceName}}</view>
+            </view>
+            <view bindtap="onClose" class="fun-select-bottom">取消</view>
+        </view>
+    </fun-drawer>
+</view>

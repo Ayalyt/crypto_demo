@@ -1,0 +1,1 @@
+<auth-user isPhoneOnly bind:ready="handleAuthReady"></auth-user>

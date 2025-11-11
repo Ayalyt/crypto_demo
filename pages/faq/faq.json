@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "fun-apartment-list": "pages\\faq\\components\\fun-apartment-list\\fun-apartment-list",
+    "no-data": "components\\no-data\\no-data",
+    "fun-loading": "pages\\faq\\components\\fun-loading\\fun-loading"
+  },
+  "navigationBarTitleText": "常见问题"
+}

@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="mobile-wrap">
+        <text-input placeholder="请输入手机号"></text-input>
+        <text class="otp-btn">获取验证码</text>
+    </view>
+    <view class="otp-wrap">
+        <text-input placeholder="请输入短信验证码"></text-input>
+    </view>
+    <view class="btn-wrap">
+        <view bindtap="onLogin" class="login">注册</view>
+    </view>
+    <view class="link-wrap">
+        <text bindtap="onGoLogin" class="link">登录</text>
+        <text class="tips">如果您已注册，我们将自动帮您登录</text>
+    </view>
+    <view class="protocol-wrap">
+        <view>登录/注册/找回密码均表示您已同意</view>
+        <view bindtap="onShowProtocol" class="protocol">《方隅公寓注册协议》</view>
+    </view>
+</view>

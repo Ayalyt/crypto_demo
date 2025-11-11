@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "fun-button": "components\\fun-button\\fun-button",
+    "fun-apartment-list": "pages\\hydropower\\components\\fun-apartment-list\\fun-apartment-list",
+    "no-data": "components\\no-data\\no-data",
+    "fun-loading": "pages\\hydropower\\components\\fun-loading\\fun-loading",
+    "faq-float-button": "pages\\hydropower\\components\\faq-float-button\\faq-float-button"
+  },
+  "navigationBarTitleText": "水电余额"
+}

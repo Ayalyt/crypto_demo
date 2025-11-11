@@ -1,0 +1,78 @@
+.rent-renewal-item-part.cell {
+    background: #fff;
+    margin-bottom: 18rpx;
+    padding: 0 0 15rpx
+}
+
+.rent-renewal-item-part.cell .header {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx;
+    height: 100rpx;
+    padding: 0 14px
+}
+
+.rent-renewal-item-part.cell .header .main {
+    color: #333;
+    -webkit-flex-grow: 1;
+    flex-grow: 1
+}
+
+.rent-renewal-item-part.cell .header .right {
+    color: #eb8311;
+    min-width: 80rpx;
+    text-align: right
+}
+
+.rent-renewal-item-part.cell .content {
+    padding: 0 14px
+}
+
+.rent-renewal-item-part.cell .content .date-row {
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx;
+    height: 60rpx
+}
+
+.rent-renewal-item-part.cell .content .left {
+    color: #949aa7;
+    width: 160rpx
+}
+
+.rent-renewal-item-part.cell .content .main {
+    -webkit-flex-grow: 1;
+    flex-grow: 1
+}
+
+.rent-renewal-item-part.cell .btn-row {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    padding-top: 15rpx
+}
+
+.rent-renewal-item-part.cell .btn-row .btn-con {
+    background-color: #fff;
+    border: 1px solid #c6cbd7;
+    border-radius: 35rpx;
+    color: #949aa7;
+    font-size: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-right: 14px;
+    text-align: center;
+    width: 156rpx
+}
+
+.line {
+    background: #eaeaea;
+    height: 1px
+}

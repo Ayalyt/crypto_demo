@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fun-form-input": "components-v2\\fun-form-input\\index",
+    "fun-drawer": "components-v2\\fun-drawer\\index"
+  }
+}

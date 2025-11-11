@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "扫码开门",
+  "usingComponents": {
+    "auth-user": "pages\\visitor-access\\register\\cdp\\components\\auth-user\\index",
+    "fun-form-select": "pages\\visitor-access\\register\\components-v2\\fun-form-select\\index",
+    "fun-form-input": "pages\\visitor-access\\register\\components-v2\\fun-form-input\\index",
+    "fun-button": "pages\\visitor-access\\register\\components-v2\\fun-button\\index",
+    "fun-loading": "pages\\visitor-access\\register\\components-v2\\fun-loading\\index"
+  }
+}

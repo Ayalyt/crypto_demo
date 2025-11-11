@@ -1,0 +1,72 @@
+.form-item {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1rpx solid #eaeaea;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 28rpx;
+    line-height: 100rpx;
+    padding-left: 20rpx
+}
+
+.form-item-disable {
+    background: #f4f4f4;
+    padding-left: 26rpx
+}
+
+.form-item .required-sign {
+    color: #f15d61;
+    padding-right: 6rpx;
+    text-align: center
+}
+
+.required-sign-blank {
+    padding-right: 10rpx;
+    text-align: center;
+    width: 11.38rpx
+}
+
+.form-item .left {
+    min-width: 112rpx;
+    white-space: nowrap
+}
+
+.form-item .right {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 100rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 30rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+
+.form-item .right .fun-text-input-value {
+    color: #828999;
+    -webkit-flex: 1;
+    flex: 1;
+    height: 100%;
+    text-overflow: ellipsis;
+    vertical-align: center;
+    width: 100%
+}
+
+.form-item .right .fun-text-input-clear {
+    color: #d8d8d8;
+    font-size: 28rpx;
+    height: 100rpx;
+    margin-right: 20rpx;
+    overflow: hidden;
+    text-align: center;
+    transition: all .1s ease-in;
+    width: 60rpx
+}

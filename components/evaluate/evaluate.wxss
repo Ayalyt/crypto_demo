@@ -1,0 +1,60 @@
+@import "..\..\public\styles\index.wxss";
+
+.evaluate-star-require {
+    color: #f15d61;
+    left: -12rpx;
+    position: absolute;
+    top: 7rpx
+}
+
+.evaluate-star {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #333;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 24rpx;
+    position: relative
+}
+
+.prompt {
+    margin-right: 28rpx
+}
+
+.gray-star,.star,.stars {
+    display: -webkit-flex;
+    display: flex
+}
+
+.gray-star,.star {
+    -webkit-align-items: center;
+    align-items: center;
+    font-size: 36rpx;
+    height: 46rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-right: 20rpx;
+    width: 46rpx
+}
+
+.star {
+    color: #ffdf83
+}
+
+.gray-star {
+    color: #e5e5e5
+}
+
+.stars-bg .star {
+    background-color: #ffdf83;
+    color: #fff
+}
+
+.stars-bg .gray-star {
+    background-color: #e5e5e5;
+    color: #fff
+}
+
+.desc {
+    color: #949aa7
+}

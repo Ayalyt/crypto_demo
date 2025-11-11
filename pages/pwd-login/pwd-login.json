@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "text-input": "pages\\pwd-login\\components\\text-input\\text-input"
+  },
+  "navigationBarTitleText": "登录"
+}

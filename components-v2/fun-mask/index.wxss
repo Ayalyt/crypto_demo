@@ -1,0 +1,18 @@
+.fun-mask {
+    background: rgba(0,0,0,.5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.fun-mask-show {
+    -webkit-animation: fun-animate-fadein .3s ease forwards;
+    animation: fun-animate-fadein .3s ease forwards
+}
+
+.fun-mask-hiding {
+    -webkit-animation: fun-animate-fadeout .3s ease forwards;
+    animation: fun-animate-fadeout .3s ease forwards
+}

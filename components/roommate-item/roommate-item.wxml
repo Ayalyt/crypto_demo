@@ -1,0 +1,15 @@
+<view class="roommate-item-part" wx:for="{{listData}}" wx:key="index">
+    <view class="roommate-head">
+        <text class="name">{{item.lesseeName}}</text>
+        <view class="sign" wx:if="{{item.checkInStatus==='IN'}}">
+            <image src="/public/imgs/Check.png"></image>
+        </view>
+    </view>
+    <view class="main">
+        <text class="phone">手 机： {{item.newPhone}}</text>
+        <text class="card-no">{{item.idCardTypeDesc}}:  {{item.newIdCardNo}}</text>
+    </view>
+    <view bindtap="goToEditRoommate" class="edit-btn" data-edit="{{isEdit}}" data-index="{{index}}" data-list="{{listData}}">
+        <text>编辑</text>
+    </view>
+</view>

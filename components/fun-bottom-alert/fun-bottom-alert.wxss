@@ -1,0 +1,39 @@
+.date-view {
+    z-index: 1001
+}
+
+.date-back,.date-view {
+    position: fixed;
+    width: 100%
+}
+
+.date-back {
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 1000
+}
+
+.date-header {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #f8f8f8;
+    display: -webkit-flex;
+    display: flex;
+    height: 44px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 14px
+}
+
+.date-text {
+    color: #949aa7;
+    font-size: 32rpx
+}
+
+.date-image {
+    height: 18px;
+    width: 18px
+}

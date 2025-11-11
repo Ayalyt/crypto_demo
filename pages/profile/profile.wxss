@@ -1,0 +1,58 @@
+page {
+    background: #f4f4f4
+}
+
+.profile-common-info {
+    background-color: #fff;
+    color: #333;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-size: 50rpx;
+    font-weight: 500;
+    padding: 40rpx 40rpx 6rpx
+}
+
+.section {
+    background: #fff
+}
+
+.link {
+    border-bottom: 2rpx solid #f2f2f2;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    line-height: 142rpx;
+    margin: 0 40rpx
+}
+
+.link-wrap {
+    padding-top: 6rpx
+}
+
+.link-wrap .link:last-child {
+    border: none
+}
+
+.label {
+    color: #333;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500
+}
+
+.mobile {
+    color: #333;
+    margin-left: 30rpx
+}
+
+.logout {
+    line-height: 90rpx;
+    margin-top: 57rpx;
+    text-align: center
+}
+
+.fun-icon {
+    color: #333;
+    font-size: 22rpx;
+    line-height: inherit
+}

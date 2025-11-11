@@ -1,0 +1,91 @@
+.apartment-select {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    line-height: 102rpx
+}
+
+.select-label {
+    margin-right: 30rpx
+}
+
+.select-value {
+    color: #828999;
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.select-placeholder {
+    color: #c6cbd7;
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.select-icon {
+    color: #afb2bb;
+    font-size: 22rpx;
+    line-height: inherit
+}
+
+.select-header {
+    border-bottom: 1rpx solid #f1f1f1;
+    color: #949aa7;
+    font-size: 32rpx;
+    line-height: 90rpx;
+    text-align: center
+}
+
+.fun-icon-close {
+    height: 90rpx;
+    left: 0;
+    line-height: 90rpx;
+    position: absolute;
+    top: 0;
+    width: 90rpx
+}
+
+.select-content {
+    display: -webkit-flex;
+    display: flex;
+    height: 510rpx;
+    line-height: 102rpx
+}
+
+.select-content .selected {
+    color: #e0ae01
+}
+
+.select-cities {
+    background: #f7f7f7;
+    overflow: auto;
+    width: 200rpx
+}
+
+.select-city {
+    font-size: 30rpx;
+    overflow: hidden;
+    padding-left: 30rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.select-apartments {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto
+}
+
+.select-apartment {
+    color: #828999;
+    font-size: 26rpx;
+    padding-left: 30rpx
+}
+
+.current-live {
+    background-color: #d67e4f;
+    border-radius: 20rpx;
+    color: #fff;
+    margin-left: 10rpx;
+    padding: 5rpx 15rpx
+}

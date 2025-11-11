@@ -1,0 +1,19 @@
+.fun-line-item {
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    padding: 20rpx 0
+}
+
+.line-item-label {
+    color: #949aa7;
+    margin-right: 30rpx;
+    min-width: 4em;
+    text-align: justify;
+    text-align-last: justify
+}
+
+.line-item-value {
+    color: #333;
+    word-break: break-word
+}

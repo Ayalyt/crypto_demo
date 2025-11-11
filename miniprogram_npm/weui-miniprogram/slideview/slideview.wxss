@@ -1,0 +1,15 @@
+.weui-slideview__btn {
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0
+}
+
+.weui-slideview_icon .weui-slideview__btn {
+    -webkit-flex: none;
+    flex: none
+}
+
+.weui-slideview__btn__wrp {
+    -webkit-justify-content: center;
+    justify-content: center
+}

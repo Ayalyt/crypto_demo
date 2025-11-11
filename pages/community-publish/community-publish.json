@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发布",
+  "usingComponents": {
+    "fun-upload": "pages\\community-publish\\components\\fun-upload\\fun-upload",
+    "fun-loading": "pages\\community-publish\\components\\fun-loading\\fun-loading"
+  }
+}

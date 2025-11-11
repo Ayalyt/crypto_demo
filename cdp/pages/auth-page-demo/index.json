@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "授权组件使用DEMO",
+  "usingComponents": {
+    "auth-user": "cdp\\pages\\auth-page-demo\\cdp\\components\\auth-user\\index"
+  }
+}

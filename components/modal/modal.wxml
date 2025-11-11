@@ -1,0 +1,8 @@
+<view hidden="{{!visible}}">
+    <view class="modal-wrp">
+        <view catchtouchstart="catchtouchstart" class="modal-title">{{title}}</view>
+        <slot name="content"></slot>
+        <slot name="footer"></slot>
+    </view>
+    <view bindtap="handleClickMask" catchtouchstart="catchtouchstart" class="modal-mask"></view>
+</view>

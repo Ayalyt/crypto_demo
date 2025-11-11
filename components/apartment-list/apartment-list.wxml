@@ -1,0 +1,10 @@
+<view class="apartment-list" wx:if="{{items.length>0}}">
+    <view class="my-class">
+        <picker bindchange="bindPickerChange" disabled="{{items.length<=1}}" range="{{items}}" rangeKey="text" value="{{index}}">
+            <view class="wraper">
+                <text class="value">{{items[index].text}}</text>
+                <text class="fun-icon fun-icon-down-fill" wx:if="{{items.length>1}}"></text>
+            </view>
+        </picker>
+    </view>
+</view>

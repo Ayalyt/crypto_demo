@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "mp-navigation-bar": "pages\\store\\miniprogram_npm\\weui-miniprogram\\navigation-bar\\navigation-bar",
+    "fun-city-position": "pages\\store\\components\\fun-city-position\\index",
+    "fun-loading": "pages\\store\\components\\fun-loading\\fun-loading",
+    "fun-image": "pages\\store\\components\\fun-image\\fun-image",
+    "privacy": "pages\\store\\components\\privacy\\privacy"
+  }
+}

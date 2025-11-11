@@ -1,0 +1,45 @@
+page {
+    background: #f4f4f4;
+    height: 100%
+}
+
+.rent-renewal-page {
+    box-sizing: border-box;
+    height: 100%
+}
+
+.rent-renewal-header {
+    background: linear-gradient(270deg,#333,#2c2825);
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 24rpx;
+    font-weight: 700;
+    height: 88rpx;
+    line-height: 88rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    width: 100%
+}
+
+.renewal-apply {
+    background-color: #ffdf83;
+    border: 1px solid #ffdf83;
+    border-radius: 50rpx;
+    color: #795600
+}
+
+.renewal-apply,.withdraw-apply {
+    float: right;
+    height: 78rpx;
+    line-height: 78rpx;
+    margin-right: 20rpx;
+    text-align: center;
+    width: 234rpx
+}
+
+.withdraw-apply {
+    background-color: #fff;
+    border: 1px solid #c6cbd7;
+    border-radius: 50rpx;
+    color: #949aa7
+}

@@ -1,0 +1,85 @@
+.scroll-view {
+    height: 100%;
+    overflow: auto
+}
+
+.scroll-view-loading {
+    padding-top: 20rpx;
+    text-align: center
+}
+
+.scroll-view-loading > wx-image {
+    height: 26rpx
+}
+
+.message-card {
+    display: inline-block;
+    padding: 0 30rpx
+}
+
+.message-card:last-child {
+    padding-bottom: 63rpx
+}
+
+.message-card-date {
+    height: 73rpx;
+    line-height: 73rpx;
+    text-align: center
+}
+
+.message-card-content {
+    background-color: #fff;
+    border: 1rpx solid #e0e0e0;
+    border-radius: 4rpx;
+    color: #333;
+    font-size: 24rpx;
+    width: 690rpx
+}
+
+.card-header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 26rpx;
+    padding: 25rpx 25rpx 20rpx
+}
+
+.card-header > .card-header-date {
+    color: #949aa7
+}
+
+.card-title {
+    font-size: 28rpx;
+    font-weight: 500;
+    padding: 0 25rpx 20rpx
+}
+
+.card-normal {
+    padding: 10rpx 25rpx 25rpx
+}
+
+.card-title-view {
+    font-size: 28rpx;
+    font-weight: 500;
+    padding: 20rpx
+}
+
+.card-template {
+    color: #949aa7;
+    font-size: 26rpx;
+    padding: 0 25rpx 20rpx
+}
+
+.card-template wx-text {
+    word-break: break-all
+}
+
+.card-url {
+    border-top: 1rpx solid #e0e0e0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 20rpx 25rpx
+}

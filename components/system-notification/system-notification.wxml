@@ -1,0 +1,19 @@
+<view wx:if="{{show}}">
+    <fun-mask closable="{{false}}" show="{{maskShow}}"></fun-mask>
+    <view class="main-view main-view-show {{hideAnimation}}">
+        <view class="top-view">
+            <view class="image-view" style="height:{{imageHeight}}px;width:100%;">
+                <fun-image src="{{messageDetail.picture}}"></fun-image>
+            </view>
+            <view class="content">
+                <view class="title">{{messageDetail.title}}</view>
+                <view class="date">{{messageDetail.pushTime}}</view>
+                <view class="content-text" wx:if="{{messageDetail.description}}">{{messageDetail.description}}</view>
+                <view class="button-view">
+                    <view bindtap="goToDetail" class="button">查看详情</view>
+                </view>
+            </view>
+        </view>
+        <image bindtap="close" class="close-button" src="/public/imgs/icon_close_white.png"></image>
+    </view>
+</view>

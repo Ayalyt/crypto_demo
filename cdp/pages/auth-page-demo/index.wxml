@@ -1,0 +1,7 @@
+<auth-user bind:ready="onAuthReady">
+    <view class="demo">用户已登录</view>
+    <view class="btns">
+        <button bindgetphonenumber="onGetPhoneNumber" class="btn" openType="getPhoneNumber" type="primary">获取手机号</button>
+        <button bindgetuserinfo="onGetUserInfo" class="btn" openType="getUserInfo" type="primary">获取用户信息</button>
+    </view>
+</auth-user>
