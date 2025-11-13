@@ -2,7 +2,8 @@
 - description: "A query suite focused exclusively on cryptographic issues."
 
 # 导入所有查询
-- import: security-and-quality
+- queries: .
+  from: codeql/javascript-queries
 
 - include:
     tags contain: 
