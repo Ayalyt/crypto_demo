@@ -1,0 +1,10 @@
+# .github/codeql/crypto-only.qls
+- description: "A query suite focused exclusively on cryptographic issues."
+
+# 导入所有查询
+- import: security-and-quality
+
+- include:
+    tags contain: 
+      - cryptography
+      - credentials
